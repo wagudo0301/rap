@@ -2,15 +2,31 @@
 !foreground_color="0,0,0"
 !foreground_anim="fadein,0,2,%0,0,0,0%%"
 !background_sprite="background_sprite1"
-!charaimg_sprite="polygon"="main_character_generally"
-!charaimg_size="polygon"="500, 500, 1"
 
-&みにに「Hello,World!」
+!charaimg_sprite="principal_normal"="principal_normal"
+!charaimg_pos="principal_normal"="-800,0,0"
+!charaimg_size="principal_normal"="1500, 1500, 1"
+!charaimg_active="principal_normal"="false"
 
-&!charaimg_active="polygon"="true"
+!charaimg_sprite="principal_close_eyes"="principal_close_eyes"
+!charaimg_size="principal_close_eyes"="1500,1500,1"
+!charaimg_pos="principal_close_eyes"="-800,0,0"
+!charaimg_active="principal_close_eyes"="false"
+
+!charaimg_sprite="polygon"="main_character_normal"
+!charaimg_pos="polygon"="-800,0,0"
+!charaimg_size="polygon"="1500, 1500, 1"
+!charaimg_active="polygon"="false"
+
+&!charaimg_active="principal_normal"="true"
+&校長「通常の表情」
+
+&!charaimg_active="principal_close_eyes"="true"
+&校長「目を閉じている表情」
+
+&!charaimg_active="principal_normal"="true"
 !charaimg_anim="polygon"="anim,0,1,EaseInOut%255,255,255,0%1000,1000,0%1000,500,0"
-
-&みにに「これはテキスト表示のサンプルです」
+&みにに「八剱君、あなたが遅れて学校に来たんじゃないのは警備システムで教員にはわかっていることだから、そんなに気に病まなくても大丈夫よ。さぁ、みんな！教室に入って！レクリエーションをはじめましょう」
 
 &!charaimg_active="polygon"="true"
 !background_sprite="background_sprite2"
@@ -18,7 +34,10 @@
 !charaimg_anim="polygon"="anim,,,Replay"
 
 &名無し「こんにちは！」
-&!jump_to="NEXT"
+
+&!top_text="NEXT1"="こんにちは"
+!bottom_text="NEXT2"="こんばんは"
+&!jump_to="END"
 
 #END&
 !charaimg_delete="polygon"=""
@@ -27,6 +46,14 @@
 &!foreground_anim="fadeout,0,2,%0,0,0%%"
 !wait="2"
 
-#NEXT&
-「ジャンプしました！」
+#NEXT1&
+「こんにちはを選んだ」
+&!jump_to="END"
+
+#NEXT2&
+「こんばんはを選んだ」
+&!jump_to="END"
+
+#NEXT3&
+「おはようございますを選んだ」
 &!jump_to="END"

@@ -31,6 +31,10 @@ public class GameManager : MonoBehaviour
     private Dictionary<string, Queue<string>> _subScenes =
         new Dictionary<string, Queue<string>>();
     private const string COMMAND_JUMP = "jump_to";
+    private const string COMMAND_TOP = "top";
+    private const string COMMAND_BOTTOM = "bottom";
+    private const string COMMAND_TEXT = "_text";
+    private const string SELECT_BUTTON_PREFAB = "SelectButton";
     private const string COMMAND_WAIT_TIME = "wait";
     private float _waitTime = 0;
     private const string COMMAND_BGM = "bgm";
@@ -46,6 +50,7 @@ public class GameManager : MonoBehaviour
     private const string COMMAND_CHANGE_SCENE = "scene";
     private const string SE_AUDIOSOURCE_PREFAB = "SEAudioSource";
     private const string CHARACTER_IMAGE_PREFAB = "CharacterImage";
+    private bool wait = false;
     // SerializeFieldと書くとprivateなパラメーターでも
     // インスペクター上で値を変更できる
     [SerializeField]
@@ -75,6 +80,12 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private string animationsDirectory = "Animations/";
     [SerializeField]
+    private GameObject topButtons;
+    [SerializeField]
+    private GameObject bottomButtons;
+
+    public List<Button> _selectButtonList = new List<Button>();
+    [SerializeField]
     private string overrideAnimationClipName = "Clip";
     private List<Image> _charaImageList = new List<Image>();
     [SerializeField]
@@ -92,7 +103,7 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         // 左(=0)クリックされたらOnClickメソッドを呼び出し
-        if (Input.GetMouseButtonDown(0)) OnClick();
+        if (Input.GetMouseButtonDown(0) && !wait) OnClick();
     }
 
     // ここから下は作った関数
@@ -135,6 +146,7 @@ public class GameManager : MonoBehaviour
         if (_charQueue.Count > 0) OutputAllChar();
         else
         {
+            if (_selectButtonList.Count > 0) return;
             if (!ShowNextPage())
                 // UnityエディタのPlayモードを終了する
                 UnityEditor.EditorApplication.isPlaying = false;
@@ -150,6 +162,7 @@ public class GameManager : MonoBehaviour
         if (text[0].Equals(SEPARATE_COMMAND))
         {
             ReadCommand(text);
+            if (_selectButtonList.Count > 0) return;
             if (_waitTime > 0)
             {
                 StartCoroutine(WaitForCommand());
@@ -193,6 +206,10 @@ public class GameManager : MonoBehaviour
                 SetCharacterImage(cmds[1], cmds[0], cmds[2]);
             if (cmds[0].Contains(COMMAND_JUMP))
                 JumpTo(cmds[1]);
+            if (cmds[0].Contains(COMMAND_TOP))
+                SetTopButton(cmds[1], cmds[0], cmds[2]);
+            if (cmds[0].Contains(COMMAND_BOTTOM))
+                SetBottomButton(cmds[1], cmds[0], cmds[2]);
             if (cmds[0].Contains(COMMAND_WAIT_TIME))
                 SetWaitTime(cmds[1]);
             if (cmds[0].Contains(COMMAND_BGM))
@@ -201,6 +218,7 @@ public class GameManager : MonoBehaviour
                 SetSoundEffect(cmds[1], cmds[0], cmds[2]);
             if (cmds[0].Contains(COMMAND_CHANGE_SCENE))
                 ChangeNextScene(cmds[1]);
+            
         }
     }
 
@@ -218,8 +236,10 @@ public class GameManager : MonoBehaviour
     */
     private IEnumerator WaitForCommand()
     {
+        wait = true;
         yield return new WaitForSeconds(_waitTime);
         _waitTime = 0;
+        wait = false;
         ShowNextPage();
         yield break;
     }
@@ -229,6 +249,48 @@ public class GameManager : MonoBehaviour
         return textasset.text.Replace("\n", "").Replace("\r", "");
     }
 
+    /**
+    * 選択肢がクリックされた
+    */
+    private void SelectButtonOnClick(string label)
+    {
+        foreach (Button button in _selectButtonList) Destroy(button.gameObject);
+        _selectButtonList.Clear();
+        JumpTo('"' + label + '"');
+        ShowNextPage();
+    }
+
+    /**
+    * 選択肢の設定
+    */
+    private void SetTopButton(string name, string cmd, string parameter)
+    {
+        cmd = cmd.Replace(COMMAND_TOP, "");
+        name = name.Substring(name.IndexOf('"') + 1, name.LastIndexOf('"') - name.IndexOf('"') - 1);
+        Button button = _selectButtonList.Find(n => n.name == name);
+        if (button == null)
+        {
+            button = Instantiate(Resources.Load<Button>(prefabsDirectory + SELECT_BUTTON_PREFAB),topButtons.transform);
+            button.name = name;
+            button.onClick.AddListener(() => SelectButtonOnClick(name));
+            _selectButtonList.Add(button);
+        }
+        SetImage(cmd, parameter, button.image);
+    }
+    private void SetBottomButton(string name, string cmd, string parameter)
+    {
+        cmd = cmd.Replace(COMMAND_BOTTOM, "");
+        name = name.Substring(name.IndexOf('"') + 1, name.LastIndexOf('"') - name.IndexOf('"') - 1);
+        Button button = _selectButtonList.Find(n => n.name == name);
+        if (button == null)
+        {
+            button = Instantiate(Resources.Load<Button>(prefabsDirectory + SELECT_BUTTON_PREFAB),bottomButtons.transform);
+            button.name = name;
+            button.onClick.AddListener(() => SelectButtonOnClick(name));
+            _selectButtonList.Add(button);
+        }
+        SetImage(cmd, parameter, button.image);
+    }
 
     /**
     * BGMの設定
@@ -386,6 +448,8 @@ public class GameManager : MonoBehaviour
     */
     private void JumpTo(string parameter)
     {
+        nameText.text = "";
+        mainText.text = "";
         parameter = parameter.Substring(parameter.IndexOf('"') + 1, parameter.LastIndexOf('"') - parameter.IndexOf('"') - 1);
         _pageQueue = _subScenes[parameter];
     }
@@ -421,6 +485,9 @@ public class GameManager : MonoBehaviour
         parameter = parameter.Substring(parameter.IndexOf('"') + 1, parameter.LastIndexOf('"') - parameter.IndexOf('"') - 1);
         switch (cmd)
         {
+            case COMMAND_TEXT:
+                image.GetComponentInChildren<Text>().text = parameter;
+                break;
             case COMMAND_SPRITE:
                 image.sprite = LoadSprite(parameter);
                 break;
