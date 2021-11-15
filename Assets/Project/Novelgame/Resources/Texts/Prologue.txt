@@ -1,4 +1,4 @@
-!background_sprite="background_sprite2"
+!background_sprite="testbackground"
 !foreground_color="0,0,0"
 !foreground_anim="fadein,0,2,%0,0,0,0%%"
 !wait="2"
