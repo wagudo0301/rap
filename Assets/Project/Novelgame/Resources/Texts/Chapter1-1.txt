@@ -28,10 +28,6 @@
 !charaimg_size="yatsurugi_gaze"="1500,1500,1"
 !charaimg_active="yatsurugi_gaze"="false"
 
-!charaimg_sprite="mesh_girl_normal"="main_character_normal"
-!charaimg_size="mesh_girl_normal"="1500,1500,1"
-!charaimg_active="mesh_girl_normal"="false"
-
 
 !foreground_color="0,0,0"
 !foreground_anim="fadein,0,2,%0,0,0,0%%"
@@ -43,6 +39,7 @@
 「あなたたちは今までに様々な経験をしてきたでしょう。一人一人、
 全く別の人生をこれまで歩んできました。異なる境遇の人と関わる
 ことは、皆さんを大いに成長させる糧となるでしょう。」
+
 &校長
 「この学校に集まった理由は違えども、あなたたちがここにきた理由
 はただ一つ、『ラップスキルを上げる』ということ。この学校の校
@@ -63,6 +60,7 @@
 !wait="1"
 &熊井
 「_________________________．．．」
+
 &熊井
 「．．．寝坊してしまったから、入り辛い。でも、そろそろ校長の話
 が終わりそうだ。」
@@ -151,8 +149,9 @@
 &先生
 「ここが、1年1組。あなたたちのクラスよ。」
 
-&!charaimg_pos="mesh_girl_normal"="200,0,0"
-!charaimg_active="mesh_girl_normal"="true"
+&!charaimg_sprite="mesh_girl_normal"="main_character_normal"
+!charaimg_size="mesh_girl_normal"="1500,1500,1"
+!charaimg_pos="mesh_girl_normal"="200,0,0"
 &メッシュの女の子
 「せんせい！八剱君、いました！！」
 
@@ -185,9 +184,17 @@
 夫よ。さぁ、みんな！教室に入って！レクリエーションをはじめま
 しょう」
 
+&!foreground_anim="fadeout,0,2,%0,0,0%%"
+!wait="2"
+!charaimg_delete="mesh_girl_normal"=""
+!charaimg_delete="main_character_normal"=""
+!charaimg_delete="yatsurugi_normal"=""
+!charaimg_delete="homeroom_teacher_normal"=""
+&!jump_to="CHAPTER1-1-4"
+
 
 #CHAPTER1-1-B-1&
-!charaimg_active="main_character_surprise"="false"
+!charaimg_delete="main_character_surprise"=""
 !charaimg_pos="yatsurugi_normal"="-800,0,0"
 !charaimg_active="yatsurugi_normal"="true"
 &熊井
@@ -262,10 +269,10 @@
 
 &!foreground_anim="fadeout,0,2,%0,0,0%%"
 !wait="2"
-&!jump_to="CHAPTER1-1-B-2"
+&!jump_to="CHAPTER1-1-B-4"
 
 
-#CHAPTER1-1-B-2&
+#CHAPTER1-1-B-4&
 !foreground_anim="fadein,0,2,%0,0,0,0%%"
 !background_sprite="classroom_background"
 !charaimg_delete="main_character_normal"=""
@@ -305,6 +312,88 @@
 &八剱
 「学校で迷ってしまい、入学式に参加できませんでした。申し訳
 ありませんでした！」
+
+&先生
+「まだ、学校案内をしていなかったから先生的にはセーフにしておき
+ます、さぁついてきて！」
+
+&!foreground_anim="fadeout,0,2,%0,0,0%%"
+!wait="2"
+&!jump_to="CHAPTER1-1-B-5"
+
+
+#CHAPTER1-1-B-5&
+!foreground_anim="fadein,0,2,%0,0,0,0%%"
+!background_sprite="classroom_background"
+!charaimg_delete="main_character_normal"=""
+!charaimg_sprite="main_character_normal"="main_character_normal"
+!charaimg_size="main_character_normal"="1500,1500,1"
+!charaimg_pos="main_character_normal"="200,0,0"
+!wait="1"
+&熊井
+「さすが、日本一のラッパー学校というだけあって、敷地が広いですね～」
+
+&!charaimg_delete="yatsurugi_normal"=""
+!charaimg_sprite="yatsurugi_normal"="principal_normal"
+!charaimg_size="yatsurugi_normal"="1500,1500,1"
+!charaimg_pos="yatsurugi_normal"="800,0,0"
+&八剱
+「国の税金から賄われているもんなぁ～」
+
+&先生「これにて、 学校案内を終わります。そして、ここがあなたたちのクラスです。
+入ってレクリエーションをはじめましょう。」
+
+&!foreground_anim="fadeout,0,2,%0,0,0%%"
+!wait="2"
+!charaimg_delete="main_character_normal"=""
+!charaimg_delete="yatsurugi_normal"=""
+!charaimg_delete="homeroom_teacher_normal"=""
+&!jump_to="CHAPTER1-1-4"
+
+
+#CHAPTER1-1-4&
+!foreground_anim="fadein,0,2,%0,0,0,0%%"
+!background_sprite="background_sprite2"
+!charaimg_sprite="homeroom_teacher_normal"="background_sprite2"
+!charaimg_size="homeroom_teacher_normal"="1500,1500,1"
+!charaimg_pos="homeroom_teacher_normal"="-800,0,0"
+!wait="1"
+
+&先生
+「レクリエーションは二人組を組んで、自分の好きなラッパーを熱弁
+してみましょうここに来たからには一人ぐらいは尊敬しているラッ
+パーはいるでしょう？いないならば、私を今から尊敬してもいいん
+ですよ～」
+
+&先生
+「あ、あとそこは三人でやってください」
+
+&!charaimg_sprite="main_character_normal"="main_character_normal"
+!charaimg_size="main_character_normal"="1500,1500,1"
+!charaimg_pos="main_character_normal"="0,0,0"
+!charaimg_sprite="yatsurugi_normal"="principal_normal"
+!charaimg_size="yatsurugi_normal"="1500,1500,1"
+!charaimg_pos="yatsurugi_normal"="800,0,0"
+!charaimg_sprite="mesh_girl_normal"="principal_normal"
+!charaimg_size="mesh_girl_normal"="1500,1500,1"
+!charaimg_pos="mesh_girl_normal"="400,0,0"
+&メッシュの女の子
+「私は。好きなラッパーは。よろしくね。」
+
+&!charaimg_delete="main_character_normal"=""
+!charaimg_sprite="main_character_normal"="main_character_normal"
+!charaimg_size="main_character_normal"="1500,1500,1"
+!charaimg_pos="main_character_normal"="0,0,0"
+&熊井
+「八剱君、先良いですよ」
+
+&!charaimg_delete="yatsurugi_normal"=""
+!charaimg_sprite="yatsurugi_normal"="principal_normal"
+!charaimg_size="yatsurugi_normal"="1500,1500,1"
+!charaimg_pos="yatsurugi_normal"="800,0,0"
+&八剱
+「俺は八剱冬樹。俺の好きなラッパーは。よろしくお願いします！」
+
 
 
 
