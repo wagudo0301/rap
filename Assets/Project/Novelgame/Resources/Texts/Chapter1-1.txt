@@ -149,9 +149,9 @@
 &先生
 「ここが、1年1組。あなたたちのクラスよ。」
 
-&!charaimg_sprite="mesh_girl_normal"="main_character_normal"
-!charaimg_size="mesh_girl_normal"="1500,1500,1"
-!charaimg_pos="mesh_girl_normal"="200,0,0"
+&!charaimg_sprite="asai_normal"="main_character_normal"
+!charaimg_size="asai_normal"="1500,1500,1"
+!charaimg_pos="asai_normal"="200,0,0"
 &メッシュの女の子
 「せんせい！八剱君、いました！！」
 
@@ -162,10 +162,10 @@
 &八剱？
 「あー．．．っす」
 
-&!charaimg_delete="mesh_girl_normal"=""
-!charaimg_sprite="mesh_girl_normal"="main_character_normal"
-!charaimg_size="mesh_girl_normal"="1500,1500,1"
-!charaimg_pos="mesh_girl_normal"="200,0,0"
+&!charaimg_delete="asai_normal"=""
+!charaimg_sprite="asai_normal"="main_character_normal"
+!charaimg_size="asai_normal"="1500,1500,1"
+!charaimg_pos="asai_normal"="200,0,0"
 &メッシュの女の子
 「遅れたんだし、挨拶くらいはちゃんとしないと！ほら！」
 
@@ -186,7 +186,7 @@
 
 &!foreground_anim="fadeout,0,2,%0,0,0%%"
 !wait="2"
-!charaimg_delete="mesh_girl_normal"=""
+!charaimg_delete="asai_normal"=""
 !charaimg_delete="main_character_normal"=""
 !charaimg_delete="yatsurugi_normal"=""
 !charaimg_delete="homeroom_teacher_normal"=""
@@ -374,9 +374,9 @@
 !charaimg_sprite="yatsurugi_normal"="principal_normal"
 !charaimg_size="yatsurugi_normal"="1500,1500,1"
 !charaimg_pos="yatsurugi_normal"="800,0,0"
-!charaimg_sprite="mesh_girl_normal"="principal_normal"
-!charaimg_size="mesh_girl_normal"="1500,1500,1"
-!charaimg_pos="mesh_girl_normal"="400,0,0"
+!charaimg_sprite="asai_normal"="principal_normal"
+!charaimg_size="asai_normal"="1500,1500,1"
+!charaimg_pos="asai_normal"="400,0,0"
 &メッシュの女の子
 「私は。好きなラッパーは。よろしくね。」
 
