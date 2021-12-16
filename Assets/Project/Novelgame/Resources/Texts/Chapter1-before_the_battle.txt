@@ -1,0 +1,4 @@
+#CHAPTER1-before_the_battle-1&
+!foreground_color="0,0,0"
+!foreground_anim="fadein,0,2,%0,0,0,0%%"
+!background_sprite="background_sprite2"

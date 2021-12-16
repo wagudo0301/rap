@@ -16,8 +16,8 @@
 !charaimg_size="principal_close_eyes"="1500,1500,1"
 !charaimg_active="principal_close_eyes"="false"
 
-!charaimg_sprite="homeroom_teacher_normal"="background_sprite2"
-!charaimg_size="homeroom_teacher_normal"="1500,1500,1"
+!charaimg_sprite="homeroom_teacher_normal"="homeroom_teacher_normal"
+!charaimg_size="homeroom_teacher_normal"="1800,1800,1"
 !charaimg_active="homeroom_teacher_normal"="false"
 
 !charaimg_sprite="yatsurugi_normal"="yatsurugi_normal"
@@ -27,7 +27,6 @@
 !charaimg_sprite="yatsurugi_gaze"="principal_close_eyes"
 !charaimg_size="yatsurugi_gaze"="1500,1500,1"
 !charaimg_active="yatsurugi_gaze"="false"
-
 
 !foreground_color="0,0,0"
 !foreground_anim="fadein,0,2,%0,0,0,0%%"
@@ -59,7 +58,7 @@
 !charaimg_active="main_character_normal"="true"
 !wait="1"
 &熊井
-「_________________________．．．」
+「_______．．．」
 
 &熊井
 「．．．寝坊してしまったから、入り辛い。でも、そろそろ校長の話
@@ -354,7 +353,7 @@
 #CHAPTER1-1-4&
 !foreground_anim="fadein,0,2,%0,0,0,0%%"
 !background_sprite="background_sprite2"
-!charaimg_sprite="homeroom_teacher_normal"="background_sprite2"
+!charaimg_sprite="homeroom_teacher_normal"="homeroom_teacher_normal"
 !charaimg_size="homeroom_teacher_normal"="1500,1500,1"
 !charaimg_pos="homeroom_teacher_normal"="-800,0,0"
 !wait="1"
@@ -563,7 +562,7 @@
 「実際に、さっきの班でこの四つの言葉について話し合ってみましょう。検索がしたかったら机の青いボタンを押してね。」
 
 &!charaimg_active="homeroom_teacher_normal"="false"
-!charaimg_sprite="miune_normal"="main_character_normal"
+!charaimg_sprite="miune_normal"="miune_normal"
 !charaimg_size="miune_normal"="1500,1500,1"
 !charaimg_pos="miune_normal"="800,0,0"
 &おとなしそうな女の子
@@ -587,7 +586,7 @@
 「しかも、私のAndroidも使える充電ケーブルだ！！」
 
 &!charaimg_delete="asao_normal"=""
-!charaimg_sprite="shizaki_normal"="main_character_normal"
+!charaimg_sprite="shizaki_normal"="shizaki_normal"
 !charaimg_size="shizaki_normal"="1500,1500,1"
 !charaimg_pos="shizaki_normal"="800,0,0"
 &メガネの男の子
@@ -669,7 +668,7 @@
 !background_sprite="classroom_background"
 !wait="1"
 
-&!charaimg_sprite="homeroom_teacher_normal"="principal_normal"
+&!charaimg_sprite="homeroom_teacher_normal"="homeroom_teacher_normal"
 !charaimg_size="homeroom_teacher_normal"="1500,1500,1"
 !charaimg_pos="homeroom_teacher_normal"="0,0,0"
 &先生
@@ -701,7 +700,7 @@
 &!charaimg_delete="main_character_normal"=""
 !charaimg_active="asao_normal"="false"
 !charaimg_active="yatsurugi_normal"="false"
-!charaimg_sprite="shizaki_normal"="main_character_normal"
+!charaimg_sprite="shizaki_normal"="shizaki_normal"
 !charaimg_size="shizaki_normal"="1500,1500,1"
 !charaimg_pos="shizaki_normal"="800,0,0"
 &メガネの男の子
@@ -724,7 +723,7 @@
 !charaimg_delete="asao_normal"=""
 !charaimg_active="yatsurugi_normal"="false"
 !charaimg_active="shizaki_normal"="false"
-!charaimg_sprite="miune_normal"="asao_normal"
+!charaimg_sprite="miune_normal"="miune_normal"
 !charaimg_size="miune_normal"="1500,1500,1"
 !charaimg_pos="miune_normal"="0,0,0"
 &おとなしそうな女の子
@@ -755,7 +754,7 @@
 「俺は『紫崎　朝暉（しざき　あさき）』だ。」
 
 &!charaimg_delete="miune_normal"=""
-!charaimg_sprite="miune_normal"="asao_normal"
+!charaimg_sprite="miune_normal"="miune_normal"
 !charaimg_size="miune_normal"="1500,1500,1"
 !charaimg_pos="miune_normal"="800,0,0"
 &おとなしい女の子
@@ -784,7 +783,7 @@
 「『さっきの大声はどこへいったんだ．．．』」
 
 &!charaimg_delete="miune_normal"=""
-!charaimg_sprite="miune_normal"="asao_normal"
+!charaimg_sprite="miune_normal"="miune_normal"
 !charaimg_size="miune_normal"="1500,1500,1"
 !charaimg_pos="miune_normal"="800,0,0"
 &三嶺
@@ -809,14 +808,14 @@
 !charaimg_active="yatsurugi_normal"="true"
 !charaimg_active="shizaki_normal"="true"
 !charaimg_delete="miune_normal"=""
-!charaimg_sprite="miune_normal"="asao_normal"
+!charaimg_sprite="miune_normal"="miune_normal"
 !charaimg_size="miune_normal"="1500,1500,1"
 !charaimg_pos="miune_normal"="800,0,0"
 &三嶺
 「そーなの～、あのパンを食べるがためにこの学校に入ったともいえるんだ～～！」
 
 &!charaimg_delete="shizaki_normal"=""
-!charaimg_sprite="shizaki_normal"="main_character_normal"
+!charaimg_sprite="shizaki_normal"="shizaki_normal"
 !charaimg_size="shizaki_normal"="1500,1500,1"
 !charaimg_pos="shizaki_normal"="600,0,0"
 &紫崎
@@ -847,10 +846,10 @@
 #CHAPTER1-1-10&
 !foreground_anim="fadein,0,2,%0,0,0,0%%"
 !background_sprite="classroom_background"
-!charaimg_sprite="shizaki_normal"="yatsurugi_normal"
+!charaimg_sprite="shizaki_normal"="shizaki_normal"
 !charaimg_size="shizaki_normal"="1500,1500,1"
 !charaimg_pos="shizaki_normal"="-800,0,0"
-!charaimg_sprite="miune_normal"="asao_normal"
+!charaimg_sprite="miune_normal"="miune_normal"
 !charaimg_size="miune_normal"="1500,1500,1"
 !charaimg_pos="miune_normal"="800,0,0"
 !wait="1"
@@ -916,7 +915,7 @@
 &!charaimg_pos="main_character_normal"="0,0,0"
 !charaimg_pos="asao_normal"="400,0,0"
 !charaimg_pos="yatsurugi_normal"="800,0,0"
-!charaimg_sprite="homeroom_teacher_normal"="principal_normal"
+!charaimg_sprite="homeroom_teacher_normal"="homeroom_teacher_normal"
 !charaimg_size="homeroom_teacher_normal"="1500,1500,1"
 !charaimg_pos="homeroom_teacher_normal"="-800,0,0"
 
