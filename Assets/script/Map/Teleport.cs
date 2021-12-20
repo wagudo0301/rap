@@ -15,11 +15,19 @@ public class Teleport : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("あ");
+        StartCoroutine("ChangeColor");
+        /*
         PublicStaticStatus.CurrrentScene=SceneName;
-        Debug.Log(PublicStaticStatus.CurrrentScene+"aaaa");
+        Debug.Log(PublicStaticStatus.CurrrentScene+"に行く");
         PublicStaticStatus.LastTeleportDistination=TeleportDistinationName;
-        Debug.Log(PublicStaticStatus.LastTeleportDistination+"bbb");
+        SceneManager.LoadScene(SceneName);*/
+    }
+    IEnumerator ChangeColor()
+    {
+        yield return new WaitForSeconds(0.32f);
+        PublicStaticStatus.CurrrentScene=SceneName;
+        Debug.Log(PublicStaticStatus.CurrrentScene+"に行く");
+        PublicStaticStatus.LastTeleportDistination=TeleportDistinationName;
         SceneManager.LoadScene(SceneName);
     }
 }

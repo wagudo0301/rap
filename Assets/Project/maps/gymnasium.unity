@@ -188,7 +188,7 @@ PrefabInstance:
     - target: {fileID: 6844337406905268355, guid: 37c5deacaa1c2c848b61881f302cdd43,
         type: 3}
       propertyPath: m_Name
-      value: classroom-gymnasium
+      value: Hall_1f-Gymnasium
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 37c5deacaa1c2c848b61881f302cdd43, type: 3}
@@ -258,6 +258,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Teleport_test
+      objectReference: {fileID: 0}
+    - target: {fileID: 7224665403350584410, guid: 51797c62b776316418938ab486de871b,
+        type: 3}
+      propertyPath: SceneName
+      value: Hall_1f
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 51797c62b776316418938ab486de871b, type: 3}
@@ -392,7 +397,7 @@ PrefabInstance:
     - target: {fileID: 6844337406905268355, guid: 37c5deacaa1c2c848b61881f302cdd43,
         type: 3}
       propertyPath: m_Name
-      value: gymnasium-gymnasium_top
+      value: Gymnasium-Gymnasium_top
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 37c5deacaa1c2c848b61881f302cdd43, type: 3}
@@ -471,12 +476,12 @@ PrefabInstance:
     - target: {fileID: 7224665403350584410, guid: 51797c62b776316418938ab486de871b,
         type: 3}
       propertyPath: SceneName
-      value: gymnasium
+      value: Gymnasium
       objectReference: {fileID: 0}
     - target: {fileID: 7224665403350584410, guid: 51797c62b776316418938ab486de871b,
         type: 3}
       propertyPath: TeleportDistinationName
-      value: gymnasium-gymnasium_top
+      value: Gymnasium-Gymnasium_top
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 51797c62b776316418938ab486de871b, type: 3}
@@ -600,8 +605,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7224665403350584410, guid: 51797c62b776316418938ab486de871b,
         type: 3}
+      propertyPath: SceneName
+      value: Hall_1f
+      objectReference: {fileID: 0}
+    - target: {fileID: 7224665403350584410, guid: 51797c62b776316418938ab486de871b,
+        type: 3}
       propertyPath: TeleportDistinationName
-      value: gymnasium-classroom
+      value: Gymnasium-Hall_1f
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 51797c62b776316418938ab486de871b, type: 3}
@@ -702,7 +712,7 @@ PrefabInstance:
     - target: {fileID: 6844337406905268355, guid: 37c5deacaa1c2c848b61881f302cdd43,
         type: 3}
       propertyPath: m_Name
-      value: Hall-gymnasium
+      value: Hall_A-Gymnasium
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 37c5deacaa1c2c848b61881f302cdd43, type: 3}
@@ -20462,7 +20472,7 @@ PrefabInstance:
     - target: {fileID: 6844337406905268355, guid: 37c5deacaa1c2c848b61881f302cdd43,
         type: 3}
       propertyPath: m_Name
-      value: gymnasium_top-gymnasium
+      value: Gymnasium_top-Gymnasium
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 37c5deacaa1c2c848b61881f302cdd43, type: 3}
@@ -20541,12 +20551,12 @@ PrefabInstance:
     - target: {fileID: 7224665403350584410, guid: 51797c62b776316418938ab486de871b,
         type: 3}
       propertyPath: SceneName
-      value: Hall
+      value: Hall_A
       objectReference: {fileID: 0}
     - target: {fileID: 7224665403350584410, guid: 51797c62b776316418938ab486de871b,
         type: 3}
       propertyPath: TeleportDistinationName
-      value: gymnasium-Hall
+      value: Gymnasium-Hall_A
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 51797c62b776316418938ab486de871b, type: 3}
@@ -20722,12 +20732,12 @@ PrefabInstance:
     - target: {fileID: 7224665403350584410, guid: 51797c62b776316418938ab486de871b,
         type: 3}
       propertyPath: SceneName
-      value: gymnasium
+      value: Gymnasium
       objectReference: {fileID: 0}
     - target: {fileID: 7224665403350584410, guid: 51797c62b776316418938ab486de871b,
         type: 3}
       propertyPath: TeleportDistinationName
-      value: gymnasium_top-gymnasium
+      value: Gymnasium_top-Gymnasium
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 51797c62b776316418938ab486de871b, type: 3}
