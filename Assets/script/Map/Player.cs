@@ -11,6 +11,8 @@ public class Player : MonoBehaviour
     private Animator playerAnim;
 
     public Rigidbody2D Rb;
+
+    private int timer;
     // Start is called before the first frame update
     void Start()
     {
