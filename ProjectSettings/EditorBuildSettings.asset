@@ -14,4 +14,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Project/Chapter1-1-Scenes/Chapter1-1-Scenes.unity
     guid: 2e7a6e2469e403b48baff1ed67d315f7
+  - enabled: 1
+    path: Assets/Project/maps/gymnasium.unity
+    guid: 57232e5816e760a4ca7616bb15356454
+  - enabled: 1
+    path: Assets/Project/maps/classroom.unity
+    guid: 390ce1c5b5806e642b52790182262389
   m_configObjects: {}
