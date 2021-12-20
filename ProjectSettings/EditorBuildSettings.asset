@@ -15,9 +15,18 @@ EditorBuildSettings:
     path: Assets/Project/Chapter1-1-Scenes/Chapter1-1-Scenes.unity
     guid: 2e7a6e2469e403b48baff1ed67d315f7
   - enabled: 1
-    path: Assets/Project/maps/gymnasium.unity
+    path: Assets/Project/maps/Gymnasium.unity
     guid: 57232e5816e760a4ca7616bb15356454
   - enabled: 1
-    path: Assets/Project/maps/classroom.unity
+    path: Assets/Project/maps/classroom (Hell)/Hall_1f.unity
     guid: 390ce1c5b5806e642b52790182262389
+  - enabled: 1
+    path: Assets/Project/maps/Hall_A.unity
+    guid: 01629cb5e7ed62c42a2f28ac6d40f5a3
+  - enabled: 1
+    path: Assets/Project/maps/classroom (Hell)/Hall_2f.unity
+    guid: d9d472fabb8cb6249929682f18328262
+  - enabled: 1
+    path: Assets/Project/maps/classroom (Hell)/Hall_3f.unity
+    guid: cc6db8e12817439469e80ba3f3207974
   m_configObjects: {}

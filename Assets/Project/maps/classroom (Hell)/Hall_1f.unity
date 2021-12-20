@@ -133,7 +133,7 @@ PrefabInstance:
     - target: {fileID: 3923462141183062865, guid: 37c5deacaa1c2c848b61881f302cdd43,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3923462141183062865, guid: 37c5deacaa1c2c848b61881f302cdd43,
         type: 3}
@@ -188,7 +188,7 @@ PrefabInstance:
     - target: {fileID: 6844337406905268355, guid: 37c5deacaa1c2c848b61881f302cdd43,
         type: 3}
       propertyPath: m_Name
-      value: gymnasium-classroom
+      value: Gymnasium-Hall_1f
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 37c5deacaa1c2c848b61881f302cdd43, type: 3}
@@ -202,7 +202,7 @@ PrefabInstance:
     - target: {fileID: 7224665403350584388, guid: 51797c62b776316418938ab486de871b,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7224665403350584388, guid: 51797c62b776316418938ab486de871b,
         type: 3}
@@ -263,6 +263,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Teleport
+      objectReference: {fileID: 0}
+    - target: {fileID: 7224665403350584410, guid: 51797c62b776316418938ab486de871b,
+        type: 3}
+      propertyPath: SceneName
+      value: Hall_2f
+      objectReference: {fileID: 0}
+    - target: {fileID: 7224665403350584410, guid: 51797c62b776316418938ab486de871b,
+        type: 3}
+      propertyPath: TeleportDistinationName
+      value: Hall_1f-Hall_2f
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 51797c62b776316418938ab486de871b, type: 3}
@@ -407,7 +417,7 @@ Transform:
   - {fileID: 1635267781}
   - {fileID: 1423776934}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1358954314
 GameObject:
@@ -2176,7 +2186,7 @@ PrefabInstance:
     - target: {fileID: 7224665403350584388, guid: 51797c62b776316418938ab486de871b,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7224665403350584388, guid: 51797c62b776316418938ab486de871b,
         type: 3}
@@ -2241,12 +2251,12 @@ PrefabInstance:
     - target: {fileID: 7224665403350584410, guid: 51797c62b776316418938ab486de871b,
         type: 3}
       propertyPath: SceneName
-      value: gymnasium
+      value: Gymnasium
       objectReference: {fileID: 0}
     - target: {fileID: 7224665403350584410, guid: 51797c62b776316418938ab486de871b,
         type: 3}
       propertyPath: TeleportDistinationName
-      value: classroom-gymnasium
+      value: Hall_1f-Gymnasium
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 51797c62b776316418938ab486de871b, type: 3}
@@ -8061,7 +8071,7 @@ PrefabInstance:
     - target: {fileID: 3923462141183062865, guid: 37c5deacaa1c2c848b61881f302cdd43,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3923462141183062865, guid: 37c5deacaa1c2c848b61881f302cdd43,
         type: 3}
@@ -8117,6 +8127,80 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: test1431
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 37c5deacaa1c2c848b61881f302cdd43, type: 3}
+--- !u!1001 &1981731773
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3923462141183062865, guid: 37c5deacaa1c2c848b61881f302cdd43,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3923462141183062865, guid: 37c5deacaa1c2c848b61881f302cdd43,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3923462141183062865, guid: 37c5deacaa1c2c848b61881f302cdd43,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 8.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3923462141183062865, guid: 37c5deacaa1c2c848b61881f302cdd43,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -5.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3923462141183062865, guid: 37c5deacaa1c2c848b61881f302cdd43,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3923462141183062865, guid: 37c5deacaa1c2c848b61881f302cdd43,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3923462141183062865, guid: 37c5deacaa1c2c848b61881f302cdd43,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3923462141183062865, guid: 37c5deacaa1c2c848b61881f302cdd43,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3923462141183062865, guid: 37c5deacaa1c2c848b61881f302cdd43,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3923462141183062865, guid: 37c5deacaa1c2c848b61881f302cdd43,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3923462141183062865, guid: 37c5deacaa1c2c848b61881f302cdd43,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3923462141183062865, guid: 37c5deacaa1c2c848b61881f302cdd43,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6844337406905268355, guid: 37c5deacaa1c2c848b61881f302cdd43,
+        type: 3}
+      propertyPath: m_Name
+      value: Hall_2f-Hall_1f
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 37c5deacaa1c2c848b61881f302cdd43, type: 3}
