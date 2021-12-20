@@ -390,6 +390,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Gamemanager
       objectReference: {fileID: 0}
+    - target: {fileID: 6676768813003287634, guid: bd1b0aef15bd599478b96ca45b4ca4c0,
+        type: 3}
+      propertyPath: captionSpeed
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 6676768813003287635, guid: bd1b0aef15bd599478b96ca45b4ca4c0,
         type: 3}
       propertyPath: m_Pivot.x

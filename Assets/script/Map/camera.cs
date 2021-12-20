@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class camera : MonoBehaviour
 {
-    GameObject go;
+    public GameObject go;
     // Start is called before the first frame update
     void Start()
     {
