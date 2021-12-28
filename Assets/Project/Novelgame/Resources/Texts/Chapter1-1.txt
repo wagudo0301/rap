@@ -4,10 +4,6 @@
 !charaimg_size="main_character_normal"="1500,1500,1"
 !charaimg_active="main_character_normal"="false"
 
-!charaimg_sprite="main_character_surprise"="principal_close_eyes"
-!charaimg_size="main_character_surprise"="1500,1500,1"
-!charaimg_active="main_character_surprise"="false"
-
 !charaimg_sprite="principal_normal"="principal_normal" 
 !charaimg_size="principal_normal"="1500, 1500, 1"
 !charaimg_active="principal_normal"="false"
@@ -30,8 +26,8 @@
 
 !foreground_color="0,0,0"
 !foreground_anim="fadein,0,2,%0,0,0,0%%"
-!background_sprite="background_sprite2"
-!charaimg_pos="principal_normal"="-800,0,0"
+!background_sprite="gymnasium_background"
+!charaimg_pos="principal_normal"="-600,0,0"
 !charaimg_active="principal_normal"="true"
 !wait="1"
 &校長
@@ -52,9 +48,8 @@
 
 #CHAPTER1-1-2&
 !foreground_anim="fadein,0,2,%0,0,0,0%%"
-!background_sprite="classroom_background"
 !charaimg_active="principal_normal"="false"
-!charaimg_pos="main_character_normal"="800,0,0"
+!charaimg_pos="main_character_normal"="600,0,0"
 !charaimg_active="main_character_normal"="true"
 !wait="1"
 &熊井
@@ -71,10 +66,9 @@
 
 #CHAPTER1-1-3&
 !foreground_anim="fadein,0,2,%0,0,0,0%%"
-!background_sprite="classroom_background"
 !charaimg_active="main_character_normal"="false"
 !charaimg_active="principal_normal"="true"
-!charaimg_pos="principal_close_eyes"="-800,0,0"
+!charaimg_pos="principal_close_eyes"="-600,0,0"
 !charaimg_active="principal_close_eyes"="true"
 !wait="1"
 &校長
@@ -82,16 +76,15 @@
 
 &!charaimg_active="principal_normal"="false"
 !charaimg_active="principal_close_eyes"="false"
-!charaimg_pos="homeroom_teacher_normal"="-800,0,0"
+!charaimg_pos="homeroom_teacher_normal"="-600,0,0"
 !charaimg_active="homeroom_teacher_normal"="true"
 &担任の先生？？
 「じゃあ2列になって私についてきてください。そのまま校舎を案内
 します。」
 
 &!charaimg_active="homeroom_teacher_normal"="false"
+!charaimg_pos="main_character_normal"="600,0,0"
 !charaimg_active="main_character_normal"="true"
-!charaimg_pos="main_character_surprise"="800,0,0"
-!charaimg_active="main_character_surprise"="true"
 &熊井
 「．．．こっちに来る！！」
 
@@ -101,14 +94,14 @@
 !bottom_text="CHAPTER1-1-B-1"="さすがに木の陰はバレるから、やめとく"
 
 
-#CHAPTER1-1-A-1&
-!charaimg_active="main_character_surprise"="false"
+#CHAPTER1-1-A-1
 &熊井
 「そろそろかな、ここからさりげなく最後尾で合流しよう」
+
 &「ガサッ」
 
 &!charaimg_active="main_character_normal"="false"
-!charaimg_pos="yatsurugi_normal"="-800,0,0"
+!charaimg_pos="yatsurugi_normal"="-600,0,0"
 !charaimg_active="yatsurugi_normal"="true"
 &ヤンキー？
 「？」
@@ -119,7 +112,6 @@
 
 #CHAPTER1-1-A-2&
 !foreground_anim="fadein,0,2,%0,0,0,0%%"
-!background_sprite="classroom_background"
 !charaimg_active="yatsurugi_normal"="false"
 !charaimg_active="main_character_normal"="true"
 !wait="1"
@@ -129,8 +121,10 @@
 &!charaimg_active="homeroom_teacher_normal"="true"
 &先生
 「君が熊井くんね。私は『羽代真代』。これからよろしくね。」
+
 &熊井
 「よろしくお願いします。」
+
 &先生
 「あーと、八剱くんはいる？学校の警備システムでゲートで認証して
 いるみたいだけどここにはいないのね。時間も押しているし、先に
@@ -145,10 +139,13 @@
 !charaimg_active="main_character_normal"="false"
 !foreground_anim="fadein,0,2,%0,0,0,0%%"
 !background_sprite="classroom_background"
+!wait="1"
+
 &先生
 「ここが、1年1組。あなたたちのクラスよ。」
 
-&!charaimg_sprite="asao_normal"="asao_normal"
+&!charaimg_pos="homeroom_teacher_normal"="-800,0,0"
+!charaimg_sprite="asao_normal"="asao_normal"
 !charaimg_size="asao_normal"="1500,1500,1"
 !charaimg_pos="asao_normal"="200,0,0"
 &メッシュの女の子
@@ -193,7 +190,6 @@
 
 
 #CHAPTER1-1-B-1&
-!charaimg_delete="main_character_surprise"=""
 !charaimg_pos="yatsurugi_normal"="-800,0,0"
 !charaimg_active="yatsurugi_normal"="true"
 &熊井
@@ -352,10 +348,10 @@
 
 #CHAPTER1-1-4&
 !foreground_anim="fadein,0,2,%0,0,0,0%%"
-!background_sprite="background_sprite2"
+!background_sprite="classroom_background"
 !charaimg_sprite="homeroom_teacher_normal"="homeroom_teacher_normal"
-!charaimg_size="homeroom_teacher_normal"="1500,1500,1"
-!charaimg_pos="homeroom_teacher_normal"="-800,0,0"
+!charaimg_size="homeroom_teacher_normal"="1800,1800,1"
+!charaimg_pos="homeroom_teacher_normal"="-600,0,0"
 !wait="1"
 
 &先生
@@ -364,7 +360,8 @@
 パーはいるでしょう？いないならば、私を今から尊敬してもいいん
 ですよ～」
 
-&!charaimg_sprite="main_character_normal"="main_character_normal"
+&!charaimg_pos="homeroom_teacher_normal"="-800,0,0"
+!charaimg_sprite="main_character_normal"="main_character_normal"
 !charaimg_size="main_character_normal"="1500,1500,1"
 !charaimg_pos="main_character_normal"="0,0,0"
 !charaimg_sprite="asao_normal"="asao_normal"
@@ -450,7 +447,7 @@
 !charaimg_size="main_character_normal"="1500,1500,1"
 !charaimg_pos="main_character_normal"="-800,0,0"
 &熊井
-「『同級生には敬語を使わないのか...勉強になるな』」
+「『同級生には敬語を使わないのか．．．勉強になるな』」
 
 &熊井
 「敬語は使わないことにするよ。改めてまして、僕は熊井。よろしく。」
@@ -480,6 +477,7 @@
 #CHAPTER1-1-5&
 !foreground_anim="fadein,0,2,%0,0,0,0%%"
 !background_sprite="classroom_background"
+!charaimg_pos="homeroom_teacher_normal"="-600,0,0"
 !charaimg_active="homeroom_teacher_normal"="true"
 !wait="1"
 &先生
@@ -563,8 +561,8 @@
 
 &!charaimg_active="homeroom_teacher_normal"="false"
 !charaimg_sprite="miune_normal"="miune_normal"
-!charaimg_size="miune_normal"="1500,1500,1"
-!charaimg_pos="miune_normal"="800,0,0"
+!charaimg_size="miune_normal"="1600,1600,1"
+!charaimg_pos="miune_normal"="600,0,0"
 &おとなしそうな女の子
 「あべし！」
 
@@ -575,7 +573,7 @@
 
 &!charaimg_sprite="asao_normal"="asao_normal"
 !charaimg_size="asao_normal"="1500,1500,1"
-!charaimg_pos="asao_normal"="800,0,0"
+!charaimg_pos="asao_normal"="600,0,0"
 &浅尾
 「緑で雷マークのボタンはまさか．．．」
 
@@ -588,7 +586,7 @@
 &!charaimg_delete="asao_normal"=""
 !charaimg_sprite="shizaki_normal"="shizaki_normal"
 !charaimg_size="shizaki_normal"="1500,1500,1"
-!charaimg_pos="shizaki_normal"="800,0,0"
+!charaimg_pos="shizaki_normal"="600,0,0"
 &メガネの男の子
 「確か、事前に僕たちのスマホの種類を聞かれていたはず．．．」
 
@@ -598,7 +596,7 @@
 &!charaimg_delete="shizaki_normal"=""
 !charaimg_sprite="main_character_normal"="main_character_normal"
 !charaimg_size="main_character_normal"="1500,1500,1"
-!charaimg_pos="main_character_normal"="800,0,0"
+!charaimg_pos="main_character_normal"="600,0,0"
 &熊井
 「じゃあ、僕たちもやろう！」
 
@@ -607,6 +605,7 @@
 !foreground_anim="fadeout,0,2,%0,0,0%%"
 !wait="2"
 &!jump_to="CHAPTER1-1-7"
+
 #CHAPTER1-1-7&
 !foreground_anim="fadein,0,2,%0,0,0,0%%"
 !background_sprite="classroom_background"
@@ -623,7 +622,7 @@
 
 #CHAPTER1-1-8&
 !foreground_anim="fadein,0,2,%0,0,0,0%%"
-!background_sprite="classroom_background"
+!background_sprite="hall_background"
 !wait="1"
 &!charaimg_sprite="yatsurugi_normal"="yatsurugi_normal"
 !charaimg_size="yatsurugi_normal"="1500,1500,1"
@@ -631,13 +630,14 @@
 &八剱
 「ふわぁ～。寮から教室までの道のりは分かりやすくて助かるなあ」
 
-&!charaimg_pos="yatsurugi_normal"="-800,0,0"
+&!background_sprite="classroom_background"
+!charaimg_pos="yatsurugi_normal"="-600,0,0"
 &八剱
 「誰かいる．．．お、おはよー！」
 
 &!charaimg_sprite="main_character_normal"="main_character_normal"
 !charaimg_size="main_character_normal"="1500,1500,1"
-!charaimg_pos="main_character_normal"="800,0,0"
+!charaimg_pos="main_character_normal"="600,0,0"
 &熊井
 「おはよう！」
 
@@ -669,7 +669,7 @@
 !wait="1"
 
 &!charaimg_sprite="homeroom_teacher_normal"="homeroom_teacher_normal"
-!charaimg_size="homeroom_teacher_normal"="1500,1500,1"
+!charaimg_size="homeroom_teacher_normal"="1800,1800,1"
 !charaimg_pos="homeroom_teacher_normal"="0,0,0"
 &先生
 「はい、それでは朝のHRをはじめます。今日やることを先に説明しちゃいたいと思います！これから2日後、ラッパー適正テストをします。いたって簡単、昨日の授業で説明した4つの観点をうまくクリアしていればOK。できなかったら、即退学ね。」
@@ -677,7 +677,8 @@
 &先生
 「退学とは言ったけど、今日を含めたこの2日間でテストに向けて自己のスキルを強化しなさい！私からは以上です。」
 
-&!charaimg_delete="homeroom_teacher_normal"=""
+&!background_sprite="hall_background"
+!charaimg_delete="homeroom_teacher_normal"=""
 !charaimg_sprite="main_character_normal"="main_character_normal"
 !charaimg_size="main_character_normal"="1500,1500,1"
 !charaimg_pos="main_character_normal"="-800,0,0"
@@ -722,15 +723,15 @@
 &!charaimg_active="main_character_normal"="false"
 !charaimg_delete="asao_normal"=""
 !charaimg_active="yatsurugi_normal"="false"
-!charaimg_active="shizaki_normal"="false"
+!charaimg_pos="shizaki_normal"="-300,0,0"
 !charaimg_sprite="miune_normal"="miune_normal"
-!charaimg_size="miune_normal"="1500,1500,1"
-!charaimg_pos="miune_normal"="0,0,0"
+!charaimg_size="miune_normal"="1600,1600,1"
+!charaimg_pos="miune_normal"="300,0,0"
 &おとなしそうな女の子
 「あ、痛ッ！！！急に止まらないでよ、紫崎！」
 
-&!charaimg_pos="miune_normal"="800,0,0"
-!charaimg_pos="shizaki_normal"="-800,0,0"
+&!charaimg_pos="miune_normal"="600,0,0"
+!charaimg_pos="shizaki_normal"="-600,0,0"
 !charaimg_active="shizaki_normal"="true"
 &紫崎？
 「（お前が前を見ていないのもどうかと思うが．．．）急に立ち止まってしまったことは申し訳ない。だが、人が自己紹介をしているときにいきなりぶつかってこられた方はあまりいい思いしないがな。」
@@ -741,22 +742,29 @@
 &おとなしそうな女の子
 「そんないい方しなくてもいいじゃん！酷い．．．」
 
-&!charaimg_active="main_character_normal"="true"
+&!charaimg_pos="main_character_normal"="-1000,0,0"
+!charaimg_active="main_character_normal"="true"
+!charaimg_pos="yatsurugi_normal"="-200,0,0"
 !charaimg_active="yatsurugi_normal"="true"
 !charaimg_sprite="asao_normal"="asao_normal"
 !charaimg_size="asao_normal"="1500,1500,1"
-!charaimg_pos="asao_normal"="-400,0,0"
+!charaimg_pos="asao_normal"="-600,0,0"
 !charaimg_pos="shizaki_normal"="600,0,0"
+!charaimg_pos="miune_normal"="1000,0,0"
 &浅尾
 「えぇ～と、待って待って。最初の話からどんどんズレていってる。話を戻して、あなたたちの名前は何ていうの？」
 
+&!charaimg_delete="shizaki_normal"=""
+!charaimg_sprite="shizaki_normal"="shizaki_normal"
+!charaimg_size="shizaki_normal"="1500,1500,1"
+!charaimg_pos="shizaki_normal"="600,0,0"
 &紫崎？
 「俺は『紫崎　朝暉（しざき　あさき）』だ。」
 
 &!charaimg_delete="miune_normal"=""
 !charaimg_sprite="miune_normal"="miune_normal"
-!charaimg_size="miune_normal"="1500,1500,1"
-!charaimg_pos="miune_normal"="800,0,0"
+!charaimg_size="miune_normal"="1600,1600,1"
+!charaimg_pos="miune_normal"="1000,0,0"
 &おとなしい女の子
 「．．．わたしは、『三嶺　昼ネ（みうね　ひるね）』です。」
 
@@ -766,26 +774,26 @@
 &!charaimg_delete="main_character_normal"=""
 !charaimg_sprite="main_character_normal"="main_character_normal"
 !charaimg_size="main_character_normal"="1500,1500,1"
-!charaimg_pos="main_character_normal"="-800,0,0"
+!charaimg_pos="main_character_normal"="-1000,0,0"
 &熊井
 「よろしく～」
 
 &!charaimg_delete="asao_normal"=""
 !charaimg_sprite="asao_normal"="asao_normal"
 !charaimg_size="asao_normal"="1500,1500,1"
-!charaimg_pos="asao_normal"="-400,0,0"
+!charaimg_pos="asao_normal"="-600,0,0"
 !charaimg_delete="yatsurugi_normal"=""
 !charaimg_sprite="yatsurugi_normal"="yatsurugi_normal"
 !charaimg_size="yatsurugi_normal"="1500,1500,1"
-!charaimg_pos="yatsurugi_normal"="0,0,0"
+!charaimg_pos="yatsurugi_normal"="-200,0,0"
 
 &浅尾・八剱
 「『さっきの大声はどこへいったんだ．．．』」
 
 &!charaimg_delete="miune_normal"=""
 !charaimg_sprite="miune_normal"="miune_normal"
-!charaimg_size="miune_normal"="1500,1500,1"
-!charaimg_pos="miune_normal"="800,0,0"
+!charaimg_size="miune_normal"="1600,1600,1"
+!charaimg_pos="miune_normal"="1000,0,0"
 &三嶺
 「あっ、紫崎！！早くしないと！購買のパンが売り切れちゃうよ！！」
 
@@ -809,8 +817,8 @@
 !charaimg_active="shizaki_normal"="true"
 !charaimg_delete="miune_normal"=""
 !charaimg_sprite="miune_normal"="miune_normal"
-!charaimg_size="miune_normal"="1500,1500,1"
-!charaimg_pos="miune_normal"="800,0,0"
+!charaimg_size="miune_normal"="1600,1600,1"
+!charaimg_pos="miune_normal"="1000,0,0"
 &三嶺
 「そーなの～、あのパンを食べるがためにこの学校に入ったともいえるんだ～～！」
 
@@ -845,13 +853,13 @@
 
 #CHAPTER1-1-10&
 !foreground_anim="fadein,0,2,%0,0,0,0%%"
-!background_sprite="classroom_background"
+!background_sprite="dining_background"
 !charaimg_sprite="shizaki_normal"="shizaki_normal"
 !charaimg_size="shizaki_normal"="1500,1500,1"
-!charaimg_pos="shizaki_normal"="-800,0,0"
+!charaimg_pos="shizaki_normal"="-600,0,0"
 !charaimg_sprite="miune_normal"="miune_normal"
-!charaimg_size="miune_normal"="1500,1500,1"
-!charaimg_pos="miune_normal"="800,0,0"
+!charaimg_size="miune_normal"="1600,1600,1"
+!charaimg_pos="miune_normal"="600,0,0"
 !wait="1"
 &紫崎
 「ラップパン2つ買えたな！争奪戦に勝つってこれはいい気分なものだな。」
@@ -869,7 +877,7 @@
 「これぐらい知ってて当然だろう。お前が無知なだけだ。」
 
 &三嶺
-「またひどい...その冷たい言い回しやめなよ。ともだちできないよ？」
+「またひどい．．．その冷たい言い回しやめなよ。ともだちできないよ？」
 
 &紫崎
 「人前でおどおどしている奴には言われたくないね。あっ、おい！！」
@@ -916,7 +924,7 @@
 !charaimg_pos="asao_normal"="400,0,0"
 !charaimg_pos="yatsurugi_normal"="800,0,0"
 !charaimg_sprite="homeroom_teacher_normal"="homeroom_teacher_normal"
-!charaimg_size="homeroom_teacher_normal"="1500,1500,1"
+!charaimg_size="homeroom_teacher_normal"="1800,1800,1"
 !charaimg_pos="homeroom_teacher_normal"="-800,0,0"
 
 &先生
@@ -954,6 +962,10 @@
 
 &熊井
 「わかった。じゃあまた。」
+
+&!foreground_anim="fadeout,0,2,%0,0,0%%"
+!wait="2"
+&!scene="gymnasium"
 
 
 
