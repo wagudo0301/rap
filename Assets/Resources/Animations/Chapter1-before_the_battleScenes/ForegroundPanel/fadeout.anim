@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: fadein
+  m_Name: fadeout
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -106,17 +106,17 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0.9970159
+        value: 0.0022432208
         inSlope: 0
-        outSlope: -0.49850795
+        outSlope: 0.4988784
         tangentMode: 0
         weightedMode: 0
         inWeight: 0
         outWeight: 0
       - serializedVersion: 3
         time: 2
-        value: 0
-        inSlope: -0.49850795
+        value: 1
+        inSlope: 0.4988784
         outSlope: 0
         tangentMode: 0
         weightedMode: 0
@@ -486,17 +486,17 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0.9970159
+        value: 0.0022432208
         inSlope: 0
-        outSlope: -0.49850795
+        outSlope: 0.4988784
         tangentMode: 0
         weightedMode: 0
         inWeight: 0
         outWeight: 0
       - serializedVersion: 3
         time: 2
-        value: 0
-        inSlope: -0.49850795
+        value: 1
+        inSlope: 0.4988784
         outSlope: 0
         tangentMode: 0
         weightedMode: 0
