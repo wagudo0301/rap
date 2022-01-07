@@ -208,7 +208,7 @@ PrefabInstance:
     - target: {fileID: 7224665403350584410, guid: 51797c62b776316418938ab486de871b,
         type: 3}
       propertyPath: TeleportDistinationName
-      value: Hall_1f-Classroom1-2
+      value: Hall_1f-Classroom1-2_L
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 51797c62b776316418938ab486de871b, type: 3}
@@ -2964,7 +2964,7 @@ PrefabInstance:
     - target: {fileID: 7224665403350584410, guid: 51797c62b776316418938ab486de871b,
         type: 3}
       propertyPath: TeleportDistinationName
-      value: Hall_1f-Classroom1-2
+      value: Hall_1f-Classroom1-2_R
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 51797c62b776316418938ab486de871b, type: 3}
