@@ -20,10 +20,6 @@
 !charaimg_size="yatsurugi_normal"="1500,1500,1"
 !charaimg_active="yatsurugi_normal"="false"
 
-!charaimg_sprite="yatsurugi_gaze"="principal_close_eyes"
-!charaimg_size="yatsurugi_gaze"="1500,1500,1"
-!charaimg_active="yatsurugi_gaze"="false"
-
 !foreground_color="0,0,0"
 !foreground_anim="fadein,0,2,%0,0,0,0%%"
 !background_sprite="gymnasium_background"
@@ -190,13 +186,11 @@
 
 
 #CHAPTER1-1-B-1&
-!charaimg_pos="yatsurugi_normal"="-800,0,0"
+!charaimg_pos="yatsurugi_normal"="-600,0,0"
 !charaimg_active="yatsurugi_normal"="true"
 &熊井
 「あっ、こんにちは」
 
-&!charaimg_pos="yatsurugi_gaze"="-800,0,0"
-!charaimg_active="yatsurugi_gaze"="true"
 &ヤンキー？「．．．」
 
 &ヤンキー？
@@ -206,7 +200,6 @@
 &熊井
 「あなたも入学式に遅れたんですか？」
 
-&!charaimg_active="yatsurugi_gaze"="false"
 &ヤンキー？
 「いや、俺は．．．（実は学校で迷子になってた）」
 
@@ -271,13 +264,9 @@
 !foreground_anim="fadein,0,2,%0,0,0,0%%"
 !background_sprite="classroom_background"
 !charaimg_delete="main_character_normal"=""
-!charaimg_delete="yatsurugi_normal"=""
-!charaimg_sprite="yatsurugi_normal"="yatsurugi_normal"
-!charaimg_size="yatsurugi_normal"="1500,1500,1"
-!charaimg_pos="yatsurugi_normal"="800,0,0"
 !charaimg_sprite="main_character_normal"="main_character_normal"
 !charaimg_size="main_character_normal"="1500,1500,1"
-!charaimg_pos="main_character_normal"="200,0,0"
+!charaimg_pos="main_character_normal"="600,0,0"
 !wait="1"
 &熊井
 「追いつけましたね！」
@@ -285,25 +274,28 @@
 &!charaimg_delete="yatsurugi_normal"=""
 !charaimg_sprite="yatsurugi_normal"="yatsurugi_normal"
 !charaimg_size="yatsurugi_normal"="1500,1500,1"
-!charaimg_pos="yatsurugi_normal"="800,0,0"
+!charaimg_pos="yatsurugi_normal"="-600,0,0"
 &八剱
 「．．．」
 
-&!charaimg_active="homeroom_teacher_normal"="true"
+&!charaimg_pos="yatsurugi_normal"="200,0,0"
+!charaimg_pos="main_character_normal"="800,0,0"
+!charaimg_pos="homeroom_teacher_normal"="-800,0,0"
+!charaimg_active="homeroom_teacher_normal"="true"
 &先生
 「君たちが熊井君と八剱君ね！ずいぶん遅かったわね」
 
 &!charaimg_delete="main_character_normal"=""
 !charaimg_sprite="main_character_normal"="main_character_normal"
 !charaimg_size="main_character_normal"="1500,1500,1"
-!charaimg_pos="main_character_normal"="200,0,0"
+!charaimg_pos="main_character_normal"="800,0,0"
 &熊井
 「そうです！遅れてしまってすみません。」
 
 &!charaimg_delete="yatsurugi_normal"=""
 !charaimg_sprite="yatsurugi_normal"="yatsurugi_normal"
 !charaimg_size="yatsurugi_normal"="1500,1500,1"
-!charaimg_pos="yatsurugi_normal"="800,0,0"
+!charaimg_pos="yatsurugi_normal"="200,0,0"
 &八剱
 「学校で迷ってしまい、入学式に参加できませんでした。申し訳
 ありませんでした！」
@@ -320,10 +312,12 @@
 #CHAPTER1-1-B-5&
 !foreground_anim="fadein,0,2,%0,0,0,0%%"
 !background_sprite="classroom_background"
+!charaimg_active="homeroom_teacher_normal"="false"
+!charaimg_pos="yatsurugi_normal"="-600,0,0"
 !charaimg_delete="main_character_normal"=""
 !charaimg_sprite="main_character_normal"="main_character_normal"
 !charaimg_size="main_character_normal"="1500,1500,1"
-!charaimg_pos="main_character_normal"="200,0,0"
+!charaimg_pos="main_character_normal"="600,0,0"
 !wait="1"
 &熊井
 「さすが、日本一のラッパー学校というだけあって、敷地が広いですね～」
@@ -331,10 +325,14 @@
 &!charaimg_delete="yatsurugi_normal"=""
 !charaimg_sprite="yatsurugi_normal"="yatsurugi_normal"
 !charaimg_size="yatsurugi_normal"="1500,1500,1"
-!charaimg_pos="yatsurugi_normal"="800,0,0"
+!charaimg_pos="yatsurugi_normal"="-600,0,0"
 &八剱
 「国の税金から賄われているもんなぁ～」
 
+&!charaimg_active="main_character_normal"="false"
+!charaimg_active="yatsurugi_normal"="false"
+!charaimg_pos="homeroom_teacher_normal"="0,0,0"
+!charaimg_active="homeroom_teacher_normal"="true"
 &先生「これにて、 学校案内を終わります。そして、ここがあなたたちのクラスです。
 入ってレクリエーションをはじめましょう。」
 
@@ -805,7 +803,7 @@
 !charaimg_active="yatsurugi_normal"="false"
 !charaimg_active="shizaki_normal"="false"
 !charaimg_active="miune_normal"="false"
-!charaimg_sprite="rap_bread"="background_sprite2"
+!charaimg_sprite="rap_bread"="rap_bread"
 !charaimg_size="rap_bread"="1500,1500,1"
 !charaimg_pos="rap_bread"="0,0,0"
 &「」
