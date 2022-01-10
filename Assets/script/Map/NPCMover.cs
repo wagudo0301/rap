@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NonPlayerCharacter : MonoBehaviour
+public class NPCMover : MonoBehaviour
 {
     public List<(int,int,float)> MoveCommandList=new List<(int,int,float)>();
 
