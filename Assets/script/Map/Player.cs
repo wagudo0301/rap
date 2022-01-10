@@ -24,7 +24,6 @@ public class Player : MonoBehaviour
     {
         Rb.velocity = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")).normalized * moveSpeed;
 
-
         if(Rb.velocity != Vector2.zero)
         {
             playerAnim.speed=1;
