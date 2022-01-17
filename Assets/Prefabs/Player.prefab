@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 971965265888471049}
   - component: {fileID: 971965265888471048}
   - component: {fileID: 971965265888471047}
-  - component: {fileID: 971965265888471050}
   - component: {fileID: 971965265888471051}
   - component: {fileID: 6347263997550877885}
   - component: {fileID: 3829088981382455553}
@@ -98,7 +97,7 @@ Animator:
   m_GameObject: {fileID: 971965265888471046}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 323004acb4c04044683f5be5e539b6b6, type: 2}
+  m_Controller: {fileID: 9100000, guid: c6a23e6cbf187514a88c83df6773efb5, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -107,21 +106,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &971965265888471050
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 971965265888471046}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bcb7af507ddbcc740be2f5f368130cbb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 10
-  playerAnim: {fileID: 971965265888471047}
-  Rb: {fileID: 971965265888471051}
 --- !u!50 &971965265888471051
 Rigidbody2D:
   serializedVersion: 4

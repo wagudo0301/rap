@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    [SerializeField, Tooltip("移動スピード")]
+    [SerializeField]
     private int moveSpeed;
 
     [SerializeField]
@@ -24,9 +24,9 @@ public class Player : MonoBehaviour
     {
         Rb.velocity = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")).normalized * moveSpeed;
 
-
         if(Rb.velocity != Vector2.zero)
         {
+            playerAnim.speed=1;
             if(Input.GetAxisRaw("Horizontal") != 0)
             {
                 if(Input.GetAxisRaw("Horizontal") > 0)
@@ -50,6 +50,10 @@ public class Player : MonoBehaviour
                 playerAnim.SetFloat("X", 0);
                 playerAnim.SetFloat("Y", -1);
             }
+        }
+        else
+        {
+            playerAnim.speed=0;
         }
     }
 }
