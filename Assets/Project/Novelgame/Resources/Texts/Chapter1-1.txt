@@ -239,7 +239,7 @@
 
 #CHAPTER1-1-B-3&
 !foreground_anim="fadein,0,2,%0,0,0,0%%"
-!background_sprite="classroom_background"
+!background_sprite="hall_background"
 !wait="1"
 
 &熊井
@@ -262,7 +262,7 @@
 
 #CHAPTER1-1-B-4&
 !foreground_anim="fadein,0,2,%0,0,0,0%%"
-!background_sprite="classroom_background"
+!background_sprite="hall_background"
 !charaimg_delete="main_character_normal"=""
 !charaimg_sprite="main_character_normal"="main_character_normal"
 !charaimg_size="main_character_normal"="1500,1500,1"
@@ -311,7 +311,7 @@
 
 #CHAPTER1-1-B-5&
 !foreground_anim="fadein,0,2,%0,0,0,0%%"
-!background_sprite="classroom_background"
+!background_sprite="hall_background"
 !charaimg_active="homeroom_teacher_normal"="false"
 !charaimg_pos="yatsurugi_normal"="-600,0,0"
 !charaimg_delete="main_character_normal"=""
