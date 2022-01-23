@@ -8,6 +8,9 @@ public class voice_recognition : MonoBehaviour
     DictationRecognizer dictationRecognizer;
     float time;
 
+    string ans;
+    string fullans;
+
     float count = 0;
 
 	void Start () {
@@ -29,7 +32,7 @@ public class voice_recognition : MonoBehaviour
             dictationRecognizer.DictationError += DictationRecognizer_DictationError;//DictationRecognizer_DictationError処理を行う
         }else if(time > 10.0f) {
             if(count == 1){
-                dictationRecognizer.DictationResult += ans;
+                Debug.Log(fullans);
                 dictationRecognizer.Stop();
                 dictationRecognizer.DictationComplete += DictationRecognizer_DictationComplete;//DictationRecognizer_DictationComplete処理を行う
                 count = 2;
@@ -39,7 +42,12 @@ public class voice_recognition : MonoBehaviour
 
     //DictationResult：音声が特定の認識精度で認識されたときに発生するイベント
     private void DictationRecognizer_DictationResult(string text, ConfidenceLevel confidence){
-        //Debug.Log("認識した音声：" + text);
+        if(ans != text)
+        {
+            fullans += text;
+            ans = text;
+            Debug.Log(fullans);
+        }
     }
     
     //DictationHypothesis：音声入力中に発生するイベント
@@ -49,15 +57,11 @@ public class voice_recognition : MonoBehaviour
 
     //DictationComplete：音声認識セッションを終了したときにトリガされるイベント
     private void DictationRecognizer_DictationComplete(DictationCompletionCause cause){
-        //Debug.Log("音声認識完了");
+        Debug.Log("音声認識完了");
     }
 
     //DictationError：音声認識セッションにエラーが発生したときにトリガされるイベント
     private void DictationRecognizer_DictationError(string error, int hresult){
         //Debug.Log("音声認識エラー");
-    }
-    private void ans(string text, ConfidenceLevel confidence)
-    {
-        Debug.Log(text);
     }
 }
