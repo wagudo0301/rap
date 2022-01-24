@@ -450,7 +450,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainText: {fileID: 6676768812424236694}
   nameText: {fileID: 6676768813121604442}
-  captionSpeed: 0.2
+  captionSpeed: 0.1
   nextPageIcon: {fileID: 6676768813043288259}
   backgroundImage: {fileID: 6676768814007958522}
   foregroundImage: {fileID: 6676768812681273858}
