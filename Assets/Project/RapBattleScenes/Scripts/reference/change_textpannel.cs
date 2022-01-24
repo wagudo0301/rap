@@ -11,7 +11,7 @@ public class change_textpannel : MonoBehaviour
     float timer;
     int count = 0;
 
-    float starttime = 3.3f;
+    float starttime = 3f;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,7 +22,7 @@ public class change_textpannel : MonoBehaviour
     void Update()
     {
         timer += Time.deltaTime;
-        if(timer - starttime > 22f){
+        if(timer - starttime > 21.5f){
             changetextpannel(count);
             starttime = 0;
             timer = 0;
@@ -32,10 +32,10 @@ public class change_textpannel : MonoBehaviour
 
     private void changetextpannel(int count){
         if(count % 2 == 0) {
-            this.gameObject.GetComponent<Image> ().sprite = kumaitextpannel;
+            //this.gameObject.GetComponent<Image> ().sprite = kumaitextpannel;
             this.gameObject.GetComponentInChildren<Text>().color = new Color(255.0f, 0.0f, 0.0f, 1.0f);
         } else {
-            this.gameObject.GetComponent<Image> ().sprite = mashirotextpannel;
+            //this.gameObject.GetComponent<Image> ().sprite = mashirotextpannel;
             this.gameObject.GetComponentInChildren<Text>().color = new Color(0.0f, 255.0f, 0.0f, 1.0f);
         }
     }
