@@ -86,4 +86,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Project/maps/Cafeteria and shower room.unity
     guid: a9edb00a9181dd64d96883095a10b69d
+  - enabled: 1
+    path: Assets/Project/maps/dormitoty/dormitoty Hall.unity
+    guid: 5b5e70ad826d1c645b8230d94c3c275f
+  - enabled: 1
+    path: Assets/Project/maps/dormitoty/room.unity
+    guid: 2513e668cc48bbc42a9ef0ad853d77fb
   m_configObjects: {}
