@@ -2,7 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RapJudger : MonoBehaviour
+//韻ふみシステム
+public class RapJudger_buckup : MonoBehaviour
 {
     const float RhymeImportanceScale=1.6f;//累乗される
     const float MoreThanVowelImportanceScale=1.6f;//0か1かこれ
