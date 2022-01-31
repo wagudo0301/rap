@@ -123,6 +123,85 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &34721175
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7224665403350584388, guid: 51797c62b776316418938ab486de871b,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7224665403350584388, guid: 51797c62b776316418938ab486de871b,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -7.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7224665403350584388, guid: 51797c62b776316418938ab486de871b,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 4.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7224665403350584388, guid: 51797c62b776316418938ab486de871b,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7224665403350584388, guid: 51797c62b776316418938ab486de871b,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7224665403350584388, guid: 51797c62b776316418938ab486de871b,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7224665403350584388, guid: 51797c62b776316418938ab486de871b,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7224665403350584388, guid: 51797c62b776316418938ab486de871b,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7224665403350584388, guid: 51797c62b776316418938ab486de871b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7224665403350584388, guid: 51797c62b776316418938ab486de871b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7224665403350584388, guid: 51797c62b776316418938ab486de871b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7224665403350584408, guid: 51797c62b776316418938ab486de871b,
+        type: 3}
+      propertyPath: m_Name
+      value: Teleport
+      objectReference: {fileID: 0}
+    - target: {fileID: 7224665403350584410, guid: 51797c62b776316418938ab486de871b,
+        type: 3}
+      propertyPath: SceneName
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7224665403350584411, guid: 51797c62b776316418938ab486de871b,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 51797c62b776316418938ab486de871b, type: 3}
 --- !u!1001 &42565789
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -268,7 +347,7 @@ Transform:
   - {fileID: 1625690286}
   - {fileID: 611205157}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &460741843
 PrefabInstance:
@@ -440,8 +519,8 @@ TilemapRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -105541197
+  m_SortingLayer: 3
   m_SortingOrder: -1
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
@@ -880,16 +959,6 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
-  - first: {x: -8, y: 4, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 0
-      m_TileSpriteIndex: 0
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
   - first: {x: -7, y: 4, z: 0}
     second:
       serializedVersion: 2
@@ -1082,13 +1151,13 @@ Tilemap:
       m_AllTileFlags: 1073741825
   m_AnimatedTiles: {}
   m_TileAssetArray:
-  - m_RefCount: 62
+  - m_RefCount: 61
     m_Data: {fileID: 11400000, guid: d8dcebf02719cd1418632eb3ec17943e, type: 2}
   m_TileSpriteArray:
-  - m_RefCount: 62
+  - m_RefCount: 61
     m_Data: {fileID: 21300000, guid: 501762c7b10834f44b1e2a5f9e2e70fb, type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 62
+  - m_RefCount: 61
     m_Data:
       e00: 1
       e01: 0
@@ -1107,7 +1176,7 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 62
+  - m_RefCount: 61
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
@@ -1214,6 +1283,90 @@ PrefabInstance:
         type: 3}
       propertyPath: TeleportDistinationName
       value: dormitoty_hall-Hall_1f
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 51797c62b776316418938ab486de871b, type: 3}
+--- !u!1001 &970963682
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7224665403350584388, guid: 51797c62b776316418938ab486de871b,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7224665403350584388, guid: 51797c62b776316418938ab486de871b,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 7224665403350584388, guid: 51797c62b776316418938ab486de871b,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -8.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7224665403350584388, guid: 51797c62b776316418938ab486de871b,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7224665403350584388, guid: 51797c62b776316418938ab486de871b,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7224665403350584388, guid: 51797c62b776316418938ab486de871b,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7224665403350584388, guid: 51797c62b776316418938ab486de871b,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7224665403350584388, guid: 51797c62b776316418938ab486de871b,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7224665403350584388, guid: 51797c62b776316418938ab486de871b,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7224665403350584388, guid: 51797c62b776316418938ab486de871b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7224665403350584388, guid: 51797c62b776316418938ab486de871b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7224665403350584388, guid: 51797c62b776316418938ab486de871b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7224665403350584408, guid: 51797c62b776316418938ab486de871b,
+        type: 3}
+      propertyPath: m_Name
+      value: Teleport
+      objectReference: {fileID: 0}
+    - target: {fileID: 7224665403350584410, guid: 51797c62b776316418938ab486de871b,
+        type: 3}
+      propertyPath: SceneName
+      value: Cafeteria and shower room
+      objectReference: {fileID: 0}
+    - target: {fileID: 7224665403350584410, guid: 51797c62b776316418938ab486de871b,
+        type: 3}
+      propertyPath: TeleportDistinationName
+      value: dormitoty_hall-Cafeteria and shower room
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 51797c62b776316418938ab486de871b, type: 3}
@@ -3839,8 +3992,8 @@ Tilemap:
   - first: {x: -8, y: 4, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 1
-      m_TileSpriteIndex: 1
+      m_TileIndex: 3
+      m_TileSpriteIndex: 3
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -4119,8 +4272,8 @@ Tilemap:
   - first: {x: -8, y: 5, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 1
-      m_TileSpriteIndex: 1
+      m_TileIndex: 2
+      m_TileSpriteIndex: 2
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -4390,14 +4543,24 @@ Tilemap:
   m_TileAssetArray:
   - m_RefCount: 252
     m_Data: {fileID: 11400000, guid: 933a36bca97a6264fb872098f1011834, type: 2}
-  - m_RefCount: 56
+  - m_RefCount: 54
     m_Data: {fileID: 11400000, guid: c0b3d1f0ff0af0e47adc0c5c447c17c6, type: 2}
+  - m_RefCount: 1
+    m_Data: {fileID: 11400000, guid: 4b7c4344bab35664c9e634d47292ada7, type: 2}
+  - m_RefCount: 1
+    m_Data: {fileID: 11400000, guid: 3455c81d662f40548b2c17189d06c8fc, type: 2}
   m_TileSpriteArray:
   - m_RefCount: 252
     m_Data: {fileID: 3138674674001102870, guid: b327458f8578d774cb2e05550ab2ae99,
       type: 3}
-  - m_RefCount: 56
+  - m_RefCount: 54
     m_Data: {fileID: 1838641678483439089, guid: b327458f8578d774cb2e05550ab2ae99,
+      type: 3}
+  - m_RefCount: 1
+    m_Data: {fileID: 9168549820009290793, guid: 0cdb98124e2a2ec41b881e3813393742,
+      type: 3}
+  - m_RefCount: 1
+    m_Data: {fileID: -719711639512828022, guid: 0cdb98124e2a2ec41b881e3813393742,
       type: 3}
   m_TileMatrixArray:
   - m_RefCount: 308
@@ -5264,3 +5427,72 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 971965265888471046, guid: 3e02147748687ab4c9c044053000075d, type: 3}
+--- !u!1001 &2099698805
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3923462141183062865, guid: 37c5deacaa1c2c848b61881f302cdd43,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3923462141183062865, guid: 37c5deacaa1c2c848b61881f302cdd43,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -7.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3923462141183062865, guid: 37c5deacaa1c2c848b61881f302cdd43,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3923462141183062865, guid: 37c5deacaa1c2c848b61881f302cdd43,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3923462141183062865, guid: 37c5deacaa1c2c848b61881f302cdd43,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3923462141183062865, guid: 37c5deacaa1c2c848b61881f302cdd43,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3923462141183062865, guid: 37c5deacaa1c2c848b61881f302cdd43,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3923462141183062865, guid: 37c5deacaa1c2c848b61881f302cdd43,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3923462141183062865, guid: 37c5deacaa1c2c848b61881f302cdd43,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3923462141183062865, guid: 37c5deacaa1c2c848b61881f302cdd43,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3923462141183062865, guid: 37c5deacaa1c2c848b61881f302cdd43,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6844337406905268355, guid: 37c5deacaa1c2c848b61881f302cdd43,
+        type: 3}
+      propertyPath: m_Name
+      value: Cafeteria and shower room-dormitoty_hall
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 37c5deacaa1c2c848b61881f302cdd43, type: 3}
