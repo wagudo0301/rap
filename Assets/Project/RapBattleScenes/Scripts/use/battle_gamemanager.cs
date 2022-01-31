@@ -227,6 +227,8 @@ public class battle_gamemanager : MonoBehaviour
         mainText.color = new Color(0.0f, 255.0f, 0.0f, 1.0f);
         dictationRecognizer.Stop();
         Debug.Log(fullans);
+        string st = fullans;
+        float num=GameObject.Find("RapJudger").GetComponent<RapJudger>().JudgeRap(st);
         dictationRecognizer.Dispose(); 
         dictationRecognizer = new DictationRecognizer();
         dictationRecognizer.InitialSilenceTimeoutSeconds  = 24f;
