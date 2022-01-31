@@ -29,7 +29,7 @@ public class RapJudger : MonoBehaviour
             Debug.Log(str1);
         }*/
         //JudgeRap("昔々あるところにおじいさんとおばあさんがいました");
-        Debug.Log(JudgeRap("おじいさんの言いがかりおばあさんは聞く係り"));
+        //Debug.Log(JudgeRap("おじいさんの言いがかりおばあさんは聞く係り"));
         //JudgeMaxVowelCombo("トコロ","々");
         //JudgeMaxVowelCombo("ムカシ","アル");
     }
