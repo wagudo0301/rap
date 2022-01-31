@@ -1,6 +1,7 @@
 using NMeCab.Specialized;
 using UnityEngine;
 
+//テスト用スクリプト
 public class NcabTest : MonoBehaviour
 {
 
