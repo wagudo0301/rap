@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Windows.Speech;   //Windowsの音声認識で使用
 
-public class battle_gamemanager : MonoBehaviour
+public class battle_gamemanager_buckup : MonoBehaviour
 {
     DictationRecognizer dictationRecognizer;
     string ans;
@@ -14,9 +14,6 @@ public class battle_gamemanager : MonoBehaviour
     private int count = 0;
     private float starttime = 8f;
     private float voice_lag = 0f;
-
-    private float PlayerPointOfRap=0;
-    private float OpponentPointOfRap=0;
     // SerializeFieldと書くとprivateなパラメーターでも
     // インスペクター上で値を変更できる
     [SerializeField]
@@ -37,15 +34,15 @@ public class battle_gamemanager : MonoBehaviour
         dictationRecognizer.InitialSilenceTimeoutSeconds  = 24f;
         dictationRecognizer.AutoSilenceTimeoutSeconds = 24f;
 
-        //float maxHp = 100f;
-        //float nowHp = 50f;
+        float maxHp = 100f;
+        float nowHp = 50f;
  
  
         //スライダーの最大値の設定
-        //hpSlider.maxValue = maxHp;
+        hpSlider.maxValue = maxHp;
  
         //スライダーの現在値の設定
-        //hpSlider.value = nowHp;
+        hpSlider.value = nowHp;
     }
 
     // Update is called once per frame
@@ -59,14 +56,12 @@ public class battle_gamemanager : MonoBehaviour
             {
                 case 0:
                     ReadLine("お手並み拝見小テスト　見せてみなさいキミのベスト　聞き届けるはこの担任　キミを育てるそのために", 0.21f);
-                    OpponentPointOfRap+=15;
-                    hpSlider.value = 0.55f;
+                    hpSlider.value += 5f;
                     starttime = 0;
                     break;
                 case 1:
                     ReadLine("対するキミは何者さ　聞かせて見せなYourアンサー　まずは元気にレッツトライ　チャレンジするならザッツオーライ", 0.18f);
-                    OpponentPointOfRap+=15;
-                    hpSlider.value = 0.6f;
+                    hpSlider.value += 10f;
                     voice_lag = 0.8f;
                     break;
                 case 2:
@@ -76,27 +71,23 @@ public class battle_gamemanager : MonoBehaviour
                     mainText.color = new Color(255.0f, 0.0f, 0.0f, 1.0f);
                     dictationRecognizer.Start();
                     Debug.Log("音声認識開始");
-                    //hpSlider.value += -10f;
+                    hpSlider.value += -10f;
                     voice_lag = -1f;
                     break;
                 case 3:
                     //ReadLine("スターと　なって皆を夢中に　宇宙にまで届けるビート　かなで行こうぜ高鳴る世界と　Rappy Box楽しまないと", 0.18f);
-                    //hpSlider.value += -10f;
+                    hpSlider.value += -10f;
                     voice_lag = 1f;
                     break;
                 case 4:
                     init_recognition();
                     ReadLine("夢見てるのなら一つ言わせろ　調子は良いけど経験はゼロ　ラップにおいてはキミは無知　だから打つのよ愛のムチ", 0.18f);
-                    OpponentPointOfRap+=10;
-                    hpSlider.value=1-(PlayerPointOfRap/(PlayerPointOfRap+OpponentPointOfRap));
-                    //hpSlider.value += 10f;
+                    hpSlider.value += 10f;
                     voice_lag = 0;
                     break;
                 case 5:
                     ReadLine("大人の美と　言葉のビート　叩きつけるは　言霊のビーム　おじけづいてないわよね？　＃ComeOn BeatMe", 0.18f);
-                    OpponentPointOfRap+=10;
-                    hpSlider.value=1-(PlayerPointOfRap/(PlayerPointOfRap+OpponentPointOfRap));
-                    //hpSlider.value += 20f;
+                    hpSlider.value += 20f;
                     voice_lag = 0.8f;
                     break;
                 case 6:
@@ -106,7 +97,7 @@ public class battle_gamemanager : MonoBehaviour
                     mainText.color = new Color(255.0f, 0.0f, 0.0f, 1.0f);
                     dictationRecognizer.Start();
                     Debug.Log("音声認識開始");
-                    //hpSlider.value += -10f;
+                    hpSlider.value += -10f;
                     voice_lag = -1f;
                     break;
                 case 7:
@@ -117,16 +108,12 @@ public class battle_gamemanager : MonoBehaviour
                 case 8:
                     init_recognition();
                     ReadLine("確かに少しはやるようね　チェックしとくわYourName-弱音をはかないその威勢　姿勢　すでに　合格点よ", 0.18f);
-                    OpponentPointOfRap+=7;
-                    hpSlider.value=1-(PlayerPointOfRap/(PlayerPointOfRap+OpponentPointOfRap));
-                    //hpSlider.value += 20f;
+                    hpSlider.value += 20f;
                     voice_lag = 0f;
                     break;
                 case 9:
                     ReadLine("後はキミの覚悟次第　格上いても倒したい？　覚悟がないなら直ちにカエるか　エイリアンにも立ち向かえるか", 0.2f);
-                    OpponentPointOfRap+=7;
-                    hpSlider.value=1-(PlayerPointOfRap/(PlayerPointOfRap+OpponentPointOfRap));
-                    //hpSlider.value += 20f;
+                    hpSlider.value += 20f;
                     voice_lag = 0.8f;
                     break;
                 case 10:
@@ -242,9 +229,6 @@ public class battle_gamemanager : MonoBehaviour
         Debug.Log(fullans);
         string st = fullans;
         float num=GameObject.Find("RapJudger").GetComponent<RapJudger>().JudgeRap(st);
-        Debug.Log(num);
-        PlayerPointOfRap+=num;
-        hpSlider.value=1-(PlayerPointOfRap/(PlayerPointOfRap+OpponentPointOfRap));
         dictationRecognizer.Dispose(); 
         dictationRecognizer = new DictationRecognizer();
         dictationRecognizer.InitialSilenceTimeoutSeconds  = 24f;
