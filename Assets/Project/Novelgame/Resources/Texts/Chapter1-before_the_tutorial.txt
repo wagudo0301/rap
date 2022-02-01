@@ -34,25 +34,48 @@
 &熊井
 「八剱くん、浅尾さん。おはよー」
 
+&!charaimg_size="yatsurugi_normal"="1700,1700,1"
+
 &八剱
 「熊井。昨日はよく眠れたか？俺さ、緊張して眠れなくてどうしようもなかったからさ、今朝は校内一周走った後に教室に避難してたわ。」
+
+&!charaimg_size="yatsurugi_normal"="1500,1500,1"
+!charaimg_size="main_character_normal"="1700,1700,1"
 
 &熊井
 「僕はいつも通りだよ」
 
+&!charaimg_size="main_character_normal"="1500,1500,1"
+!charaimg_size="asao_normal"="1700,1700,1"
+
+
 &浅尾
 「私なんか朝早く起きたいからって早く寝たら、いつもよりたくさん寝ちゃって、朝ごはん食べれなかったよ．．．もしかして、熊井くんはマイペースなのかな。熊井だけに！あは！今朝から私のライム絶好調じゃん！！」
+
+&!charaimg_size="asao_normal"="1500,1500,1"
+!charaimg_size="yatsurugi_normal"="1700,1700,1"
+
+
 
 &八剱
 「たしかに韻は踏んでいるけど．．．なんかさっむ！」
 
+&!charaimg_size="yatsurugi_normal"="1500,1500,1"
+!charaimg_size="main_character_normal"="1700,1700,1"
+
+
 &熊井
 「浅尾さんは普段からおやじギャグを言ったりするの？」
 
-&浅尾
-「おやじギャグって言わないでよ！これでも、ラッパーの卵なんだから！」
+&!charaimg_size="main_character_normal"="1500,1500,1"
+!charaimg_size="asao_normal"="1700,1700,1"
 
-&!charaimg_active="main_character_normal"="false"
+&浅尾
+「おやじギャグって言わないでよ！これでもラッパーの卵なんだから！」
+
+
+&!charaimg_size="asao_normal"="1500,1500,1"
+!charaimg_active="main_character_normal"="false"
 !charaimg_active="asao_normal"="false"
 !charaimg_active="yatsurugi_normal"="false"
 !charaimg_active="homeroom_teacher_normal"="true"
@@ -65,14 +88,19 @@
 !charaimg_active="yatsurugi_normal"="true"
 &八剱
 「自分より後の人に見られちまうってことか．．．これはまた緊張するじゃないか．．．．．．」
+&!charaimg_size="main_character_normal"="1700,1700,1"
 
 &熊井
 「僕の後は紫崎くんか．．．」
+&!charaimg_size="main_character_normal"="1500,1500,1"
+!charaimg_size="asao_normal"="1700,1700,1"
 
 &浅尾
 「逆に言えば、前の人を見て学べるってことでしょ？でも、私は」
 
-&!charaimg_active="main_character_normal"="false"
+&
+!charaimg_size="asao_normal"="1500,1500,1"
+!charaimg_active="main_character_normal"="false"
 !charaimg_active="asao_normal"="false"
 !charaimg_active="yatsurugi_normal"="false"
 !charaimg_active="homeroom_teacher_normal"="true"
@@ -169,10 +197,19 @@
 「さあ、試験を始めるわよ！橘川くん」
 
 &!charaimg_active="homeroom_teacher_normal"="false"
+!charaimg_sprite="kitsukawa_normal"="kitsukawa_normal"
+!charaimg_size="kitsukawa_normal"="1500,1500,1"
+!charaimg_pos="kitsukawa_normal"="0,0,0"
+
+
 &橘川
 「は、はいぃぃぃぃ！」
 
-&!charaimg_active="main_character_normal"="true"
+
+
+&
+!charaimg_active="kitsukawa_normal"="false"
+!charaimg_active="main_character_normal"="true"
 &熊井
 「すごい緊張している」
 

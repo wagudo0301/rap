@@ -4,25 +4,62 @@
 !background_sprite="soundproofroom_background"
 !wait="1"
 
+&!charaimg_sprite="kitsukawa_normal"="kitsukawa_normal"
+!charaimg_size="kitsukawa_normal"="1500,1500,1"
+!charaimg_pos="kitsukawa_normal"="0,0,0"
+
+
 &橘川
 「どうでしょうか．．．」
 
-&!charaimg_sprite="homeroom_teacher_normal"="homeroom_teacher_normal"
+&
+!charaimg_sprite="homeroom_teacher_normal"="homeroom_teacher_normal"
 !charaimg_size="homeroom_teacher_normal"="2000,2000,1"
-!charaimg_pos="homeroom_teacher_normal"="0,0,0"
+!charaimg_pos="homeroom_teacher_normal"="-600,0,0"
+
+!charaimg_sprite="kitsukawa_normal"="kitsukawa_normal"
+!charaimg_size="kitsukawa_normal"="1500,1500,1"
+!charaimg_pos="kitsukawa_normal"="600,0,0"
+
+
 &先生
 「まぁ、及第点ってところかな？とりあえず、合格！」
 
-&!charaimg_active="homeroom_teacher_normal"="false"
+&
+!charaimg_sprite="homeroom_teacher_normal"="homeroom_teacher_normal"
+!charaimg_size="homeroom_teacher_normal"="2000,2000,1"
+!charaimg_pos="homeroom_teacher_normal"="-600,0,0"
+
+
+!charaimg_sprite="kitsukawa_normal"="kitsukawa_normal"
+!charaimg_size="kitsukawa_normal"="1700,1700,1"
+!charaimg_pos="kitsukawa_normal"="600,0,0"
+
+
 &橘川
 「よかったああああああ、もう帰っていいですか？？？？」
 
-&!charaimg_active="homeroom_teacher_normal"="true"
+&
+!charaimg_sprite="homeroom_teacher_normal"="homeroom_teacher_normal"
+!charaimg_size="homeroom_teacher_normal"="2200,2200,1"
+!charaimg_pos="homeroom_teacher_normal"="-600,0,0"
+
+!charaimg_sprite="kitsukawa_normal"="kitsukawa_normal"
+!charaimg_size="kitsukawa_normal"="1500,1500,1"
+!charaimg_pos="kitsukawa_normal"="600,0,0"
+
+
 &先生
 「ええ。疲れただろうから今日はゆっくり部屋で休んでね。お疲れ様。」
 
+&!charaimg_active="kitsukawa_normal"="false"
+!charaimg_sprite="homeroom_teacher_normal"="homeroom_teacher_normal"
+!charaimg_size="homeroom_teacher_normal"="2000,2000,1"
+!charaimg_pos="homeroom_teacher_normal"="0,0,0"
+
+
 &先生
-「次は熊井くんなので、紫崎くん。部屋に来てください。」
+「次は熊井くんなので紫崎くん、部屋に来てください。」
 
 &!charaimg_active="homeroom_teacher_normal"="false"
 !charaimg_sprite="shizaki_normal"="shizaki_normal"
