@@ -1337,7 +1337,7 @@ PrefabInstance:
     - target: {fileID: 3923462141183062865, guid: 37c5deacaa1c2c848b61881f302cdd43,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3923462141183062865, guid: 37c5deacaa1c2c848b61881f302cdd43,
         type: 3}
@@ -1392,7 +1392,7 @@ PrefabInstance:
     - target: {fileID: 6844337406905268355, guid: 37c5deacaa1c2c848b61881f302cdd43,
         type: 3}
       propertyPath: m_Name
-      value: dormitoty_hall-Room1
+      value: dormitoty_hall-Room13
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 37c5deacaa1c2c848b61881f302cdd43, type: 3}
@@ -3128,7 +3128,7 @@ PrefabInstance:
     - target: {fileID: 7224665403350584388, guid: 51797c62b776316418938ab486de871b,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7224665403350584388, guid: 51797c62b776316418938ab486de871b,
         type: 3}
@@ -3198,7 +3198,7 @@ PrefabInstance:
     - target: {fileID: 7224665403350584410, guid: 51797c62b776316418938ab486de871b,
         type: 3}
       propertyPath: TeleportDistinationName
-      value: Room1-dormitoty_hall
+      value: Room13-dormitoty_hall
       objectReference: {fileID: 0}
     - target: {fileID: 7224665403350584411, guid: 51797c62b776316418938ab486de871b,
         type: 3}

@@ -15,6 +15,9 @@ EditorBuildSettings:
     path: Assets/Project/Chapter1-1-Scenes/Chapter1-1-Scenes.unity
     guid: 2e7a6e2469e403b48baff1ed67d315f7
   - enabled: 1
+    path: Assets/Project/Chapter1-2-Scenes/Chapter1-2-Scenes.unity
+    guid: a04b69834739436488cda728dc5f806b
+  - enabled: 1
     path: Assets/Project/Chapter1-before_the_TutorialScenes/Chapter1-before_the_TutorialScenes.unity
     guid: cc52197728b9c5647b4010d7b46f7b1c
   - enabled: 1
@@ -81,6 +84,9 @@ EditorBuildSettings:
     path: Assets/Project/maps/AroundClassroom/3f/Reference.unity
     guid: 4e0fb6c41073d7645a4f2fe4b06e6474
   - enabled: 1
+    path: Assets/Project/maps/AroundClassroom/Rooftop.unity
+    guid: 08014018de1cff147bbb09f6ac70939d
+  - enabled: 1
     path: Assets/Project/maps/shower room.unity
     guid: f25c1f10f6cd2324685f73043cdf1c8b
   - enabled: 1
@@ -92,4 +98,52 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Project/maps/dormitoty/room.unity
     guid: 2513e668cc48bbc42a9ef0ad853d77fb
+  - enabled: 1
+    path: Assets/Project/maps/dormitoty/Room1.unity
+    guid: 3a881ade6ca2fc147a6268298e470e32
+  - enabled: 1
+    path: Assets/Project/maps/dormitoty/Room2.unity
+    guid: 9d483e17326ae444d8c909cb41472c57
+  - enabled: 1
+    path: Assets/Project/maps/dormitoty/Room3.unity
+    guid: 568be157b358f904bb5ed781cee4816e
+  - enabled: 1
+    path: Assets/Project/maps/dormitoty/Room4.unity
+    guid: 17e4e8a6e8b93914ca13efb7f1eed922
+  - enabled: 1
+    path: Assets/Project/maps/dormitoty/Room5.unity
+    guid: d4fefb4f71c666244b89f2d4cfd28df4
+  - enabled: 1
+    path: Assets/Project/maps/dormitoty/Room6.unity
+    guid: 4854fc7b75978994bb52c141a158f220
+  - enabled: 1
+    path: Assets/Project/maps/dormitoty/Room7.unity
+    guid: 57427872e8d779a468d7a08525bfc902
+  - enabled: 1
+    path: Assets/Project/maps/dormitoty/Room8.unity
+    guid: a171dee065f974d4b81a7e21d61ac9b8
+  - enabled: 1
+    path: Assets/Project/maps/dormitoty/Room9.unity
+    guid: 83ad9fa52226b6348a93ee77a6986448
+  - enabled: 1
+    path: Assets/Project/maps/dormitoty/Room10.unity
+    guid: 3cfbe259203fc6442bb46505cb50166c
+  - enabled: 1
+    path: Assets/Project/maps/dormitoty/Room11.unity
+    guid: 75fd66f6f685a9e42a29feb7727d49a0
+  - enabled: 1
+    path: Assets/Project/maps/dormitoty/Room12.unity
+    guid: a28de8f9f09226941a6ea5979340b607
+  - enabled: 1
+    path: Assets/Project/maps/dormitoty/Room13.unity
+    guid: 7ee0a7f7d6b4642479b7935963f7d107
+  - enabled: 1
+    path: Assets/Project/maps/dormitoty/Room14.unity
+    guid: 0c8841719c31f4d4f83bc1fb1fcaa129
+  - enabled: 1
+    path: Assets/Project/maps/dormitoty/Room15.unity
+    guid: f5b6a0c31061c2048a70ae81d408a862
+  - enabled: 1
+    path: Assets/Project/maps/dormitoty/Room16.unity
+    guid: 7f013f8a711cbd54ba3224fac657a391
   m_configObjects: {}
