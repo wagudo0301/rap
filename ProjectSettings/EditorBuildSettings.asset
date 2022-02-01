@@ -84,6 +84,9 @@ EditorBuildSettings:
     path: Assets/Project/maps/AroundClassroom/3f/Reference.unity
     guid: 4e0fb6c41073d7645a4f2fe4b06e6474
   - enabled: 1
+    path: Assets/Project/maps/AroundClassroom/Rooftop.unity
+    guid: 08014018de1cff147bbb09f6ac70939d
+  - enabled: 1
     path: Assets/Project/maps/shower room.unity
     guid: f25c1f10f6cd2324685f73043cdf1c8b
   - enabled: 1
