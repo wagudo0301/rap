@@ -43,11 +43,16 @@
 
 
 #CHAPTER1-1-2&
+
 !foreground_anim="fadein,0,2,%0,0,0,0%%"
+!background_sprite="yard_background"
 !charaimg_active="principal_normal"="false"
 !charaimg_pos="main_character_normal"="600,0,0"
 !charaimg_active="main_character_normal"="true"
 !wait="1"
+
+
+
 &熊井
 「_______．．．」
 
@@ -62,6 +67,7 @@
 
 #CHAPTER1-1-3&
 !foreground_anim="fadein,0,2,%0,0,0,0%%"
+!background_sprite="gymnasium_background"
 !charaimg_active="main_character_normal"="false"
 !charaimg_active="principal_normal"="true"
 !charaimg_pos="principal_close_eyes"="-600,0,0"
@@ -78,9 +84,16 @@
 「じゃあ2列になって私についてきてください。そのまま校舎を案内
 します。」
 
-&!charaimg_active="homeroom_teacher_normal"="false"
+&!foreground_anim="fadeout,0,2,%0,0,0%%"
+!wait="2"
+&!jump_to="CHAPTER1-1-3-1"
+
+#CHAPTER1-1-3-1
+&!foreground_anim="fadein,0,2,%0,0,0,0%%"
+!charaimg_active="homeroom_teacher_normal"="false"
 !charaimg_pos="main_character_normal"="600,0,0"
 !charaimg_active="main_character_normal"="true"
+!background_sprite="yard_background"
 &熊井
 「．．．こっちに来る！！」
 
@@ -125,7 +138,7 @@
 「何とか合流できた．．．」
 
 &!charaimg_active="homeroom_teacher_normal"="true"
-!charaimg_size="homeroom_teacher_normal"="2200,2200,1"
+!charaimg_size="homeroom_teacher_normal"="2000,2000,1"
 
 &先生
 「君が熊井くんね。私は『羽代真代』。これからよろしくね。」
@@ -409,6 +422,8 @@ charaimg_size="main_character_normal"="1700,1700,1"
 &先生
 「まだ学校案内をしていなかったから、とーっても優しい真代先生はセーフにしておき
 ます。さぁついてきて！」
+
+&!charaimg_size="homeroom_teacher_normal"="2000,2000,1"
 
 &!foreground_anim="fadeout,0,2,%0,0,0%%"
 !wait="2"
