@@ -137,13 +137,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7224665403350584388, guid: 51797c62b776316418938ab486de871b,
         type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7224665403350584388, guid: 51797c62b776316418938ab486de871b,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7224665403350584388, guid: 51797c62b776316418938ab486de871b,
+        type: 3}
       propertyPath: m_LocalPosition.x
       value: -7.5
       objectReference: {fileID: 0}
     - target: {fileID: 7224665403350584388, guid: 51797c62b776316418938ab486de871b,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.5
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7224665403350584388, guid: 51797c62b776316418938ab486de871b,
         type: 3}
@@ -203,7 +213,7 @@ PrefabInstance:
     - target: {fileID: 7224665403350584411, guid: 51797c62b776316418938ab486de871b,
         type: 3}
       propertyPath: m_SortingOrder
-      value: -1
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 51797c62b776316418938ab486de871b, type: 3}
@@ -272,7 +282,7 @@ PrefabInstance:
     - target: {fileID: 6844337406905268355, guid: 37c5deacaa1c2c848b61881f302cdd43,
         type: 3}
       propertyPath: m_Name
-      value: room-dormitoty_hall
+      value: Room1-dormitoty_hall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 37c5deacaa1c2c848b61881f302cdd43, type: 3}
@@ -368,13 +378,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7224665403350584388, guid: 51797c62b776316418938ab486de871b,
         type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7224665403350584388, guid: 51797c62b776316418938ab486de871b,
+        type: 3}
       propertyPath: m_LocalPosition.x
       value: -5.5
       objectReference: {fileID: 0}
     - target: {fileID: 7224665403350584388, guid: 51797c62b776316418938ab486de871b,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.5
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7224665403350584388, guid: 51797c62b776316418938ab486de871b,
         type: 3}
@@ -424,17 +439,17 @@ PrefabInstance:
     - target: {fileID: 7224665403350584410, guid: 51797c62b776316418938ab486de871b,
         type: 3}
       propertyPath: SceneName
-      value: room
+      value: Room1
       objectReference: {fileID: 0}
     - target: {fileID: 7224665403350584410, guid: 51797c62b776316418938ab486de871b,
         type: 3}
       propertyPath: TeleportDistinationName
-      value: dormitoty_hall-room
+      value: dormitoty_hall-Room1
       objectReference: {fileID: 0}
     - target: {fileID: 7224665403350584411, guid: 51797c62b776316418938ab486de871b,
         type: 3}
       propertyPath: m_SortingOrder
-      value: -1
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 51797c62b776316418938ab486de871b, type: 3}
