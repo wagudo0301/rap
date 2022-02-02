@@ -79,10 +79,12 @@ public class battle_gamemanager : MonoBehaviour
             switch(count)
             {
                 case 0:
+                    //ターン1(先生-1)
                     ReadLine("お手並み拝見小テスト　見せてみなさいキミのベスト　聞き届けるはこの担任　キミを育てるそのために", 0.21f);
                     starttime = 0;
                     break;
                 case 1:
+                    //ターン1(先生-2)
                     OpponentPointOfRap+=75;
                     MyScoreController.OpponentPointOfRap+=75;
                     stringOpponentPointOfRap = OpponentPointOfRap.ToString();
@@ -92,31 +94,25 @@ public class battle_gamemanager : MonoBehaviour
                     voice_lag = 0.8f;
                     break;
                 case 2:
+                    //ターン1(熊井-1)
                     OpponentPointOfRap+=75;
                     MyScoreController.OpponentPointOfRap+=75;
                     stringOpponentPointOfRap = OpponentPointOfRap.ToString();
                     mashiro_point.text = stringOpponentPointOfRap;
                     hpSlider.value = 0.6f;
-                    //ReadLine("僕の名前は熊井だよ　イカしたビートつなぎあお　ラップは初心者からスタート　経験つんで頑張った後", 0.21f);
                     mainText.text = "";
                     TextPannel.sprite = kumaitextpannel;
                     mainText.color = new Color(255.0f, 0.0f, 0.0f, 1.0f);
                     dictationRecognizer.Start();
                     Debug.Log("音声認識開始");
-                    //hpSlider.value += -10f;
                     voice_lag = -1f;
                     break;
                 case 3:
-                    //ReadLine("スターと　なって皆を夢中に　宇宙にまで届けるビート　かなで行こうぜ高鳴る世界と　Rappy Box楽しまないと", 0.18f);
-                    //hpSlider.value += -10f;
+                    //ターン1(熊井-2)
                     voice_lag = 1f;
                     break;
                 case 4:
-                    fullans += mainText.text;
-                    TextPannel.sprite = mashirotextpannel;
-                    mainText.color = new Color(0.0f, 255.0f, 0.0f, 1.0f);
-                    dictationRecognizer.Stop();
-
+                    //ターン2(先生-1)
                     RateOfTurn=1.0f;
                     MyScoreController.RateOfTurn=1.0f;
                     init_recognition();
@@ -125,6 +121,7 @@ public class battle_gamemanager : MonoBehaviour
                     voice_lag = 0;
                     break;
                 case 5:
+                    //ターン2(先生-2)
                     OpponentPointOfRap+=100;
                     MyScoreController.OpponentPointOfRap+=100;
                     stringOpponentPointOfRap = OpponentPointOfRap.ToString();
@@ -134,40 +131,33 @@ public class battle_gamemanager : MonoBehaviour
                     voice_lag = 0.8f;
                     break;
                 case 6:
+                    //ターン2(熊井-1)
                     OpponentPointOfRap+=100;
                     MyScoreController.OpponentPointOfRap+=100;
                     stringOpponentPointOfRap = OpponentPointOfRap.ToString();
                     mashiro_point.text = stringOpponentPointOfRap;
                     hpSlider.value=1-(PlayerPointOfRap/(PlayerPointOfRap+OpponentPointOfRap));
-                    //ReadLine("現状だけのディスは嫌い　どうせ描くなら輝く未来　わけぇしこれからレッツトライ　チャレンジするなら結果オーライ", 0.18f);
                     mainText.text = "";
                     TextPannel.sprite = kumaitextpannel;
                     mainText.color = new Color(255.0f, 0.0f, 0.0f, 1.0f);
                     dictationRecognizer.Start();
                     Debug.Log("音声認識開始");
-                    //hpSlider.value += -10f;
                     voice_lag = -1f;
                     break;
                 case 7:
-                    //ReadLine("そうだろ　だって初心者の僕に　現状がどうこうって元も子もない話じゃん　描いた未来を引き寄せる　。。。#それがラッピーだろ", 0.17f);
-                    //hpSlider.value += -15f;
+                    //ターン2(熊井-2)
                     voice_lag = 1f;
                     break;
                 case 8:
-                    fullans += mainText.text;
-                    TextPannel.sprite = mashirotextpannel;
-                    mainText.color = new Color(0.0f, 255.0f, 0.0f, 1.0f);
-                    dictationRecognizer.Stop();
-
+                    //ターン3(先生-1)
                     RateOfTurn=1.5f;
                     MyScoreController.RateOfTurn=1.5f;
                     init_recognition();
-
                     ReadLine("確かに少しはやるようね　チェックしとくわYourName-弱音をはかないその威勢　姿勢　すでに　合格点よ", 0.18f);
-                    //hpSlider.value += 20f;
                     voice_lag = 0f;
                     break;
                 case 9:
+                    //ターン3(先生-2)
                     OpponentPointOfRap+=125;
                     MyScoreController.OpponentPointOfRap+=125;
                     stringOpponentPointOfRap = OpponentPointOfRap.ToString();
@@ -177,6 +167,7 @@ public class battle_gamemanager : MonoBehaviour
                     voice_lag = 0.8f;
                     break;
                 case 10:
+                    //ターン3(熊井-1)
                     OpponentPointOfRap+=125;
                     MyScoreController.OpponentPointOfRap+=125;
                     stringOpponentPointOfRap = OpponentPointOfRap.ToString();
@@ -186,22 +177,19 @@ public class battle_gamemanager : MonoBehaviour
                     TextPannel.sprite = kumaitextpannel;
                     mainText.color = new Color(255.0f, 0.0f, 0.0f, 1.0f);
                     dictationRecognizer.Start();
-                    //hpSlider.value += -20f;
                     voice_lag = -1f;
                     break;
                 case 11:
-                    //hpSlider.value += -40f;
+                    //ターン3(熊井-2)
                     voice_lag = 1f;
                     break;
                 case 12:
-                    fullans += mainText.text;
-                    TextPannel.sprite = mashirotextpannel;
-                    mainText.color = new Color(0.0f, 255.0f, 0.0f, 1.0f);
-                    dictationRecognizer.Stop();
-
+                    //最後の点数計算
                     RateOfTurn=1.5f;
                     MyScoreController.RateOfTurn=1.5f;
                     init_recognition();
+                    //画面上の吹き出しの文字列削除
+                    mainText.text = "";
                     break;
             }
             timer = 0;
@@ -292,21 +280,20 @@ public class battle_gamemanager : MonoBehaviour
     //音声認識を終了してまた音声認識が使えるようにインスタンスを生成する
     private void init_recognition()
     {
-        
         fullans += mainText.text;
         TextPannel.sprite = mashirotextpannel;
         mainText.color = new Color(0.0f, 255.0f, 0.0f, 1.0f);
         dictationRecognizer.Stop();
         Debug.Log(fullans);
         string st = fullans;
-        Debug.Log("aaa");
         MyScoreController.Rap=st;
         MyScoreController.WillChangeScore=true;
-        /*float num=GameObject.Find("RapJudger").GetComponent<RapJudger>().JudgeRap(st);
-        PlayerPointOfRap+=num;
-        stringPlayerPointOfRap = PlayerPointOfRap.ToString();
-        kumai_point.text = stringPlayerPointOfRap;
-        hpSlider.value = 1-(PlayerPointOfRap/(PlayerPointOfRap+OpponentPointOfRap));*/
+
+        /*
+            ここで外部の関数で寺杣君韻踏みシステムで計算をしてバーを動かすところまでしてある。
+        */
+
+        //音声認識で使ったやつを消して新しく音声認識のインスタンスを生成する。
         dictationRecognizer.Dispose(); 
         dictationRecognizer = new DictationRecognizer();
         dictationRecognizer.InitialSilenceTimeoutSeconds  = 24f;
