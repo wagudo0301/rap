@@ -66,6 +66,7 @@ public class battle_gamemanager : MonoBehaviour
         //先生のスコアの設定
         mashiro_point.text = stringOpponentPointOfRap;
 
+        hpSlider.value = 0.5f;
     }
 
     // Update is called once per frame
@@ -78,7 +79,6 @@ public class battle_gamemanager : MonoBehaviour
             switch(count)
             {
                 case 0:
-                    hpSlider.value = 0.5f;
                     ReadLine("お手並み拝見小テスト　見せてみなさいキミのベスト　聞き届けるはこの担任　キミを育てるそのために", 0.21f);
                     starttime = 0;
                     break;
