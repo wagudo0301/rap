@@ -35,6 +35,18 @@ public class battle_gamemanager : MonoBehaviour
     private Text kumai_point;
     [SerializeField]
     private Text mashiro_point;
+    [SerializeField]
+    private Image kumai;
+    [SerializeField]
+    private Sprite kumai_mini;
+    [SerializeField]
+    private Sprite kumai_mini_microphone;
+    [SerializeField]
+    private Image mashiro;
+    [SerializeField]
+    private Sprite mashiro_mini;
+    [SerializeField]
+    private Sprite mashiro_mini_microphone;
 
     [SerializeField]
     private Image TextPannel;
@@ -43,6 +55,12 @@ public class battle_gamemanager : MonoBehaviour
     private Sprite kumaitextpannel;
     [SerializeField]
     private Sprite mashirotextpannel;
+    [SerializeField]
+    private Image TurnPannel;
+    [SerializeField]
+    private Sprite kumai_turn;
+    [SerializeField]
+    private Sprite mashiro_turn;
     // Start is called before the first frame update
     void Start()
     {
@@ -80,6 +98,8 @@ public class battle_gamemanager : MonoBehaviour
             {
                 case 0:
                     //ターン1(先生-1)
+                    mashiro.sprite = mashiro_mini_microphone;
+                    TurnPannel.sprite = mashiro_turn;
                     ReadLine("お手並み拝見小テスト　見せてみなさいキミのベスト　聞き届けるはこの担任　キミを育てるそのために", 0.21f);
                     starttime = 0;
                     break;
@@ -101,6 +121,9 @@ public class battle_gamemanager : MonoBehaviour
                     mashiro_point.text = stringOpponentPointOfRap;
                     hpSlider.value = 0.6f;
                     mainText.text = "";
+                    kumai.sprite = kumai_mini_microphone;
+                    mashiro.sprite = mashiro_mini;
+                    TurnPannel.sprite = kumai_turn;
                     TextPannel.sprite = kumaitextpannel;
                     mainText.color = new Color(255.0f, 0.0f, 0.0f, 1.0f);
                     dictationRecognizer.Start();
@@ -113,10 +136,12 @@ public class battle_gamemanager : MonoBehaviour
                     break;
                 case 4:
                     //ターン2(先生-1)
+                    mashiro.sprite = mashiro_mini_microphone;
+                    kumai.sprite = kumai_mini;
+                    TurnPannel.sprite = mashiro_turn;
                     RateOfTurn=1.0f;
                     MyScoreController.RateOfTurn=1.0f;
                     init_recognition();
-
                     ReadLine("夢見てるのなら一つ言わせろ　調子は良いけど経験はゼロ　ラップにおいてはキミは無知　だから打つのよ愛のムチ", 0.18f);
                     voice_lag = 0;
                     break;
@@ -138,6 +163,9 @@ public class battle_gamemanager : MonoBehaviour
                     mashiro_point.text = stringOpponentPointOfRap;
                     hpSlider.value=1-(PlayerPointOfRap/(PlayerPointOfRap+OpponentPointOfRap));
                     mainText.text = "";
+                    kumai.sprite = kumai_mini_microphone;
+                    mashiro.sprite = mashiro_mini;
+                    TurnPannel.sprite = kumai_turn;
                     TextPannel.sprite = kumaitextpannel;
                     mainText.color = new Color(255.0f, 0.0f, 0.0f, 1.0f);
                     dictationRecognizer.Start();
@@ -150,6 +178,9 @@ public class battle_gamemanager : MonoBehaviour
                     break;
                 case 8:
                     //ターン3(先生-1)
+                    mashiro.sprite = mashiro_mini_microphone;
+                    kumai.sprite = kumai_mini;
+                    TurnPannel.sprite = mashiro_turn;
                     RateOfTurn=1.5f;
                     MyScoreController.RateOfTurn=1.5f;
                     init_recognition();
@@ -174,6 +205,9 @@ public class battle_gamemanager : MonoBehaviour
                     mashiro_point.text = stringOpponentPointOfRap;
                     hpSlider.value=1-(PlayerPointOfRap/(PlayerPointOfRap+OpponentPointOfRap));
                     mainText.text = "";
+                    kumai.sprite = kumai_mini_microphone;
+                    mashiro.sprite = mashiro_mini;
+                    TurnPannel.sprite = kumai_turn;
                     TextPannel.sprite = kumaitextpannel;
                     mainText.color = new Color(255.0f, 0.0f, 0.0f, 1.0f);
                     dictationRecognizer.Start();
