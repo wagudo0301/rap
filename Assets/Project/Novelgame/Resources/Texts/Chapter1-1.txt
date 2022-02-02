@@ -1243,7 +1243,7 @@ charaimg_active="main_character_normal"="false"
 &!charaimg_size="main_character_normal"="1500,1500,1"
 &!foreground_anim="fadeout,0,2,%0,0,0%%"
 !wait="2"
-&!scene="gymnasium"
+&!scene="Classroom1-1"
 
 
 
