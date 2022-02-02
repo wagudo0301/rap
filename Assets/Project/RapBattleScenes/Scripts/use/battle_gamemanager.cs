@@ -19,8 +19,10 @@ public class battle_gamemanager : MonoBehaviour
     private float starttime = 8f;
     private float voice_lag = 0f;
 
-    private float PlayerPointOfRap=0;
-    private float OpponentPointOfRap=0;
+    public float PlayerPointOfRap=0;
+    public float OpponentPointOfRap=0;
+    private float RateOfTurn=1.0f;
+    private ScoreController MyScoreController;
     private string stringPlayerPointOfRap="0";
     private string stringOpponentPointOfRap="0";
     // SerializeFieldと書くとprivateなパラメーターでも
@@ -48,6 +50,7 @@ public class battle_gamemanager : MonoBehaviour
         dictationRecognizer.InitialSilenceTimeoutSeconds  = 24f;
         dictationRecognizer.AutoSilenceTimeoutSeconds = 24f;
 
+        MyScoreController=GameObject.Find("ScoreController").GetComponent<ScoreController>();
         //float maxHp = 100f;
         //float nowHp = 50f;
  
@@ -62,6 +65,8 @@ public class battle_gamemanager : MonoBehaviour
         kumai_point.text = stringPlayerPointOfRap;
         //先生のスコアの設定
         mashiro_point.text = stringOpponentPointOfRap;
+
+        hpSlider.value = 0.5f;
     }
 
     // Update is called once per frame
@@ -78,7 +83,8 @@ public class battle_gamemanager : MonoBehaviour
                     starttime = 0;
                     break;
                 case 1:
-                    OpponentPointOfRap+=15;
+                    OpponentPointOfRap+=75;
+                    MyScoreController.OpponentPointOfRap+=75;
                     stringOpponentPointOfRap = OpponentPointOfRap.ToString();
                     mashiro_point.text = stringOpponentPointOfRap;
                     hpSlider.value = 0.55f;
@@ -86,7 +92,8 @@ public class battle_gamemanager : MonoBehaviour
                     voice_lag = 0.8f;
                     break;
                 case 2:
-                    OpponentPointOfRap+=15;
+                    OpponentPointOfRap+=75;
+                    MyScoreController.OpponentPointOfRap+=75;
                     stringOpponentPointOfRap = OpponentPointOfRap.ToString();
                     mashiro_point.text = stringOpponentPointOfRap;
                     hpSlider.value = 0.6f;
@@ -110,13 +117,16 @@ public class battle_gamemanager : MonoBehaviour
                     mainText.color = new Color(0.0f, 255.0f, 0.0f, 1.0f);
                     dictationRecognizer.Stop();
 
-                    Task.Run(init_recognition);
+                    RateOfTurn=1.0f;
+                    MyScoreController.RateOfTurn=1.0f;
+                    init_recognition();
 
                     ReadLine("夢見てるのなら一つ言わせろ　調子は良いけど経験はゼロ　ラップにおいてはキミは無知　だから打つのよ愛のムチ", 0.18f);
                     voice_lag = 0;
                     break;
                 case 5:
-                    OpponentPointOfRap+=10;
+                    OpponentPointOfRap+=100;
+                    MyScoreController.OpponentPointOfRap+=100;
                     stringOpponentPointOfRap = OpponentPointOfRap.ToString();
                     mashiro_point.text = stringOpponentPointOfRap;
                     hpSlider.value=1-(PlayerPointOfRap/(PlayerPointOfRap+OpponentPointOfRap));
@@ -124,7 +134,8 @@ public class battle_gamemanager : MonoBehaviour
                     voice_lag = 0.8f;
                     break;
                 case 6:
-                    OpponentPointOfRap+=10;
+                    OpponentPointOfRap+=100;
+                    MyScoreController.OpponentPointOfRap+=100;
                     stringOpponentPointOfRap = OpponentPointOfRap.ToString();
                     mashiro_point.text = stringOpponentPointOfRap;
                     hpSlider.value=1-(PlayerPointOfRap/(PlayerPointOfRap+OpponentPointOfRap));
@@ -139,7 +150,7 @@ public class battle_gamemanager : MonoBehaviour
                     break;
                 case 7:
                     //ReadLine("そうだろ　だって初心者の僕に　現状がどうこうって元も子もない話じゃん　描いた未来を引き寄せる　。。。#それがラッピーだろ", 0.17f);
-                    hpSlider.value += -15f;
+                    //hpSlider.value += -15f;
                     voice_lag = 1f;
                     break;
                 case 8:
@@ -148,14 +159,17 @@ public class battle_gamemanager : MonoBehaviour
                     mainText.color = new Color(0.0f, 255.0f, 0.0f, 1.0f);
                     dictationRecognizer.Stop();
 
-                    Task.Run(init_recognition);
+                    RateOfTurn=1.5f;
+                    MyScoreController.RateOfTurn=1.5f;
+                    init_recognition();
 
                     ReadLine("確かに少しはやるようね　チェックしとくわYourName-弱音をはかないその威勢　姿勢　すでに　合格点よ", 0.18f);
                     //hpSlider.value += 20f;
                     voice_lag = 0f;
                     break;
                 case 9:
-                    OpponentPointOfRap+=7;
+                    OpponentPointOfRap+=125;
+                    MyScoreController.OpponentPointOfRap+=125;
                     stringOpponentPointOfRap = OpponentPointOfRap.ToString();
                     mashiro_point.text = stringOpponentPointOfRap;
                     hpSlider.value=1-(PlayerPointOfRap/(PlayerPointOfRap+OpponentPointOfRap));
@@ -163,7 +177,8 @@ public class battle_gamemanager : MonoBehaviour
                     voice_lag = 0.8f;
                     break;
                 case 10:
-                    OpponentPointOfRap+=7;
+                    OpponentPointOfRap+=125;
+                    MyScoreController.OpponentPointOfRap+=125;
                     stringOpponentPointOfRap = OpponentPointOfRap.ToString();
                     mashiro_point.text = stringOpponentPointOfRap;
                     hpSlider.value=1-(PlayerPointOfRap/(PlayerPointOfRap+OpponentPointOfRap));
@@ -171,11 +186,11 @@ public class battle_gamemanager : MonoBehaviour
                     TextPannel.sprite = kumaitextpannel;
                     mainText.color = new Color(255.0f, 0.0f, 0.0f, 1.0f);
                     dictationRecognizer.Start();
-                    hpSlider.value += -20f;
+                    //hpSlider.value += -20f;
                     voice_lag = -1f;
                     break;
                 case 11:
-                    hpSlider.value += -40f;
+                    //hpSlider.value += -40f;
                     voice_lag = 1f;
                     break;
                 case 12:
@@ -184,7 +199,9 @@ public class battle_gamemanager : MonoBehaviour
                     mainText.color = new Color(0.0f, 255.0f, 0.0f, 1.0f);
                     dictationRecognizer.Stop();
 
-                    Task.Run(init_recognition);
+                    RateOfTurn=1.5f;
+                    MyScoreController.RateOfTurn=1.5f;
+                    init_recognition();
                     break;
             }
             timer = 0;
@@ -282,14 +299,14 @@ public class battle_gamemanager : MonoBehaviour
         dictationRecognizer.Stop();
         Debug.Log(fullans);
         string st = fullans;
-        float num=GameObject.Find("RapJudger").GetComponent<RapJudger>().JudgeRap(st);
-        for(int i=0;i<100;i++)for(int j=0;j<100;j++)num+=i+j;
-        Debug.Log(num);
-        num = 50;
+        Debug.Log("aaa");
+        MyScoreController.Rap=st;
+        MyScoreController.WillChangeScore=true;
+        /*float num=GameObject.Find("RapJudger").GetComponent<RapJudger>().JudgeRap(st);
         PlayerPointOfRap+=num;
         stringPlayerPointOfRap = PlayerPointOfRap.ToString();
         kumai_point.text = stringPlayerPointOfRap;
-        hpSlider.value = 1-(PlayerPointOfRap/(PlayerPointOfRap+OpponentPointOfRap));
+        hpSlider.value = 1-(PlayerPointOfRap/(PlayerPointOfRap+OpponentPointOfRap));*/
         dictationRecognizer.Dispose(); 
         dictationRecognizer = new DictationRecognizer();
         dictationRecognizer.InitialSilenceTimeoutSeconds  = 24f;

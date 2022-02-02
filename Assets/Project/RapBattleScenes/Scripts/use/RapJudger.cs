@@ -8,7 +8,8 @@ public class RapJudger : MonoBehaviour
 {
     public string RapSentence;
 
-    const float PointScale=100.0f;
+    const float PointScale=10.0f;
+    const int JudgeVowelRange=10;
     const float NumberImportanceScale=0.3f;
     const float RhymeImportanceScale=1.7f;//累乗される
     const float ConsonantImportanceScale=1.6f;//0か1かこれ
@@ -29,8 +30,8 @@ public class RapJudger : MonoBehaviour
             Debug.Log(str1);
         }*/
         //JudgeRap("昔々あるところにおじいさんとおばあさんがいました");
-        //Debug.Log(JudgeRap("おじいさんの言いがかりおばあさんは聞く係り"));
-        //JudgeMaxVowelCombo("トコロ","々");
+        //Debug.Log(JudgeRap("宇部の栄でvicolo捨てるbのインテルsoles webosテンの新たりするヒューマンアジュールtoニューサ人気んが米朝右ふりするして集合宇部の栄でvicolo捨てるbのインテルsoles webosテンの新たりするヒューマンアジュールtoニューサ人気んが米朝右ふりするして集合"));
+        //Debug.Log(JudgeMaxVowelCombo("テン","ノ"));
         //JudgeMaxVowelCombo("ムカシ","アル");
     }
     void Update()
@@ -51,10 +52,11 @@ public class RapJudger : MonoBehaviour
         {
             for(var j = i; j < ls00.Count; j++)
             {
-                if(Mathf.Abs(i-j)<=4&&ls00[i].Item1!=ls00[j].Item1)//距離が4以内で、自分と違う形態素のみ韻を踏んでるか判断する
+                if(Mathf.Abs(i-j)<=JudgeVowelRange&&ls00[i].Item1!=ls00[j].Item1)//距離がJudgeVowelRange以内で、自分と違う形態素のみ韻を踏んでるか判断する
                 {
                     //Debug.Log($"{i}{ls00[i].Item2}{j}{ls00[j].Item2}");
                     //Debug.Log("韻の数は"+JudgeMaxVowelCombo(ls00[i].Item2,ls00[j].Item2));
+                    //Debug.Log($"{i}{ls00[i].Item2}{j}{ls00[j].Item2}");
                     if(JudgeMaxVowelCombo(ls00[i].Item2,ls00[j].Item2)>=2)
                     {
                         Debug.Log($"{i}{ls00[i].Item2}{j}{ls00[j].Item2}");
@@ -68,7 +70,7 @@ public class RapJudger : MonoBehaviour
         Debug.Log("文字数の得点"+ls00.Count*0.8f);
         PointOfRap+=ls00.Count*0.8f;//形態素の数だけ得点
         Debug.Log("合計"+PointOfRap);
-        return(PointOfRap);
+        return(Mathf.Round(PointOfRap)*PointScale);
     }
     //文からカタカナ形態素
     List<(string,string)> SentenceToWords(string st01)
@@ -93,7 +95,7 @@ public class RapJudger : MonoBehaviour
     //ライム判定
     float JudgeMaxVowelCombo(string st10,string st11)//韻を踏める最大文字数
     {
-        float MaxVowelCombo=0;
+        float MaxVowelCombo=0f;
         List<string> ls10= new List<string>();
         List<string> ls11= new List<string>();
         //カタカナ形態素を前処理して音ごとに分ける
@@ -105,34 +107,35 @@ public class RapJudger : MonoBehaviour
         {
             ls11.Add(ch11.ToString());
         }
-        for(var i = 0; i < ls10.Count; i++)
+        for(int i = ls10.Count - 1; i >= 0; i--)
         {
             if((ls10[i]=="ッ")||(ls10[i]=="ー")||(ls10[i]=="ン"))
             {
-                ls10.RemoveAt(i);i-=1;
+                ls10.RemoveAt(i);
             }
-            if((ls10[i]=="ァ")||(ls10[i]=="ィ")||(ls10[i]=="ゥ")||(ls10[i]=="ェ")||(ls10[i]=="ォ")||(ls10[i]=="ャ")||(ls10[i]=="ュ")||(ls10[i]=="ョ"))
+            else if((ls10[i]=="ァ")||(ls10[i]=="ィ")||(ls10[i]=="ゥ")||(ls10[i]=="ェ")||(ls10[i]=="ォ")||(ls10[i]=="ャ")||(ls10[i]=="ュ")||(ls10[i]=="ョ"))
             {
                 if(i>=1){ls10[i-1]+=ls10[i];}
-                ls10.RemoveAt(i);i-=1;
+                ls10.RemoveAt(i);
             }
         }
-        for(var i = 0; i < ls11.Count; i++)
+        for(int i = ls11.Count - 1; i >= 0; i--)
         {
             if((ls11[i]=="ッ")||(ls11[i]=="ー")||(ls11[i]=="ン"))
             {
-                ls11.RemoveAt(i);i-=1;
+                ls11.RemoveAt(i);
             }
-            if((ls11[i]=="ァ")||(ls11[i]=="ィ")||(ls11[i]=="ゥ")||(ls11[i]=="ェ")||(ls11[i]=="ォ")||(ls11[i]=="ャ")||(ls11[i]=="ュ")||(ls11[i]=="ョ"))
+            else if((ls11[i]=="ァ")||(ls11[i]=="ィ")||(ls11[i]=="ゥ")||(ls11[i]=="ェ")||(ls11[i]=="ォ")||(ls11[i]=="ャ")||(ls11[i]=="ュ")||(ls11[i]=="ョ"))
             {
                 if(i>=1){ls11[i-1]+=ls11[i];}
-                ls11.RemoveAt(i);i-=1;
+                ls11.RemoveAt(i);
             }
         }
         /*for(var i = 0; i < ls10.Count; i++)
         {
             Debug.Log(ls10[i]);
         }*/
+        //Debug.Log(st10+","+st11);
         //ls10をもって動かす
         for(var i = 0; i < ls10.Count; i++)
         {
