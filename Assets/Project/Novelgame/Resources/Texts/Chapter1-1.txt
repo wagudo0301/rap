@@ -43,11 +43,16 @@
 
 
 #CHAPTER1-1-2&
+
 !foreground_anim="fadein,0,2,%0,0,0,0%%"
+!background_sprite="yard_background"
 !charaimg_active="principal_normal"="false"
 !charaimg_pos="main_character_normal"="600,0,0"
 !charaimg_active="main_character_normal"="true"
 !wait="1"
+
+
+
 &熊井
 「_______．．．」
 
@@ -62,6 +67,7 @@
 
 #CHAPTER1-1-3&
 !foreground_anim="fadein,0,2,%0,0,0,0%%"
+!background_sprite="gymnasium_background"
 !charaimg_active="main_character_normal"="false"
 !charaimg_active="principal_normal"="true"
 !charaimg_pos="principal_close_eyes"="-600,0,0"
@@ -78,19 +84,36 @@
 「じゃあ2列になって私についてきてください。そのまま校舎を案内
 します。」
 
-&!charaimg_active="homeroom_teacher_normal"="false"
+&!foreground_anim="fadeout,0,2,%0,0,0%%"
+!wait="2"
+&!jump_to="CHAPTER1-1-3-1"
+
+#CHAPTER1-1-3-1
+&!foreground_anim="fadein,0,2,%0,0,0,0%%"
+!charaimg_active="homeroom_teacher_normal"="false"
 !charaimg_pos="main_character_normal"="600,0,0"
 !charaimg_active="main_character_normal"="true"
+!background_sprite="yard_background"
 &熊井
 「．．．こっちに来る！！」
 
 &
-「【５秒以内に隠れろ！】」
+「【行動を選択してください】」
 &!top_text="CHAPTER1-1-A-1"="木の陰に隠れる"
 !bottom_text="CHAPTER1-1-B-1"="さすがに木の陰はバレるから、やめとく"
 
 
 #CHAPTER1-1-A-1
+&
+「.」
+
+&
+「..」
+
+&
+「...」
+
+
 &熊井
 「そろそろかな、ここからさりげなく最後尾で合流しよう」
 
@@ -115,16 +138,29 @@
 「何とか合流できた．．．」
 
 &!charaimg_active="homeroom_teacher_normal"="true"
+!charaimg_size="homeroom_teacher_normal"="2000,2000,1"
+
 &先生
 「君が熊井くんね。私は『羽代真代』。これからよろしくね。」
 
+&!charaimg_size="homeroom_teacher_normal"="2000,2000,1"
+!charaimg_size="main_character_normal"="1700,1700,1"
+
+
 &熊井
 「よろしくお願いします。」
+
+&!charaimg_size="main_character_normal"="1500,1500,1"
+!charaimg_size="homeroom_teacher_normal"="2200,2200,1"
+
 
 &先生
 「えーと、八剱くんはいる？学校の警備システムでゲートで認証して
 いるみたいだけどここにはいないのね。時間も押しているし、先に
 校内を案内するわね」
+
+&!charaimg_size="homeroom_teacher_normal"="2000,2000,1"
+
 
 &!foreground_anim="fadeout,0,2,%0,0,0%%"
 !wait="2"
@@ -156,19 +192,23 @@
 
 &!charaimg_delete="asao_normal"=""
 !charaimg_sprite="asao_normal"="asao_normal"
-!charaimg_size="asao_normal"="1500,1500,1"
+!charaimg_size="asao_normal"="1700,1700,1"
 !charaimg_pos="asao_normal"="200,0,0"
 &メッシュの女の子
 「遅れたんだし、挨拶くらいはちゃんとしないと！ほら！」
 
-&!charaimg_delete="yatsurugi_normal"=""
+&!charaimg_size="asao_normal"="1500,1500,1"
+!charaimg_delete="yatsurugi_normal"=""
 !charaimg_sprite="yatsurugi_normal"="yatsurugi_normal"
-!charaimg_size="yatsurugi_normal"="1500,1500,1"
+!charaimg_size="yatsurugi_normal"="1700,1700,1"
 !charaimg_pos="yatsurugi_normal"="800,0,0"
 &八剱？
 「（わぁみんなみてる．．．ああ”～～そりゃそうだよな。こんな遅
 れてくる奴他にいない．．．）．．．八剱冬樹っす。お、遅れてし
 まい申し訳ありません！」
+
+&!charaimg_size="yatsurugi_normal"="1500,1500,1"
+!charaimg_size="homeroom_teacher_normal"="2200,2200,1"
 
 &先生
 「八剱君、あなたが遅れて学校に来たんじゃないのは警備システムで
@@ -176,7 +216,8 @@
 夫よ。さぁ、みんな！教室に入って！レクリエーションをはじめま
 しょう」
 
-&!foreground_anim="fadeout,0,2,%0,0,0%%"
+&!charaimg_size="homeroom_teacher_normal"="2000,2000,1"
+!foreground_anim="fadeout,0,2,%0,0,0%%"
 !wait="2"
 !charaimg_delete="asao_normal"=""
 !charaimg_delete="main_character_normal"=""
@@ -189,48 +230,94 @@
 !charaimg_pos="yatsurugi_normal"="-600,0,0"
 !charaimg_active="yatsurugi_normal"="true"
 &熊井
-「あっ、こんにちは」
+「（じーっ）．．．あっ、こんにちは」
 
 &ヤンキー？「．．．」
 
+&!charaimg_size="yatsurugi_normal"="1700,1700,1"
 &ヤンキー？
 「（こいつ、今俺のこと絶対ヤンキーだって思ったなというか、『入
 学式に遅れた金髪野郎』とかどっちがヤンキーだよ）」
 
+&!charaimg_size="yatsurugi_normal"="1500,1500,1"
+charaimg_size="main_character_normal"="1700,1700,1"
+
+
 &熊井
 「あなたも入学式に遅れたんですか？」
+
+&!charaimg_size="main_character_normal"="1500,1500,1"
+!charaimg_size="yatsurugi_normal"="1700,1700,1"
+
+
 
 &ヤンキー？
 「いや、俺は．．．（実は学校で迷子になってた）」
 
+&!charaimg_size="yatsurugi_normal"="1500,1500,1"
+!charaimg_size="main_character_normal"="1700,1700,1"
+
 &熊井
 「？」
 
+&!charaimg_size="main_character_normal"="1500,1500,1"
+!charaimg_size="yatsurugi_normal"="1700,1700,1"
+
+
 &ヤンキー？
 「俺もこんな湿気た式なんざバックレてやったわ」
+
+&!charaimg_size="yatsurugi_normal"="1500,1500,1"
+!charaimg_size="main_character_normal"="1700,1700,1"
+
 
 &熊井
 「あぁ！そうなんですね。僕はこんな広い敷地初めてで体育館にたど
 り着くなんてできずに迷ってしまったんですよ。」
 
+
+
 &熊井
 「そうだ！これから学校案内らしいので生徒と合流しようと思ってい
 るんですけど、一緒に行きませんか？」
 
+&!charaimg_size="main_character_normal"="1500,1500,1"
+!charaimg_size="yatsurugi_normal"="1700,1700,1"
+
+
 &ヤンキー？
 「．．．ああ、そうだな。俺もそうしようと思ってたところだ。」
+
+&!charaimg_size="yatsurugi_normal"="1500,1500,1"
+!charaimg_size="main_character_normal"="1700,1700,1"
+
 
 &熊井
 「さっそくついて行きましょう！」
 
+&!charaimg_size="main_character_normal"="1500,1500,1"
+!charaimg_size="yatsurugi_normal"="1700,1700,1"
+
+
 &ヤンキー？
 「って、あんたの名前はなんだ？」
 
+&!charaimg_size="yatsurugi_normal"="1500,1500,1"
+!charaimg_size="main_character_normal"="1700,1700,1"
+
+
 &熊井
-「熊井〇〇です」
+「熊井です」
+
+&!charaimg_size="main_character_normal"="1500,1500,1"
+!charaimg_size="yatsurugi_normal"="1700,1700,1"
+
 
 &ヤンキー？
-「．．．俺は、『八剱冬樹』っていう。よろしくな」
+「．．．俺は、『八剱　冬樹（ヤツルギ　フユキ）』っていう。よろしくな」
+
+&!charaimg_size="yatsurugi_normal"="1500,1500,1"
+
 
 &!foreground_anim="fadeout,0,2,%0,0,0%%"
 !wait="2"
@@ -242,18 +329,45 @@
 !background_sprite="hall_background"
 !wait="1"
 
+
+
 &熊井
 「．．．」
+&!charaimg_size="main_character_normal"="1500,1500,1"
+!charaimg_size="yatsurugi_normal"="1700,1700,1"
+
+
 &八剱
 「なぁ！なんでそんなに足が速いのに息が切れないんだ？」
+
+&!charaimg_size="yatsurugi_normal"="1500,1500,1"
+!charaimg_size="main_character_normal"="1700,1700,1"
+
 &熊井
 「元帰宅部だから？」
+
+&!charaimg_size="main_character_normal"="1500,1500,1"
+!charaimg_size="yatsurugi_normal"="1700,1700,1"
+
 &八剱
 「それ答えになってるか？」
+
+&!charaimg_size="yatsurugi_normal"="1500,1500,1"
+!charaimg_size="main_character_normal"="1700,1700,1"
+
+
 &熊井
 「なってると思ったから答えたんだけど？」
+
+&!charaimg_size="main_character_normal"="1500,1500,1"
+!charaimg_size="yatsurugi_normal"="1700,1700,1"
+
+
 &八剱
 「そりゃそーかw」
+
+&!charaimg_size="yatsurugi_normal"="1500,1500,1"
+
 
 &!foreground_anim="fadeout,0,2,%0,0,0%%"
 !wait="2"
@@ -287,22 +401,29 @@
 
 &!charaimg_delete="main_character_normal"=""
 !charaimg_sprite="main_character_normal"="main_character_normal"
-!charaimg_size="main_character_normal"="1500,1500,1"
+!charaimg_size="main_character_normal"="1700,1700,1"
 !charaimg_pos="main_character_normal"="800,0,0"
 &熊井
 「そうです！遅れてしまってすみません。」
 
-&!charaimg_delete="yatsurugi_normal"=""
+&!charaimg_size="main_character_normal"="1500,1500,1"
+!charaimg_delete="yatsurugi_normal"=""
 !charaimg_sprite="yatsurugi_normal"="yatsurugi_normal"
-!charaimg_size="yatsurugi_normal"="1500,1500,1"
+!charaimg_size="yatsurugi_normal"="1700,1700,1"
 !charaimg_pos="yatsurugi_normal"="200,0,0"
 &八剱
 「学校で迷ってしまい、入学式に参加できませんでした。申し訳
 ありませんでした！」
 
+&!charaimg_size="yatsurugi_normal"="1500,1500,1"
+!charaimg_size="homeroom_teacher_normal"="2200,2200,1"
+
+
 &先生
-「まだ、学校案内をしていなかったから先生的にはセーフにしておき
-ます、さぁついてきて！」
+「まだ学校案内をしていなかったから、とーっても優しい真代先生はセーフにしておき
+ます。さぁついてきて！」
+
+&!charaimg_size="homeroom_teacher_normal"="2000,2000,1"
 
 &!foreground_anim="fadeout,0,2,%0,0,0%%"
 !wait="2"
@@ -320,20 +441,21 @@
 !charaimg_pos="main_character_normal"="600,0,0"
 !wait="1"
 &熊井
-「さすが、日本一のラッパー学校というだけあって、敷地が広いですね～」
+「さすが、日本一のラッパー学校というだけあって敷地が広いですね～」
 
 &!charaimg_delete="yatsurugi_normal"=""
 !charaimg_sprite="yatsurugi_normal"="yatsurugi_normal"
-!charaimg_size="yatsurugi_normal"="1500,1500,1"
+!charaimg_size="yatsurugi_normal"="1700,1700,1"
 !charaimg_pos="yatsurugi_normal"="-600,0,0"
 &八剱
 「国の税金から賄われているもんなぁ～」
 
-&!charaimg_active="main_character_normal"="false"
+&!!charaimg_size="yatsurugi_normal"="1500,1500,1"
+charaimg_active="main_character_normal"="false"
 !charaimg_active="yatsurugi_normal"="false"
 !charaimg_pos="homeroom_teacher_normal"="0,0,0"
 !charaimg_active="homeroom_teacher_normal"="true"
-&先生「これにて、 学校案内を終わります。そして、ここがあなたたちのクラスです。
+&先生「これにて学校案内を終わります。そして、ここがあなたたちのクラスです。
 入ってレクリエーションをはじめましょう。」
 
 &!foreground_anim="fadeout,0,2,%0,0,0%%"
@@ -354,9 +476,9 @@
 
 &先生
 「レクリエーションは二人組を組んで、自分の好きなラッパーを熱弁
-してみましょうここに来たからには一人ぐらいは尊敬しているラッ
-パーはいるでしょう？いないならば、私を今から尊敬してもいいん
-ですよ～」
+してみましょう。ここに来たからには一人ぐらいは尊敬しているラッ
+パーはいるでしょう？いないならば、この私を今から尊敬してもいいん
+ですよ」
 
 &!charaimg_pos="homeroom_teacher_normal"="-800,0,0"
 !charaimg_sprite="main_character_normal"="main_character_normal"
@@ -369,80 +491,93 @@
 !charaimg_size="yatsurugi_normal"="1500,1500,1"
 !charaimg_pos="yatsurugi_normal"="800,0,0"
 &先生
-「あ、あとそこは三人でやってください」
+「ふふ。あ、あとそこは三人でやってください」
 
 &!charaimg_active="homeroom_teacher_normal"="false"
+!charaimg_size="asao_normal"="1700,1700,1"
 !charaimg_pos="main_character_normal"="-800,0,0"
 !charaimg_pos="asao_normal"="0,0,0"
 &メッシュの女の子
-「私は浅尾鋏。好きなラッパーは”AOKO”。よろしくね。」
+「私は浅尾　鋏（アサオ　ハサミ）。好きなラッパーは”AOKO”。よろしくね。」
 
-&!charaimg_delete="main_character_normal"=""
+&!charaimg_size="yatsurugi_normal"="1500,1500,1"
+!charaimg_delete="main_character_normal"=""
 !charaimg_sprite="main_character_normal"="main_character_normal"
-!charaimg_size="main_character_normal"="1500,1500,1"
+!charaimg_size="main_character_normal"="1700,1700,1"
 !charaimg_pos="main_character_normal"="-800,0,0"
+
+
 &熊井
 「八剱君、先良いですよ」
 
-&!charaimg_delete="yatsurugi_normal"=""
+&!charaimg_size="main_character_normal"="1500,1500,1"
+!charaimg_delete="yatsurugi_normal"=""
 !charaimg_sprite="yatsurugi_normal"="yatsurugi_normal"
-!charaimg_size="yatsurugi_normal"="1500,1500,1"
+!charaimg_size="yatsurugi_normal"="1700,1700,1"
 !charaimg_pos="yatsurugi_normal"="800,0,0"
 &八剱
-「俺は八剱冬樹。俺の好きなラッパーは”Novel Ore ”。よろしくお願いします！」
+「俺は八剱　冬樹（ヤツルギ　フユキ）。俺の好きなラッパーは”Novel Ore ”。よろしくお願いします！」
 
-&!charaimg_delete="main_character_normal"=""
+&!charaimg_size="yatsurugi_normal"="1500,1500,1"
+!charaimg_delete="main_character_normal"=""
 !charaimg_sprite="main_character_normal"="main_character_normal"
-!charaimg_size="main_character_normal"="1500,1500,1"
+!charaimg_size="main_character_normal"="1700,1700,1"
 !charaimg_pos="main_character_normal"="-800,0,0"
 &熊井
-「僕は熊井○○です。好きなラッパーはいません。」
+「僕は熊井（クマイ）です。好きなラッパーはいません。」
 
-&!charaimg_delete="asao_normal"=""
+&!charaimg_size="main_character_normal"="1500,1500,1"
+!charaimg_delete="asao_normal"=""
 !charaimg_sprite="asao_normal"="asao_normal"
-!charaimg_size="asao_normal"="1500,1500,1"
+!charaimg_size="asao_normal"="1700,1700,1"
 !charaimg_pos="asao_normal"="0,0,0"
 &浅尾
 「．．．熊井くんは好きなラッパーいないんだ」
 
-&!charaimg_delete="main_character_normal"=""
+&!charaimg_size="asao_normal"="1500,1500,1"
+!charaimg_delete="main_character_normal"=""
 !charaimg_sprite="main_character_normal"="main_character_normal"
-!charaimg_size="main_character_normal"="1500,1500,1"
+!charaimg_size="main_character_normal"="1700,1700,1"
 !charaimg_pos="main_character_normal"="-800,0,0"
 &熊井
 「はい、いません」
 
-&!charaimg_delete="asao_normal"=""
+&!charaimg_size="main_character_normal"="1500,1500,1"
+!charaimg_delete="asao_normal"=""
 !charaimg_sprite="asao_normal"="asao_normal"
-!charaimg_size="asao_normal"="1500,1500,1"
+!charaimg_size="asao_normal"="1700,1700,1"
 !charaimg_pos="asao_normal"="0,0,0"
 &浅尾
 「もしかして、ラップ自体そんな知らない感じ？」
 
-&!charaimg_delete="main_character_normal"=""
+&!charaimg_size="asao_normal"="1500,1500,1"
+!charaimg_delete="main_character_normal"=""
 !charaimg_sprite="main_character_normal"="main_character_normal"
-!charaimg_size="main_character_normal"="1500,1500,1"
+!charaimg_size="main_character_normal"="1700,1700,1"
 !charaimg_pos="main_character_normal"="-800,0,0"
 &熊井
 「はい」
 
-&!charaimg_delete="yatsurugi_normal"=""
+&!charaimg_size="main_character_normal"="1500,1500,1"
+!charaimg_delete="yatsurugi_normal"=""
 !charaimg_sprite="yatsurugi_normal"="yatsurugi_normal"
-!charaimg_size="yatsurugi_normal"="1500,1500,1"
+!charaimg_size="yatsurugi_normal"="1700,1700,1"
 !charaimg_pos="yatsurugi_normal"="800,0,0"
 &八剱
 「というか、同級生なんだし敬語は使わないでいいぜ」
 
-&!charaimg_delete="asao_normal"=""
+&!charaimg_size="yatsurugi_normal"="1500,1500,1"
+!charaimg_delete="asao_normal"=""
 !charaimg_sprite="asao_normal"="asao_normal"
-!charaimg_size="asao_normal"="1500,1500,1"
+!charaimg_size="asao_normal"="1700,1700,1"
 !charaimg_pos="asao_normal"="0,0,0"
 &浅尾
 「私もそれに賛成！」
 
-&!charaimg_delete="main_character_normal"=""
+&!charaimg_size="asao_normal"="1500,1500,1"
+!charaimg_delete="main_character_normal"=""
 !charaimg_sprite="main_character_normal"="main_character_normal"
-!charaimg_size="main_character_normal"="1500,1500,1"
+!charaimg_size="main_character_normal"="1700,1700,1"
 !charaimg_pos="main_character_normal"="-800,0,0"
 &熊井
 「『同級生には敬語を使わないのか．．．勉強になるな』」
@@ -450,16 +585,18 @@
 &熊井
 「敬語は使わないことにするよ。改めてまして、僕は熊井。よろしく。」
 
-&!charaimg_delete="yatsurugi_normal"=""
+&!charaimg_size="main_character_normal"="1500,1500,1"
+!charaimg_delete="yatsurugi_normal"=""
 !charaimg_sprite="yatsurugi_normal"="yatsurugi_normal"
-!charaimg_size="yatsurugi_normal"="1500,1500,1"
+!charaimg_size="yatsurugi_normal"="1700,1700,1"
 !charaimg_pos="yatsurugi_normal"="800,0,0"
 &八剱
 「じゃあ、さっそく俺の大好きなNovel　Oreをおすすめするから後で聞いてみてくれよ！！」
 
-&!charaimg_delete="asao_normal"=""
+&!charaimg_size="yatsurugi_normal"="1500,1500,1"
+!charaimg_delete="asao_normal"=""
 !charaimg_sprite="asao_normal"="asao_normal"
-!charaimg_size="asao_normal"="1500,1500,1"
+!charaimg_size="asao_normal"="1700,1700,1"
 !charaimg_pos="asao_normal"="0,0,0"
 &浅尾
 「私のAOKOも聞いて！！」
@@ -490,40 +627,45 @@
 
 &!charaimg_delete="main_character_normal"=""
 !charaimg_sprite="main_character_normal"="main_character_normal"
-!charaimg_size="main_character_normal"="1500,1500,1"
+!charaimg_size="main_character_normal"="1700,1700,1"
 !charaimg_pos="main_character_normal"="-800,0,0"
 &熊井
 「うん！おかげで十分わかったよ！早速、サブスクでダウンロードしてみる」
 
-&!charaimg_delete="asao_normal"=""
+&!charaimg_size="main_character_normal"="1500,1500,1"
+!charaimg_delete="asao_normal"=""
 !charaimg_sprite="asao_normal"="asao_normal"
-!charaimg_size="asao_normal"="1500,1500,1"
+!charaimg_size="asao_normal"="1700,1700,1"
 !charaimg_pos="asao_normal"="0,0,0"
 &浅尾
 「よーし、じゃあ私はお昼行ってくるから、それじゃあね〜」
 
-&!charaimg_delete="yatsurugi_normal"=""
+&!charaimg_size="asao_normal"="1500,1500,1"
+!charaimg_delete="yatsurugi_normal"=""
 !charaimg_sprite="yatsurugi_normal"="yatsurugi_normal"
-!charaimg_size="yatsurugi_normal"="1500,1500,1"
+!charaimg_size="yatsurugi_normal"="1700,1700,1"
 !charaimg_pos="yatsurugi_normal"="800,0,0"
 &八剱
 「俺のNovelOreの話が全くできなかった．．．」
 
-&!charaimg_delete="main_character_normal"=""
+&!charaimg_size="yatsurugi_normal"="1500,1500,1"
+!charaimg_delete="main_character_normal"=""
 !charaimg_sprite="main_character_normal"="main_character_normal"
-!charaimg_size="main_character_normal"="1500,1500,1"
+!charaimg_size="main_character_normal"="1700,1700,1"
 !charaimg_pos="main_character_normal"="-800,0,0"
 &熊井
 「お昼のときに八剱くんの話も聞きたいから一緒に食堂行こうよ！」
 
-&!charaimg_delete="yatsurugi_normal"=""
+&!charaimg_size="main_character_normal"="1500,1500,1"
+!charaimg_delete="yatsurugi_normal"=""
 !charaimg_sprite="yatsurugi_normal"="yatsurugi_normal"
-!charaimg_size="yatsurugi_normal"="1500,1500,1"
+!charaimg_size="yatsurugi_normal"="1700,1700,1"
 !charaimg_pos="yatsurugi_normal"="800,0,0"
 &八剱
 「．．．ありがとう」
 
-&!foreground_anim="fadeout,0,2,%0,0,0%%"
+&!charaimg_size="yatsurugi_normal"="1500,1500,1"
+!foreground_anim="fadeout,0,2,%0,0,0%%"
 !charaimg_delete="main_character_normal"=""
 !charaimg_delete="asao_normal"=""
 !charaimg_delete="yatsurugi_normal"=""
@@ -575,8 +717,12 @@
 &浅尾
 「緑で雷マークのボタンはまさか．．．」
 
+&!charaimg_size="homeroom_teacher_normal"="1700,1700,1"
 &先生
 「スマホを充電できるわ。」
+
+&!charaimg_size="homeroom_teacher_normal"="1500,1500,1"
+!charaimg_size="asao_normal"="1700,1700,1"
 
 &浅尾
 「しかも、私のAndroidも使える充電ケーブルだ！！」
@@ -588,10 +734,13 @@
 &メガネの男の子
 「確か、事前に僕たちのスマホの種類を聞かれていたはず．．．」
 
+&!charaimg_size="homeroom_teacher_normal"="1700,1700,1"
+
 &先生
 「そう！このためのアンケートよ。とりあえず、授業について分からないことがあればいつでも質問してね。」
 
-&!charaimg_delete="shizaki_normal"=""
+&!charaimg_size="homeroom_teacher_normal"="1500,1500,1"
+!charaimg_delete="shizaki_normal"=""
 !charaimg_sprite="main_character_normal"="main_character_normal"
 !charaimg_size="main_character_normal"="1500,1500,1"
 !charaimg_pos="main_character_normal"="600,0,0"
@@ -639,22 +788,38 @@
 &熊井
 「おはよう！」
 
+&!charaimg_size="yatsurugi_normal"="1700,1700,1"
 &八剱
 「朝早いな、何時から来てたんだ？」
+
+&!charaimg_size="yatsurugi_normal"="1500,1500,1"
+!charaimg_size="main_character_normal"="1700,1700,1"
 
 &熊井
 「早くに起きちゃって、全く眠れなくてそのまま教室に来てみたら入れちゃったんだよね。」
 
+&!charaimg_size="main_character_normal"="1500,1500,1"
+!charaimg_size="yatsurugi_normal"="1700,1700,1"
+
 &八剱
 「えっ、それ本当！？」
+
+&!charaimg_size="yatsurugi_normal"="1500,1500,1"
+!charaimg_size="main_character_normal"="1700,1700,1"
+
 
 &熊井
 「夜間は校内唯一の玄関である入門がしまっているし、関係者以外は基本、外からは入れない。それに、この教室には大して物が置かれていないし、寮から繋がっているということは生徒か先生ぐらいしか夜間には入れない。大方、忘れ物をした生徒がいつでも寮から来れるようにしているんだろうね。」
 
+&!charaimg_size="main_character_normal"="1500,1500,1"
+!charaimg_size="yatsurugi_normal"="1700,1700,1"
+
+
 &八剱
 「警備の人も忘れ物をした生徒のためだけに鍵を開けたり閉めたり管理するのは面倒だもんなぁ」
 
-&!charaimg_delete="main_character_normal"=""
+&
+!charaimg_delete="main_character_normal"=""
 !charaimg_delete="yatsurugi_normal"=""
 !foreground_anim="fadeout,0,2,%0,0,0%%"
 !wait="2"
@@ -673,7 +838,7 @@
 「はい、それでは朝のHRをはじめます。今日やることを先に説明しちゃいたいと思います！これから2日後、ラッパー適正テストをします。いたって簡単、昨日の授業で説明した4つの観点をうまくクリアしていればOK。できなかったら、即退学ね。」
 
 &先生
-「退学とは言ったけど、今日を含めたこの2日間でテストに向けて自己のスキルを強化しなさい！私からは以上です。」
+「即退学とは言ったけど、今日を含めたこの2日間でテストに向けて自己のスキルを強化しなさい！私からは以上です。」
 
 &!background_sprite="hall_background"
 !charaimg_delete="homeroom_teacher_normal"=""
@@ -690,8 +855,15 @@
 &八剱
 「な、なあ．．．退学って本気かな．．．」
 
+
+&!charaimg_size="asao_normal"="1700,1700,1"
+
 &浅尾
 「わからないけど、2日間まるまるテストに向けて対策する時間をとっているし、あながち嘘ではないんじゃないの？」
+
+&!charaimg_size="asao_normal"="1500,1500,1"
+!charaimg_size="yatsurugi_normal"="1700,1700,1"
+
 
 &八剱
 「まじかよぉぉ．．．タダ飯、タダ風呂のタダ生活の日常もテストに合格しなければ、たった数日で終わりかあぁ～～．．．」
@@ -710,15 +882,22 @@
 !charaimg_pos="yatsurugi_normal"="0,0,0"
 !charaimg_active="yatsurugi_normal"="true"
 !charaimg_sprite="main_character_normal"="main_character_normal"
-!charaimg_size="main_character_normal"="1500,1500,1"
+!charaimg_size="main_character_normal"="1700,1700,1"
 !charaimg_pos="main_character_normal"="-800,0,0"
 &熊井
 「君は誰？」
 
+&!charaimg_size="main_character_normal"="1500,1500,1"
+!charaimg_size="shizaki_normal"="1700,1700,1"
+
+
 &メガネの男の子
 「おっと声に出ていたか失敬．．．俺は」
 
-&!charaimg_active="main_character_normal"="false"
+&!charaimg_size="shizaki_normal"="1500,1500,1"
+
+
+!charaimg_active="main_character_normal"="false"
 !charaimg_delete="asao_normal"=""
 !charaimg_active="yatsurugi_normal"="false"
 !charaimg_pos="shizaki_normal"="-300,0,0"
@@ -731,16 +910,23 @@
 &!charaimg_pos="miune_normal"="600,0,0"
 !charaimg_pos="shizaki_normal"="-600,0,0"
 !charaimg_active="shizaki_normal"="true"
-&紫崎？
+!charaimg_size="shizaki_normal"="1700,1700,1"
+
+&シザキ？
 「（お前が前を見ていないのもどうかと思うが．．．）急に立ち止まってしまったことは申し訳ない。だが、人が自己紹介をしているときにいきなりぶつかってこられた方はあまりいい思いしないがな。」
 
-&紫崎？
+&シザキ？
 「それに、お前は初日からいつも何かにぶつかっているだろう？もっと周りをよく見て過ごすんだな。」
+
+&!charaimg_size="shizaki_normal"="1500,1500,1"
+!charaimg_size="miune_normal"="1800,1800,1"
+
 
 &おとなしそうな女の子
 「そんないい方しなくてもいいじゃん！酷い．．．」
 
-&!charaimg_pos="main_character_normal"="-1000,0,0"
+&!charaimg_size="miune_normal"="1600,1600,1"
+!charaimg_pos="main_character_normal"="-1000,0,0"
 !charaimg_active="main_character_normal"="true"
 !charaimg_pos="yatsurugi_normal"="-200,0,0"
 !charaimg_active="yatsurugi_normal"="true"
@@ -754,51 +940,64 @@
 
 &!charaimg_delete="shizaki_normal"=""
 !charaimg_sprite="shizaki_normal"="shizaki_normal"
-!charaimg_size="shizaki_normal"="1500,1500,1"
+!charaimg_size="shizaki_normal"="1700,1700,1"
 !charaimg_pos="shizaki_normal"="600,0,0"
-&紫崎？
+&シザキ？
 「俺は『紫崎　朝暉（しざき　あさき）』だ。」
 
-&!charaimg_delete="miune_normal"=""
+&!charaimg_size="shizaki_normal"="1500,1500,1"
+!charaimg_delete="miune_normal"=""
 !charaimg_sprite="miune_normal"="miune_normal"
 !charaimg_size="miune_normal"="1600,1600,1"
 !charaimg_pos="miune_normal"="1000,0,0"
 &おとなしい女の子
 「．．．わたしは、『三嶺　昼ネ（みうね　ひるね）』です。」
 
+&!charaimg_size="miune_normal"="1800,1800,1"
+
 &三嶺
 「よ．．．ろしくね」
 
-&!charaimg_delete="main_character_normal"=""
+&!charaimg_size="miune_normal"="1600,1600,1"
+!charaimg_delete="main_character_normal"=""
 !charaimg_sprite="main_character_normal"="main_character_normal"
-!charaimg_size="main_character_normal"="1500,1500,1"
+!charaimg_size="main_character_normal"="1700,1700,1"
 !charaimg_pos="main_character_normal"="-1000,0,0"
 &熊井
 「よろしく～」
 
-&!charaimg_delete="asao_normal"=""
+&!charaimg_size="main_character_normal"="1500,1500,1"
+!charaimg_delete="asao_normal"=""
 !charaimg_sprite="asao_normal"="asao_normal"
-!charaimg_size="asao_normal"="1500,1500,1"
+!charaimg_size="asao_normal"="1700,1700,1"
 !charaimg_pos="asao_normal"="-600,0,0"
 !charaimg_delete="yatsurugi_normal"=""
 !charaimg_sprite="yatsurugi_normal"="yatsurugi_normal"
-!charaimg_size="yatsurugi_normal"="1500,1500,1"
+!charaimg_size="yatsurugi_normal"="1700,1700,1"
 !charaimg_pos="yatsurugi_normal"="-200,0,0"
 
 &浅尾・八剱
-「さっきの大声はどこへいったんだ．．．」
+「『さっきの大声は一体どこへいったんだ．．．』」
 
-&!charaimg_delete="miune_normal"=""
+&!charaimg_size="asao_normal"="1500,1500,1"
+!charaimg_size="yatsurugi_normal"="1500,1500,1"
+
+!charaimg_delete="miune_normal"=""
 !charaimg_sprite="miune_normal"="miune_normal"
-!charaimg_size="miune_normal"="1600,1600,1"
+!charaimg_size="miune_normal"="1800,1800,1"
 !charaimg_pos="miune_normal"="1000,0,0"
 &三嶺
 「あっ、紫崎！！早くしないと！購買のパンが売り切れちゃうよ！！」
 
+&!charaimg_size="miune_normal"="1600,1600,1"
+!charaimg_size="yatsurugi_normal"="1700,1700,1"
+
+
 &八剱
 「購買のパンってこの学校名物のラップパンか～～」
 
-&!charaimg_active="main_character_normal"="false"
+&!charaimg_size="yatsurugi_normal"="1500,1500,1"
+!charaimg_active="main_character_normal"="false"
 !charaimg_active="asao_normal"="false"
 !charaimg_active="yatsurugi_normal"="false"
 !charaimg_active="shizaki_normal"="false"
@@ -815,33 +1014,45 @@
 !charaimg_active="shizaki_normal"="true"
 !charaimg_delete="miune_normal"=""
 !charaimg_sprite="miune_normal"="miune_normal"
-!charaimg_size="miune_normal"="1600,1600,1"
+!charaimg_size="miune_normal"="1800,1800,1"
 !charaimg_pos="miune_normal"="1000,0,0"
 &三嶺
 「そーなの～、あのパンを食べるがためにこの学校に入ったともいえるんだ～～！」
 
-&!charaimg_delete="shizaki_normal"=""
+&!charaimg_size="miune_normal"="1600,1600,1"
+!charaimg_delete="shizaki_normal"=""
 !charaimg_sprite="shizaki_normal"="shizaki_normal"
-!charaimg_size="shizaki_normal"="1500,1500,1"
+!charaimg_size="shizaki_normal"="1700,1700,1"
 !charaimg_pos="shizaki_normal"="600,0,0"
 &紫崎
 「おい！急ぐんじゃなかったのか！？すまん、3人とも！話をもっと続けたいところだが、俺たちは購買に行ってくる！」
 
-&!charaimg_delete="shizaki_normal"=""
+&!charaimg_size="shizaki_normal"="1500,1500,1"
+!charaimg_delete="shizaki_normal"=""
 !charaimg_delete="miune_normal"=""
 !charaimg_pos="main_character_normal"="-800,0,0"
 !charaimg_pos="asao_normal"="0,0,0"
 !charaimg_pos="yatsurugi_normal"="800,0,0"
+!charaimg_size="asao_normal"="1700,1700,1"
+
 &浅尾
 「あ、私たちの名前いうの忘れた．．．」
 
+&!charaimg_size="asao_normal"="1500,1500,1"
+!charaimg_size="yatsurugi_normal"="1700,1700,1"
+
+
 &八剱
 「たしかに．．．」
+&!charaimg_size="yatsurugi_normal"="1500,1500,1"
+!charaimg_size="main_character_normal"="1700,1700,1"
+
 
 &熊井
 「あ、でも確か．．．」
 
-&!charaimg_delete="main_character_normal"=""
+&!charaimg_size="main_character_normal"="1500,1500,1"
+!charaimg_delete="main_character_normal"=""
 !charaimg_delete="asao_normal"=""
 !charaimg_delete="yatsurugi_normal"=""
 !foreground_anim="fadeout,0,2,%0,0,0%%"
@@ -861,38 +1072,78 @@
 !wait="1"
 &紫崎
 「ラップパン2つ買えたな！争奪戦に勝つってこれはいい気分なものだな。」
+&!charaimg_size="miune_normal"="1800,1800,1"
+
 
 &三嶺
 「3人の分も買えたらよかったんだけど．．．あれ？3人の名前聞くの忘れてた！！」
+&!charaimg_size="miune_normal"="1600,1600,1"
+!charaimg_size="shizaki_normal"="1700,1700,1"
+
 
 &紫崎
-「あー、そういうことなら、学校のアプリから生徒の名簿リストを見るといい。ほら。」
+「そういうことなら学校のアプリから生徒の名簿リストを見るといい。ほら。」
+
+&!charaimg_size="shizaki_normal"="1500,1500,1"
+!charaimg_size="miune_normal"="1800,1800,1"
+
 
 &三嶺
 「わっ！ほんとだ！顔写真もついているんだね！さっき話したのは熊井くん、浅尾さん、八剱くんか。紫崎はなんでもしってるんだね！」
 
+&!charaimg_size="miune_normal"="1600,1600,1"
+!charaimg_size="shizaki_normal"="1700,1700,1"
+
+
 &紫崎
 「これぐらい知ってて当然だろう。お前が無知なだけだ。」
+
+&!charaimg_size="shizaki_normal"="1500,1500,1"
+!charaimg_size="miune_normal"="1800,1800,1"
+
 
 &三嶺
 「またひどい．．．その冷たい言い回しやめなよ。ともだちできないよ？」
 
+&!charaimg_size="miune_normal"="1600,1600,1"
+!charaimg_size="shizaki_normal"="1700,1700,1"
+
+
 &紫崎
-「人前でおどおどしている奴には言われたくないね。あっ、おい！！」
+「人前でおどおどしている奴には言われたくないね。大体、お前は昔から．．．あっ、おい！！」
+
+&!charaimg_size="shizaki_normal"="1500,1500,1"
+!charaimg_size="miune_normal"="1800,1800,1"
+
 
 &三嶺
 「ラップパンおいし～～～！もう一つも食べちゃお～」
 
+&!charaimg_size="miune_normal"="1600,1600,1"
+!charaimg_size="shizaki_normal"="1700,1700,1"
+
+
 &紫崎
 「返せ！！せめて金だけでも返すんだ！！あぁ．．．俺の980円が．．．労力が．．．」
+
+&!charaimg_size="shizaki_normal"="1500,1500,1"
+!charaimg_size="miune_normal"="1800,1800,1"
+
 
 &三嶺
 「おいしかった～！ありがとうね！！紫崎！」
 
+&!charaimg_size="miune_normal"="1600,1600,1"
+!charaimg_size="shizaki_normal"="1700,1700,1"
+
+
 &紫崎
 「．．．」
 
-&!charaimg_delete="shizaki_normal"=""
+
+&!charaimg_size="shizaki_normal"="1500,1500,1"
+
+!charaimg_delete="shizaki_normal"=""
 !charaimg_delete="miune_normal"=""
 !foreground_anim="fadeout,0,2,%0,0,0%%"
 !wait="2"
@@ -915,10 +1166,14 @@
 &浅尾
 「へぇ～そうやって見れるんだ～～！顔写真付きだからわかりやすいね～」
 
+&!charaimg_size="yatsurugi_normal"="1700,1700,1"
+
+
 &八剱
 「だから全体の自己紹介もやらないのか！熊井と一緒にいると、この学校の謎の考察がどんどん増えていっている気がするぜ。」
 
-&!charaimg_pos="main_character_normal"="0,0,0"
+&!charaimg_size="yatsurugi_normal"="1500,1500,1"
+!charaimg_pos="main_character_normal"="0,0,0"
 !charaimg_pos="asao_normal"="400,0,0"
 !charaimg_pos="yatsurugi_normal"="800,0,0"
 !charaimg_sprite="homeroom_teacher_normal"="homeroom_teacher_normal"
@@ -928,23 +1183,39 @@
 &先生
 「あなたたち、意外とそんな呑気に喋っている時間はあまりないわよ？それとも余裕、かしら？」
 
+&!charaimg_size="main_character_normal"="1700,1700,1"
+!charaimg_size="yatsurugi_normal"="1700,1700,1"
+!charaimg_size="asao_normal"="1700,1700,1"
+
+
 &浅尾・八剱・熊井
 「せ、先生．．．」
+
+&!charaimg_size="main_character_normal"="1500,1500,1"
+!charaimg_size="yatsurugi_normal"="1500,1500,1"
+!charaimg_size="asao_normal"="1500,1500,1"
+
 
 &先生
 「協力するのも全然ありだけど、テスト本番は一人だからね。頑張りなさいよ？」
 
 &!charaimg_delete="main_character_normal"=""
 !charaimg_sprite="main_character_normal"="main_character_normal"
-!charaimg_size="main_character_normal"="1500,1500,1"
+!charaimg_size="main_character_normal"="1700,1700,1"
 !charaimg_pos="main_character_normal"="0,0,0"
+!charaimg_size="yatsurugi_normal"="1700,1700,1"
+
+
 &八剱・熊井
 「わかりました。」
 
-&!charaimg_delete="asao_normal"=""
+&!charaimg_size="main_character_normal"="1500,1500,1"
+!charaimg_size="yatsurugi_normal"="1500,1500,1"
+!charaimg_delete="asao_normal"=""
 !charaimg_sprite="asao_normal"="asao_normal"
-!charaimg_size="asao_normal"="1500,1500,1"
+!charaimg_size="asao_normal"="1700,1700,1"
 !charaimg_pos="asao_normal"="400,0,0"
+
 &浅尾
 「頑張りまーす。」
 
@@ -952,15 +1223,24 @@
 !charaimg_pos="main_character_normal"="-800,0,0"
 !charaimg_pos="asao_normal"="0,0,0"
 !charaimg_pos="yatsurugi_normal"="800,0,0"
+!charaimg_size="asao_normal"="1500,1500,1"
+
 &浅尾
 「私はレコーディング室に行ってくる。」
+
+&!charaimg_size="yatsurugi_normal"="1700,1700,1"
+
 
 &八剱
 「俺は資料室に行ってくる。じゃあ、自由行動って感じで！何かわかったことがあれば、スマホで連絡をとろう。」
 
+&!charaimg_size="main_character_normal"="1700,1700,1"
+!charaimg_size="yatsurugi_normal"="1500,1500,1"
+
+
 &熊井
 「わかった。じゃあまた。」
-
+&!charaimg_size="main_character_normal"="1500,1500,1"
 &!foreground_anim="fadeout,0,2,%0,0,0%%"
 !wait="2"
 &!scene="gymnasium"
