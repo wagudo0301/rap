@@ -22,7 +22,7 @@ public class battle_gamemanager : MonoBehaviour
 
     public float PlayerPointOfRap=0;
     public float OpponentPointOfRap=0;
-    private float RateOfTurn=1.0f;
+    private float RateOfTurn;
     private ScoreController MyScoreController;
     private string stringPlayerPointOfRap="0";
     private string stringOpponentPointOfRap="0";
@@ -64,23 +64,17 @@ public class battle_gamemanager : MonoBehaviour
     private Sprite mashiro_turn;
     [SerializeField]
     private Sprite UIMask;
+    [SerializeField]
+    private Image ForeGroundPannel;
+    float alfa;
     // Start is called before the first frame update
     void Start()
     {
         dictationRecognizer = new DictationRecognizer();
-        dictationRecognizer.InitialSilenceTimeoutSeconds  = 24f;
-        dictationRecognizer.AutoSilenceTimeoutSeconds = 24f;
+        dictationRecognizer.InitialSilenceTimeoutSeconds  = 240f;
+        dictationRecognizer.AutoSilenceTimeoutSeconds = 240f;
 
         MyScoreController=GameObject.Find("ScoreController").GetComponent<ScoreController>();
-        //float maxHp = 100f;
-        //float nowHp = 50f;
- 
- 
-        //スライダーの最大値の設定
-        //hpSlider.maxValue = maxHp;
- 
-        //スライダーの現在値の設定
-        //hpSlider.value = nowHp;
 
         //熊井のスコアの設定
         kumai_point.text = stringPlayerPointOfRap;
@@ -88,6 +82,8 @@ public class battle_gamemanager : MonoBehaviour
         mashiro_point.text = stringOpponentPointOfRap;
 
         hpSlider.value = 0.5f;
+
+        alfa = ForeGroundPannel.color.a;
     }
 
     // Update is called once per frame
@@ -102,7 +98,6 @@ public class battle_gamemanager : MonoBehaviour
                 case 0:
                     //ターン1(先生-1)
                     mashiro.sprite = mashiro_mini_microphone;
-                    //TurnPannel.sprite = mashiro_turn;
                     StartCoroutine("ChangeMashiroTurn");
                     TextPannel.sprite = mashirotextpannel;
                     ReadLine("お手並み拝見小テスト　見せてみなさいキミのベスト　聞き届けるはこの担任　キミを育てるそのために", 0.21f);
@@ -128,7 +123,6 @@ public class battle_gamemanager : MonoBehaviour
                     mainText.text = "";
                     kumai.sprite = kumai_mini_microphone;
                     mashiro.sprite = mashiro_mini;
-                    //TurnPannel.sprite = kumai_turn;
                     StartCoroutine("ChangeKumaiTurn");
                     TextPannel.sprite = kumaitextpannel;
                     mainText.color = new Color(255.0f, 0.0f, 0.0f, 1.0f);
@@ -144,9 +138,7 @@ public class battle_gamemanager : MonoBehaviour
                     //ターン2(先生-1)
                     mashiro.sprite = mashiro_mini_microphone;
                     kumai.sprite = kumai_mini;
-                    //TurnPannel.sprite = mashiro_turn;
                     StartCoroutine("ChangeMashiroTurn");
-                    RateOfTurn=1.0f;
                     MyScoreController.RateOfTurn=1.0f;
                     init_recognition();
                     ReadLine("夢見てるのなら一つ言わせろ　調子は良いけど経験はゼロ　ラップにおいてはキミは無知　だから打つのよ愛のムチ", 0.18f);
@@ -172,7 +164,6 @@ public class battle_gamemanager : MonoBehaviour
                     mainText.text = "";
                     kumai.sprite = kumai_mini_microphone;
                     mashiro.sprite = mashiro_mini;
-                    //TurnPannel.sprite = kumai_turn;
                     StartCoroutine("ChangeKumaiTurn");
                     TextPannel.sprite = kumaitextpannel;
                     mainText.color = new Color(255.0f, 0.0f, 0.0f, 1.0f);
@@ -188,9 +179,7 @@ public class battle_gamemanager : MonoBehaviour
                     //ターン3(先生-1)
                     mashiro.sprite = mashiro_mini_microphone;
                     kumai.sprite = kumai_mini;
-                    //TurnPannel.sprite = mashiro_turn;
                     StartCoroutine("ChangeMashiroTurn");
-                    RateOfTurn=1.5f;
                     MyScoreController.RateOfTurn=1.5f;
                     init_recognition();
                     ReadLine("確かに少しはやるようね　チェックしとくわYourName-弱音をはかないその威勢　姿勢　すでに　合格点よ", 0.18f);
@@ -198,8 +187,8 @@ public class battle_gamemanager : MonoBehaviour
                     break;
                 case 9:
                     //ターン3(先生-2)
-                    OpponentPointOfRap+=375;
-                    MyScoreController.OpponentPointOfRap+=375;
+                    OpponentPointOfRap+=500;
+                    MyScoreController.OpponentPointOfRap+=500;
                     stringOpponentPointOfRap = OpponentPointOfRap.ToString();
                     mashiro_point.text = stringOpponentPointOfRap;
                     hpSlider.value=1-(PlayerPointOfRap/(PlayerPointOfRap+OpponentPointOfRap));
@@ -208,15 +197,14 @@ public class battle_gamemanager : MonoBehaviour
                     break;
                 case 10:
                     //ターン3(熊井-1)
-                    OpponentPointOfRap+=375;
-                    MyScoreController.OpponentPointOfRap+=375;
+                    OpponentPointOfRap+=500;
+                    MyScoreController.OpponentPointOfRap+=500;
                     stringOpponentPointOfRap = OpponentPointOfRap.ToString();
                     mashiro_point.text = stringOpponentPointOfRap;
                     hpSlider.value=1-(PlayerPointOfRap/(PlayerPointOfRap+OpponentPointOfRap));
                     mainText.text = "";
                     kumai.sprite = kumai_mini_microphone;
                     mashiro.sprite = mashiro_mini;
-                    //TurnPannel.sprite = kumai_turn;
                     StartCoroutine("ChangeKumaiTurn");
                     TextPannel.sprite = kumaitextpannel;
                     mainText.color = new Color(255.0f, 0.0f, 0.0f, 1.0f);
@@ -228,22 +216,7 @@ public class battle_gamemanager : MonoBehaviour
                     voice_lag = 1f;
                     break;
                 case 12:
-                    //最後の点数計算
-                    RateOfTurn=1.5f;
-                    MyScoreController.RateOfTurn=1.5f;
-                    init_recognition();
-                    //画面上の吹き出しの文字列削除
-                    mainText.text = "";
-                    PublicStaticStatus.KumaiResultPoint = PlayerPointOfRap;
-                    PublicStaticStatus.MashiroResultPoint = OpponentPointOfRap;
-                    if(PlayerPointOfRap >= OpponentPointOfRap)
-                    {
-                        SceneManager.LoadScene("WinScenes");
-                    } 
-                    else if(PlayerPointOfRap < OpponentPointOfRap)
-                    {
-                        SceneManager.LoadScene("LoseScenes");
-                    }
+                    StartCoroutine("LastPointCalculation");
                     break;
             }
             timer = 0;
@@ -350,8 +323,8 @@ public class battle_gamemanager : MonoBehaviour
         //音声認識で使ったやつを消して新しく音声認識のインスタンスを生成する。
         dictationRecognizer.Dispose(); 
         dictationRecognizer = new DictationRecognizer();
-        dictationRecognizer.InitialSilenceTimeoutSeconds  = 24f;
-        dictationRecognizer.AutoSilenceTimeoutSeconds = 24f;
+        dictationRecognizer.InitialSilenceTimeoutSeconds  = 240f;
+        dictationRecognizer.AutoSilenceTimeoutSeconds = 240f;
         ans = "";
         fullans = "";
         Debug.Log("非同期処理終了");
@@ -382,5 +355,34 @@ public class battle_gamemanager : MonoBehaviour
 
         //透過画像の表示
         TurnPannel.sprite = UIMask;
+    }
+
+    //最後の点数の処理とフェードアウトの実装
+    IEnumerator LastPointCalculation()
+    {
+        //最後の点数計算
+        MyScoreController.RateOfTurn=2f;
+        init_recognition();
+        //画面上の吹き出しの文字列削除
+        mainText.text = "";
+        //テキストパネルの削除
+        TextPannel.sprite = UIMask;
+        //1秒停止
+        yield return new WaitForSeconds(2);
+
+        SceneLoad();
+    }
+    private void SceneLoad()
+    {
+        PublicStaticStatus.KumaiResultPoint = PlayerPointOfRap;
+        PublicStaticStatus.MashiroResultPoint = OpponentPointOfRap;
+        if(PlayerPointOfRap >= OpponentPointOfRap)
+        {
+            SceneManager.LoadScene("WinScenes");
+        } 
+        else if(PlayerPointOfRap < OpponentPointOfRap)
+        {
+            SceneManager.LoadScene("LoseScenes");
+        }
     }
 }
