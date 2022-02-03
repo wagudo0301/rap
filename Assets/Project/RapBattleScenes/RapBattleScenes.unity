@@ -1349,6 +1349,7 @@ MonoBehaviour:
   TurnPannel: {fileID: 867992218}
   kumai_turn: {fileID: 21300000, guid: 75105853c82e54d468577765d4593316, type: 3}
   mashiro_turn: {fileID: 21300000, guid: 2e760274732d9c442a13dc6f087b3de8, type: 3}
+  UIMask: {fileID: 10917, guid: 0000000000000000f000000000000000, type: 0}
 --- !u!1 &1733243169
 GameObject:
   m_ObjectHideFlags: 0
