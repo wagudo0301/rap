@@ -22,13 +22,11 @@
 
 !foreground_color="0,0,0"
 !foreground_anim="fadein,0,2,%0,0,0,0%%"
-
-
-!bgm_sound="Kinchou2BGM"
+!bgm_sound="tanoshiibouken"
 !bgm_loop="true"
+!bgm_volume="0"
 !bgm_play=""
-
-
+!bgm_fade="5,1"
 !background_sprite="gymnasium_background"
 !charaimg_pos="principal_normal"="-600,0,0"
 !charaimg_active="principal_normal"="true"
@@ -53,22 +51,10 @@
 
 !foreground_anim="fadein,0,2,%0,0,0,0%%"
 !background_sprite="yard_background"
-
-
-!bgm_sound="Kinchou1BGM"
-!bgm_loop="true"
-!bgm_volume="0"
-!bgm_play=""
-!bgm_fade="5,1"
-
-
 !charaimg_active="principal_normal"="false"
 !charaimg_pos="main_character_normal"="600,0,0"
 !charaimg_active="main_character_normal"="true"
 !wait="1"
-
-
-
 &熊井
 「_______．．．」
 
@@ -84,11 +70,6 @@
 #CHAPTER1-1-3&
 !foreground_anim="fadein,0,2,%0,0,0,0%%"
 !background_sprite="gymnasium_background"
-
-
-!bgm_mute="true"
-
-
 !charaimg_active="main_character_normal"="false"
 !charaimg_active="principal_normal"="true"
 !charaimg_pos="principal_close_eyes"="-600,0,0"
@@ -96,12 +77,6 @@
 !wait="1"
 &校長
 「では、私からの話は以上です。」
-
-
-&!se_sound="sample1"="NichijoBGM"
-!se_play="sample1"=""
-!se_sound="sample2"="Kinchou1BGM"
-
 
 !charaimg_active="principal_normal"="false"
 !charaimg_active="principal_close_eyes"="false"
@@ -117,11 +92,6 @@
 
 #CHAPTER1-1-3-1
 &!foreground_anim="fadein,0,2,%0,0,0,0%%"
-
-
-!se_active="sample1"="false"
-
-
 !charaimg_active="homeroom_teacher_normal"="false"
 !charaimg_pos="main_character_normal"="600,0,0"
 !charaimg_active="main_character_normal"="true"
@@ -139,10 +109,6 @@
 &
 「.」
 
-
-&!bgm_mute="false"
-
-
 &
 「..」
 
@@ -158,11 +124,6 @@
 &!charaimg_active="main_character_normal"="false"
 !charaimg_pos="yatsurugi_normal"="-600,0,0"
 !charaimg_active="yatsurugi_normal"="true"
-
-
-!bgm_fade="5,0"
-
-
 &ヤンキー？
 「？」
 
