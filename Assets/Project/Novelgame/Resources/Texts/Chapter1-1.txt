@@ -43,6 +43,7 @@
 ださい。」
 
 &!foreground_anim="fadeout,0,2,%0,0,0%%"
+!bgm_fade="5,1"
 !wait="2"
 &!jump_to="CHAPTER1-1-2"
 
@@ -51,6 +52,11 @@
 
 !foreground_anim="fadein,0,2,%0,0,0,0%%"
 !background_sprite="yard_background"
+!bgm_sound="NichijoBGM"
+!bgm_loop="true"
+!bgm_volume="0"
+!bgm_play=""
+!bgm_fade="5,1"
 !charaimg_active="principal_normal"="false"
 !charaimg_pos="main_character_normal"="600,0,0"
 !charaimg_active="main_character_normal"="true"
@@ -78,7 +84,7 @@
 &校長
 「では、私からの話は以上です。」
 
-!charaimg_active="principal_normal"="false"
+&!charaimg_active="principal_normal"="false"
 !charaimg_active="principal_close_eyes"="false"
 !charaimg_pos="homeroom_teacher_normal"="-600,0,0"
 !charaimg_active="homeroom_teacher_normal"="true"
@@ -1244,6 +1250,7 @@ charaimg_active="main_character_normal"="false"
 「わかった。じゃあまた。」
 &!charaimg_size="main_character_normal"="1500,1500,1"
 &!foreground_anim="fadeout,0,2,%0,0,0%%"
+!bgm_fade="5,1"
 !wait="2"
 &!scene="Classroom1-1"
 
