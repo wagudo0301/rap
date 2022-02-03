@@ -100,6 +100,7 @@ public class battle_gamemanager : MonoBehaviour
                     //ターン1(先生-1)
                     mashiro.sprite = mashiro_mini_microphone;
                     TurnPannel.sprite = mashiro_turn;
+                    TextPannel.sprite = mashirotextpannel;
                     ReadLine("お手並み拝見小テスト　見せてみなさいキミのベスト　聞き届けるはこの担任　キミを育てるそのために", 0.21f);
                     starttime = 0;
                     break;
