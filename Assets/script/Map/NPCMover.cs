@@ -20,18 +20,13 @@ public class NPCMover : MonoBehaviour
     void Start()
     {
         playerAnim.speed=0;
-
-        MoveCommandList.Add((1,0,3));
-        MoveCommandList.Add((-1,0,4));
-        MoveCommandList.Add((0,1,1));
-        MoveCommandList.Add((0,-1,1));
     }
 
     void Update()
     {
         if(MoveCommandList.Count!=0&&MoveCommand==(0,0,0f))
         {
-            Debug.Log(""+MoveCommandList[0].Item1+MoveCommandList[0].Item2+MoveCommandList[0].Item3);
+            Debug.Log(""+MoveCommandList[0].Item1+","+MoveCommandList[0].Item2+","+MoveCommandList[0].Item3);
             MoveCommand=MoveCommandList[0];
             MoveCommandList.RemoveAt(0);
 
