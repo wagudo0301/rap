@@ -6,4 +6,6 @@ public class PublicStaticStatus : MonoBehaviour
 {
     public static string CurrrentScene="";//今は使ってない
     public static string LastTeleportDistination="";
+    public static float KumaiResultPoint;
+    public static float MashiroResultPoint;
 }
