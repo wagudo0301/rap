@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using UnityEngine.Windows.Speech;   //Windowsの音声認識で使用
 using System.Threading;    //非同期処理で使用
 using System.Threading.Tasks;
@@ -61,6 +62,8 @@ public class battle_gamemanager : MonoBehaviour
     private Sprite kumai_turn;
     [SerializeField]
     private Sprite mashiro_turn;
+    [SerializeField]
+    private Sprite UIMask;
     // Start is called before the first frame update
     void Start()
     {
@@ -99,15 +102,16 @@ public class battle_gamemanager : MonoBehaviour
                 case 0:
                     //ターン1(先生-1)
                     mashiro.sprite = mashiro_mini_microphone;
-                    TurnPannel.sprite = mashiro_turn;
+                    //TurnPannel.sprite = mashiro_turn;
+                    StartCoroutine("ChangeMashiroTurn");
                     TextPannel.sprite = mashirotextpannel;
                     ReadLine("お手並み拝見小テスト　見せてみなさいキミのベスト　聞き届けるはこの担任　キミを育てるそのために", 0.21f);
                     starttime = 0;
                     break;
                 case 1:
                     //ターン1(先生-2)
-                    OpponentPointOfRap+=75;
-                    MyScoreController.OpponentPointOfRap+=75;
+                    OpponentPointOfRap+=300;
+                    MyScoreController.OpponentPointOfRap+=300;
                     stringOpponentPointOfRap = OpponentPointOfRap.ToString();
                     mashiro_point.text = stringOpponentPointOfRap;
                     hpSlider.value = 0.55f;
@@ -116,15 +120,16 @@ public class battle_gamemanager : MonoBehaviour
                     break;
                 case 2:
                     //ターン1(熊井-1)
-                    OpponentPointOfRap+=75;
-                    MyScoreController.OpponentPointOfRap+=75;
+                    OpponentPointOfRap+=300;
+                    MyScoreController.OpponentPointOfRap+=300;
                     stringOpponentPointOfRap = OpponentPointOfRap.ToString();
                     mashiro_point.text = stringOpponentPointOfRap;
                     hpSlider.value = 0.6f;
                     mainText.text = "";
                     kumai.sprite = kumai_mini_microphone;
                     mashiro.sprite = mashiro_mini;
-                    TurnPannel.sprite = kumai_turn;
+                    //TurnPannel.sprite = kumai_turn;
+                    StartCoroutine("ChangeKumaiTurn");
                     TextPannel.sprite = kumaitextpannel;
                     mainText.color = new Color(255.0f, 0.0f, 0.0f, 1.0f);
                     dictationRecognizer.Start();
@@ -139,7 +144,8 @@ public class battle_gamemanager : MonoBehaviour
                     //ターン2(先生-1)
                     mashiro.sprite = mashiro_mini_microphone;
                     kumai.sprite = kumai_mini;
-                    TurnPannel.sprite = mashiro_turn;
+                    //TurnPannel.sprite = mashiro_turn;
+                    StartCoroutine("ChangeMashiroTurn");
                     RateOfTurn=1.0f;
                     MyScoreController.RateOfTurn=1.0f;
                     init_recognition();
@@ -148,8 +154,8 @@ public class battle_gamemanager : MonoBehaviour
                     break;
                 case 5:
                     //ターン2(先生-2)
-                    OpponentPointOfRap+=100;
-                    MyScoreController.OpponentPointOfRap+=100;
+                    OpponentPointOfRap+=750;
+                    MyScoreController.OpponentPointOfRap+=750;
                     stringOpponentPointOfRap = OpponentPointOfRap.ToString();
                     mashiro_point.text = stringOpponentPointOfRap;
                     hpSlider.value=1-(PlayerPointOfRap/(PlayerPointOfRap+OpponentPointOfRap));
@@ -158,15 +164,16 @@ public class battle_gamemanager : MonoBehaviour
                     break;
                 case 6:
                     //ターン2(熊井-1)
-                    OpponentPointOfRap+=100;
-                    MyScoreController.OpponentPointOfRap+=100;
+                    OpponentPointOfRap+=750;
+                    MyScoreController.OpponentPointOfRap+=750;
                     stringOpponentPointOfRap = OpponentPointOfRap.ToString();
                     mashiro_point.text = stringOpponentPointOfRap;
                     hpSlider.value=1-(PlayerPointOfRap/(PlayerPointOfRap+OpponentPointOfRap));
                     mainText.text = "";
                     kumai.sprite = kumai_mini_microphone;
                     mashiro.sprite = mashiro_mini;
-                    TurnPannel.sprite = kumai_turn;
+                    //TurnPannel.sprite = kumai_turn;
+                    StartCoroutine("ChangeKumaiTurn");
                     TextPannel.sprite = kumaitextpannel;
                     mainText.color = new Color(255.0f, 0.0f, 0.0f, 1.0f);
                     dictationRecognizer.Start();
@@ -181,7 +188,8 @@ public class battle_gamemanager : MonoBehaviour
                     //ターン3(先生-1)
                     mashiro.sprite = mashiro_mini_microphone;
                     kumai.sprite = kumai_mini;
-                    TurnPannel.sprite = mashiro_turn;
+                    //TurnPannel.sprite = mashiro_turn;
+                    StartCoroutine("ChangeMashiroTurn");
                     RateOfTurn=1.5f;
                     MyScoreController.RateOfTurn=1.5f;
                     init_recognition();
@@ -190,8 +198,8 @@ public class battle_gamemanager : MonoBehaviour
                     break;
                 case 9:
                     //ターン3(先生-2)
-                    OpponentPointOfRap+=125;
-                    MyScoreController.OpponentPointOfRap+=125;
+                    OpponentPointOfRap+=375;
+                    MyScoreController.OpponentPointOfRap+=375;
                     stringOpponentPointOfRap = OpponentPointOfRap.ToString();
                     mashiro_point.text = stringOpponentPointOfRap;
                     hpSlider.value=1-(PlayerPointOfRap/(PlayerPointOfRap+OpponentPointOfRap));
@@ -200,15 +208,16 @@ public class battle_gamemanager : MonoBehaviour
                     break;
                 case 10:
                     //ターン3(熊井-1)
-                    OpponentPointOfRap+=125;
-                    MyScoreController.OpponentPointOfRap+=125;
+                    OpponentPointOfRap+=375;
+                    MyScoreController.OpponentPointOfRap+=375;
                     stringOpponentPointOfRap = OpponentPointOfRap.ToString();
                     mashiro_point.text = stringOpponentPointOfRap;
                     hpSlider.value=1-(PlayerPointOfRap/(PlayerPointOfRap+OpponentPointOfRap));
                     mainText.text = "";
                     kumai.sprite = kumai_mini_microphone;
                     mashiro.sprite = mashiro_mini;
-                    TurnPannel.sprite = kumai_turn;
+                    //TurnPannel.sprite = kumai_turn;
+                    StartCoroutine("ChangeKumaiTurn");
                     TextPannel.sprite = kumaitextpannel;
                     mainText.color = new Color(255.0f, 0.0f, 0.0f, 1.0f);
                     dictationRecognizer.Start();
@@ -225,6 +234,16 @@ public class battle_gamemanager : MonoBehaviour
                     init_recognition();
                     //画面上の吹き出しの文字列削除
                     mainText.text = "";
+                    PublicStaticStatus.KumaiResultPoint = PlayerPointOfRap;
+                    PublicStaticStatus.MashiroResultPoint = OpponentPointOfRap;
+                    if(PlayerPointOfRap >= OpponentPointOfRap)
+                    {
+                        SceneManager.LoadScene("WinScenes");
+                    } 
+                    else if(PlayerPointOfRap < OpponentPointOfRap)
+                    {
+                        SceneManager.LoadScene("LoseScenes");
+                    }
                     break;
             }
             timer = 0;
@@ -336,5 +355,32 @@ public class battle_gamemanager : MonoBehaviour
         ans = "";
         fullans = "";
         Debug.Log("非同期処理終了");
+    }
+
+    //yourturnの表示
+    IEnumerator ChangeKumaiTurn()
+    {
+        //yourターンの表示
+        TurnPannel.sprite = kumai_turn;
+
+        //1秒停止
+        yield return new WaitForSeconds(1);
+
+        //投下画像の表示
+        TurnPannel.sprite = UIMask;
+    }
+
+
+    //mashiroturnの表示
+    IEnumerator ChangeMashiroTurn()
+    {
+        //先生のターンの表示
+        TurnPannel.sprite = mashiro_turn;
+
+        //1秒停止
+        yield return new WaitForSeconds(1);
+
+        //透過画像の表示
+        TurnPannel.sprite = UIMask;
     }
 }

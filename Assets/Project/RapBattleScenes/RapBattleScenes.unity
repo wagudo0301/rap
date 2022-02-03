@@ -181,7 +181,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 46ecf6a039777024c8b152b97ebeab1c, type: 3}
     m_FontSize: 100
     m_FontStyle: 0
     m_BestFit: 0
@@ -458,7 +458,7 @@ RectTransform:
   m_Children:
   - {fileID: 965491512}
   m_Father: {fileID: 1678976333}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -683,7 +683,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1678976333}
-  m_RootOrder: 8
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1000,7 +1000,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1678976333}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1299,10 +1299,10 @@ RectTransform:
   - {fileID: 1752647740}
   - {fileID: 2071524920}
   - {fileID: 971382025}
+  - {fileID: 867992217}
   - {fileID: 292705054}
   - {fileID: 1042238865}
   - {fileID: 1830075846}
-  - {fileID: 867992217}
   - {fileID: 748384631}
   - {fileID: 1864912418}
   - {fileID: 38516629}
@@ -1349,6 +1349,7 @@ MonoBehaviour:
   TurnPannel: {fileID: 867992218}
   kumai_turn: {fileID: 21300000, guid: 75105853c82e54d468577765d4593316, type: 3}
   mashiro_turn: {fileID: 21300000, guid: 2e760274732d9c442a13dc6f087b3de8, type: 3}
+  UIMask: {fileID: 10917, guid: 0000000000000000f000000000000000, type: 0}
 --- !u!1 &1733243169
 GameObject:
   m_ObjectHideFlags: 0
@@ -1683,7 +1684,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1678976333}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2048,7 +2049,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 46ecf6a039777024c8b152b97ebeab1c, type: 3}
     m_FontSize: 100
     m_FontStyle: 0
     m_BestFit: 0

@@ -30,6 +30,12 @@ EditorBuildSettings:
     path: Assets/Project/RapBattleScenes/RapBattleScenes.unity
     guid: 62d52adc2e1868f41968854c6d59713d
   - enabled: 1
+    path: Assets/Project/RapBattleScenes/WinScenes.unity
+    guid: 1b341bf150e1f7040869d081480e0ac4
+  - enabled: 1
+    path: Assets/Project/RapBattleScenes/LoseScenes.unity
+    guid: d19af4c25a79c784489a76d59bc07596
+  - enabled: 1
     path: Assets/Project/maps/gymnasium.unity
     guid: 57232e5816e760a4ca7616bb15356454
   - enabled: 1
