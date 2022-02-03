@@ -29,12 +29,15 @@ public class NPCMover : MonoBehaviour
             Debug.Log(""+MoveCommandList[0].Item1+","+MoveCommandList[0].Item2+","+MoveCommandList[0].Item3);
             MoveCommand=MoveCommandList[0];
             MoveCommandList.RemoveAt(0);
-
-            playerAnim.SetFloat("X", MoveCommand.Item1);
-            playerAnim.SetFloat("Y", MoveCommand.Item2);
+            if(MoveCommand.Item1!=0||MoveCommand.Item2!=0)
+            {
+                playerAnim.SetFloat("X", MoveCommand.Item1);
+                playerAnim.SetFloat("Y", MoveCommand.Item2);
+            }
             if(MoveCommand.Item1==0&&MoveCommand.Item2==0)
             {
                 playerAnim.speed=0;
+                Rb.velocity = new Vector2(0,0);
             }
             else
             {
