@@ -121,7 +121,6 @@
 &
 「...」
 
-
 &熊井
 「そろそろかな、ここからさりげなく最後尾で合流しよう」
 
@@ -763,8 +762,11 @@ charaimg_active="main_character_normal"="false"
 
 #CHAPTER1-1-7&
 !foreground_anim="fadein,0,2,%0,0,0,0%%"
-!background_sprite="classroom_background"
+!background_sprite="evening_classroom_background"
 !charaimg_active="homeroom_teacher_normal"="true"
+!charaimg_size="homeroom_teacher_normal"="2000,2000,1"
+!charaimg_pos="homeroom_teacher_normal"="0,0,0"
+
 !wait="1"
 &先生
 「今日の授業はここまで。各自、自分の部屋でじっくり休むこと」
@@ -777,7 +779,7 @@ charaimg_active="main_character_normal"="false"
 
 #CHAPTER1-1-8&
 !foreground_anim="fadein,0,2,%0,0,0,0%%"
-!background_sprite="hall_background"
+!background_sprite="shouto_hall_background"
 !wait="1"
 &!charaimg_sprite="yatsurugi_normal"="yatsurugi_normal"
 !charaimg_size="yatsurugi_normal"="1500,1500,1"
@@ -785,7 +787,7 @@ charaimg_active="main_character_normal"="false"
 &八剱
 「ふわぁ～。寮から教室までの道のりは分かりやすくて助かるなあ」
 
-&!background_sprite="classroom_background"
+&!background_sprite="shouto_classroom_background"
 !charaimg_pos="yatsurugi_normal"="-600,0,0"
 &八剱
 「誰かいる．．．お、おはよー！」
@@ -951,7 +953,7 @@ charaimg_active="main_character_normal"="false"
 !charaimg_size="shizaki_normal"="1700,1700,1"
 !charaimg_pos="shizaki_normal"="600,0,0"
 &シザキ？
-「俺は『紫崎　朝暉（しざき　あさき）』だ。」
+「俺は『紫崎　朝暉（シザキ　アサキ）』だ。」
 
 &!charaimg_size="shizaki_normal"="1500,1500,1"
 !charaimg_delete="miune_normal"=""
@@ -959,7 +961,7 @@ charaimg_active="main_character_normal"="false"
 !charaimg_size="miune_normal"="1600,1600,1"
 !charaimg_pos="miune_normal"="1000,0,0"
 &おとなしい女の子
-「．．．わたしは、『三嶺　昼ネ（みうね　ひるね）』です。」
+「．．．わたしは、『三嶺　昼ネ（ミウネ　ヒルネ）』です。」
 
 &!charaimg_size="miune_normal"="1800,1800,1"
 
