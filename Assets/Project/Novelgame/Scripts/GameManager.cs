@@ -147,9 +147,10 @@ public class GameManager : MonoBehaviour
         else
         {
             if (_selectButtonList.Count > 0) return;
-            if (!ShowNextPage())
+        if (!ShowNextPage())
+                return;
                 // UnityエディタのPlayモードを終了する
-                UnityEditor.EditorApplication.isPlaying = false;
+                //UnityEditor.EditorApplication.isPlaying = false;
         }
     }
 
