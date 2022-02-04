@@ -120,8 +120,9 @@ public class PrologueGameManager : MonoBehaviour
         else
         {
             if (!ShowNextPage())
+                return;
                 // UnityエディタのPlayモードを終了する
-                UnityEditor.EditorApplication.isPlaying = false;
+                //UnityEditor.EditorApplication.isPlaying = false;
         }
     }
 
