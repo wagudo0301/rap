@@ -81,13 +81,22 @@
 !charaimg_pos="principal_close_eyes"="-600,0,0"
 !charaimg_active="principal_close_eyes"="true"
 !wait="1"
+
 &校長
 「では、私からの話は以上です。」
+
+
+&!se_sound="hakushu"="hakushu"
+!se_priority="hakushu"="150"
+!se_play="hakushu"=""
+!wait="1"
+
 
 &!charaimg_active="principal_normal"="false"
 !charaimg_active="principal_close_eyes"="false"
 !charaimg_pos="homeroom_teacher_normal"="-600,0,0"
 !charaimg_active="homeroom_teacher_normal"="true"
+&!se_fade="hakushu"="5,0"
 &担任の先生？？
 「じゃあ2列になって私についてきてください。そのまま校舎を案内
 します。」
@@ -325,6 +334,13 @@ charaimg_size="main_character_normal"="1700,1700,1"
 
 &!charaimg_size="yatsurugi_normal"="1500,1500,1"
 
+&!se_sound="ochiba_run"="ochiba_run"
+!se_priority="ochiba_run"="150"
+!se_play="ochiba_run"=""
+!se_fade="ochiba_run"="5,0"
+
+
+
 
 &!foreground_anim="fadeout,0,2,%0,0,0%%"
 !wait="2"
@@ -335,6 +351,11 @@ charaimg_size="main_character_normal"="1700,1700,1"
 !foreground_anim="fadein,0,2,%0,0,0,0%%"
 !background_sprite="hall_background"
 !wait="1"
+
+&!se_sound="rouka_run"="rouka_run"
+!se_loop="rouka_run"="true"
+!se_priority="rouka_run"="300"
+!se_play="rouka_run"=""
 
 
 
@@ -389,6 +410,9 @@ charaimg_size="main_character_normal"="1700,1700,1"
 !charaimg_size="main_character_normal"="1500,1500,1"
 !charaimg_pos="main_character_normal"="600,0,0"
 !wait="1"
+!se_fade="rouka_run"="5,0"
+
+
 &熊井
 「追いつけましたね！」
 
@@ -430,6 +454,12 @@ charaimg_size="main_character_normal"="1700,1700,1"
 「まだ学校案内をしていなかったから、とーっても優しい真代先生はセーフにしておき
 ます。さぁついてきて！」
 
+
+&!se_sound="Highheels_walk"="Highheels_walk"
+!se_priority="Highheels_walk"="150"
+!se_play="Highheels_walk"=""
+!se_fade="Highheels_walk"="5,0"
+
 &!charaimg_size="homeroom_teacher_normal"="2000,2000,1"
 
 &!foreground_anim="fadeout,0,2,%0,0,0%%"
@@ -462,10 +492,17 @@ charaimg_active="main_character_normal"="false"
 !charaimg_active="yatsurugi_normal"="false"
 !charaimg_pos="homeroom_teacher_normal"="0,0,0"
 !charaimg_active="homeroom_teacher_normal"="true"
+
 &先生「これにて学校案内を終わります。そして、ここがあなたたちのクラスです。
 入ってレクリエーションをはじめましょう。」
 
-&!foreground_anim="fadeout,0,2,%0,0,0%%"
+&!se_play="Highheels_walk"=""
+!se_fade="Highheels_walk"="5,0"
+!se_sound="zidou_door"="zidou_door"
+!se_priority="zidou_door"="150"
+!se_play="zidou_door"=""
+
+!foreground_anim="fadeout,0,2,%0,0,0%%"
 !wait="2"
 !charaimg_delete="main_character_normal"=""
 !charaimg_delete="yatsurugi_normal"=""
@@ -475,6 +512,8 @@ charaimg_active="main_character_normal"="false"
 
 #CHAPTER1-1-4&
 !foreground_anim="fadein,0,2,%0,0,0,0%%"
+!se_sound="Highheels_walk"="Highheels_walk"
+!se_priority="Highheels_walk"="150"
 !background_sprite="classroom_background"
 !charaimg_sprite="homeroom_teacher_normal"="homeroom_teacher_normal"
 !charaimg_size="homeroom_teacher_normal"="1800,1800,1"
@@ -625,6 +664,11 @@ charaimg_active="main_character_normal"="false"
 &先生
 「午後からはラップの基礎を学びます。それまでにお昼休憩をしておきましょう。」
 
+&!se_play="Highheels_walk"=""
+!se_fade="Highheels_walk"="5,0"
+!se_play="zidou_door"=""
+
+
 &!charaimg_active="homeroom_teacher_normal"="false"
 !charaimg_active="main_character_normal"="true"
 !charaimg_active="yatsurugi_normal"="true"
@@ -683,8 +727,16 @@ charaimg_active="main_character_normal"="false"
 #CHAPTER1-1-6&
 !foreground_anim="fadein,0,2,%0,0,0,0%%"
 !background_sprite="classroom_background"
+!se_play="zidou_door"=""
+!se_play="Highheels_walk"=""
+!se_fade="Highheels_walk"="5,0"
 !charaimg_active="homeroom_teacher_normal"="true"
 !wait="1"
+!se_play="Highheels_walk"=""
+!se_fade="Highheels_walk"="5,0"
+
+
+
 &先生
 「今度は全員そろっているみたいね。では、ラップの基礎を説明していくわよ。」
 
@@ -771,6 +823,11 @@ charaimg_active="main_character_normal"="false"
 &先生
 「今日の授業はここまで。各自、自分の部屋でじっくり休むこと」
 
+&!se_play="Highheels_walk"=""
+!se_fade="Highheels_walk"="5,0"
+!se_play="zidou_door"=""
+
+
 &!charaimg_delete="homeroom_teacher_normal"=""
 !foreground_anim="fadeout,0,2,%0,0,0%%"
 !wait="2"
@@ -787,8 +844,10 @@ charaimg_active="main_character_normal"="false"
 &八剱
 「ふわぁ～。寮から教室までの道のりは分かりやすくて助かるなあ」
 
-&!background_sprite="shouto_classroom_background"
+&!se_play="zidou_door"=""
+!background_sprite="shouto_classroom_background"
 !charaimg_pos="yatsurugi_normal"="-600,0,0"
+
 &八剱
 「誰かいる．．．お、おはよー！」
 
@@ -841,9 +900,18 @@ charaimg_active="main_character_normal"="false"
 !background_sprite="classroom_background"
 !wait="1"
 
-&!charaimg_sprite="homeroom_teacher_normal"="homeroom_teacher_normal"
+&se_play="Highheels_walk"=""
+!se_fade="Highheels_walk"="5,0"
+!se_play="zidou_door"=""
+!se_play="Highheels_walk"=""
+!se_fade="Highheels_walk"="5,0"
+
+!charaimg_sprite="homeroom_teacher_normal"="homeroom_teacher_normal"
 !charaimg_size="homeroom_teacher_normal"="1800,1800,1"
 !charaimg_pos="homeroom_teacher_normal"="0,0,0"
+
+
+
 &先生
 「はい、それでは朝のHRをはじめます。今日やることを先に説明しちゃいたいと思います！これから2日後、ラッパー適正テストをします。いたって簡単、昨日の授業で説明した4つの観点をうまくクリアしていればOK。できなかったら、即退学ね。」
 
@@ -1037,6 +1105,9 @@ charaimg_active="main_character_normal"="false"
 &紫崎
 「おい！急ぐんじゃなかったのか！？すまん、3人とも！話をもっと続けたいところだが、俺たちは購買に行ってくる！」
 
+
+&!se_play="zidou_door"=""
+
 &!charaimg_size="shizaki_normal"="1500,1500,1"
 !charaimg_delete="shizaki_normal"=""
 !charaimg_delete="miune_normal"=""
@@ -1180,7 +1251,7 @@ charaimg_active="main_character_normal"="false"
 
 
 &八剱
-「だから全体の自己紹介もやらないのか！熊井と一緒にいると、この学校の謎の考察がどんどん増えていっている気がするぜ。」
+「だから、全体の自己紹介もやらないのか！熊井と一緒にいると、この学校の謎の考察がどんどん増えていっている気がするぜ。」
 
 &!charaimg_size="yatsurugi_normal"="1500,1500,1"
 !charaimg_pos="main_character_normal"="0,0,0"
@@ -1189,6 +1260,9 @@ charaimg_active="main_character_normal"="false"
 !charaimg_sprite="homeroom_teacher_normal"="homeroom_teacher_normal"
 !charaimg_size="homeroom_teacher_normal"="1800,1800,1"
 !charaimg_pos="homeroom_teacher_normal"="-800,0,0"
+
+!se_sound="Highheels_walk"="Highheels_walk"
+!se_priority="Highheels_walk"="150"
 
 &先生
 「あなたたち、意外とそんな呑気に喋っている時間はあまりないわよ？それとも余裕、かしら？」
@@ -1229,7 +1303,10 @@ charaimg_active="main_character_normal"="false"
 &浅尾
 「頑張りまーす。」
 
-&!charaimg_delete="homeroom_teacher_normal"=""
+&!se_sound="Highheels_walk"="Highheels_walk"
+!se_priority="Highheels_walk"="150"
+
+!charaimg_delete="homeroom_teacher_normal"=""
 !charaimg_pos="main_character_normal"="-800,0,0"
 !charaimg_pos="asao_normal"="0,0,0"
 !charaimg_pos="yatsurugi_normal"="800,0,0"
