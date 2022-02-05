@@ -120,7 +120,7 @@
 &
 「【行動を選択してください】」
 &!top_text="CHAPTER1-1-A-1"="木の陰に隠れる"
-!bottom_text="CHAPTER1-1-B-1"="さすがに木の陰はバレるから、やめとく"
+!bottom_text="CHAPTER1-1-B-1"="やめとく"
 
 
 #CHAPTER1-1-A-1
