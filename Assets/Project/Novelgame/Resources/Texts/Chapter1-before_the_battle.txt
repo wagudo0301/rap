@@ -52,6 +52,12 @@
 &先生
 「ええ。疲れただろうから今日はゆっくり部屋で休んでね。お疲れ様。」
 
+&!se_sound="zidou_door"="zidou_door"
+!se_priority="zidou_door"="150"
+!se_play="zidou_door"=""
+
+
+
 &!charaimg_active="kitsukawa_normal"="false"
 !charaimg_sprite="homeroom_teacher_normal"="homeroom_teacher_normal"
 !charaimg_size="homeroom_teacher_normal"="2000,2000,1"
@@ -65,8 +71,12 @@
 !charaimg_sprite="shizaki_normal"="shizaki_normal"
 !charaimg_size="shizaki_normal"="1500,1500,1"
 !charaimg_pos="shizaki_normal"="0,0,0"
+
+&se_play="zidou_door"=""
+
 &紫崎
 「失礼します。」
+
 
 &!charaimg_active="shizaki_normal"="false"
 !charaimg_active="homeroom_teacher_normal"="true"
@@ -75,6 +85,11 @@
 
 &!charaimg_active="homeroom_teacher_normal"="false"
 !charaimg_active="shizaki_normal"="true"
+!se_sound="pushing-up-eyeglasses-1"="pushing-up-eyeglasses-1"
+!se_priority="pushing-up-eyeglasses-1"="150"
+!se_play="pushing-up-eyeglasses-1"=""
+
+
 &紫崎
 「熊井。お手並み拝見ってところだな。」
 

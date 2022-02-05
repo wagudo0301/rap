@@ -84,6 +84,14 @@
 
 !charaimg_pos="homeroom_teacher_normal"="0,0,0"
 
+&!se_sound="Highheels_walk"="Highheels_walk"
+!se_priority="Highheels_walk"="150"
+!se_play="Highheels_walk"=""
+!se_fade="Highheels_walk"="5,0"
+
+!se_sound="zidou_door"="zidou_door"
+!se_priority="zidou_door"="150"
+!se_play="zidou_door"=""
 
 //歩く音
 //ドアの開け閉め音
@@ -108,6 +116,9 @@
 !charaimg_active="shizaki_normal"="true"
 !charaimg_size="shizaki_normal"="1500,1500,1"
 !charaimg_pos="shizaki_normal"="0,0,0"
+!se_sound="pushing-up-eyeglasses-1"="pushing-up-eyeglasses-1"
+!se_priority="pushing-up-eyeglasses-1"="150"
+!se_play="pushing-up-eyeglasses-1"=""
 
 
 &紫崎

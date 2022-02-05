@@ -6,11 +6,25 @@
 !charaimg_sprite="homeroom_teacher_normal"="homeroom_teacher_normal"
 !charaimg_size="homeroom_teacher_normal"="2000,2000,1"
 !charaimg_pos="homeroom_teacher_normal"="0,0,0"
+
 !wait="1"
+
+!se_sound="school_chime"="school_chime"
+!se_priority="school_chime"="150"
+!se_play="school_chime"=""
+
 &先生
 「今日ここに残ったメンバーが、一緒に成長していく同胞よ。後程、自己紹介をしてもらうわ。今は顔だけでも覚えておくといいわ。」
 
-&!charaimg_delete="homeroom_teacher_normal"=""
+&
+!se_fade="school_chime"="5,0"
+!bgm_sound="n_ending_scene_bg"
+!bgm_loop="true"
+!bgm_volume="1"
+!bgm_play=""
+!bgm_fade="5,1"
+
+!charaimg_delete="homeroom_teacher_normal"=""
 !charaimg_sprite="sub_character1_normal"="sub_character1_normal"
 !charaimg_size="sub_character1_normal"="1500,1500,1"
 !charaimg_pos="sub_character1_normal"="0,0,0"
