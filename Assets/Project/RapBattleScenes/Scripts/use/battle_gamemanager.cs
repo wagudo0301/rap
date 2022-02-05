@@ -64,15 +64,11 @@ public class battle_gamemanager : MonoBehaviour
     private Sprite mashiro_turn;
     [SerializeField]
     private Sprite UIMask;
-    [SerializeField]
-    private Image ForeGroundPannel;
-    float alfa;
     // Start is called before the first frame update
     void Start()
     {
         dictationRecognizer = new DictationRecognizer();
         dictationRecognizer.InitialSilenceTimeoutSeconds  = 240f;
-        dictationRecognizer.AutoSilenceTimeoutSeconds = 240f;
 
         MyScoreController=GameObject.Find("ScoreController").GetComponent<ScoreController>();
 
@@ -82,14 +78,11 @@ public class battle_gamemanager : MonoBehaviour
         mashiro_point.text = stringOpponentPointOfRap;
 
         hpSlider.value = 0.5f;
-
-        alfa = ForeGroundPannel.color.a;
     }
 
     // Update is called once per frame
     void Update()
     {
-
         timer += Time.deltaTime;
         if(timer > 11f - starttime - voice_lag)
         {
@@ -132,7 +125,7 @@ public class battle_gamemanager : MonoBehaviour
                     break;
                 case 3:
                     //ターン1(熊井-2)
-                    voice_lag = 1f;
+                    voice_lag = 0f;
                     break;
                 case 4:
                     //ターン2(先生-1)
@@ -142,7 +135,6 @@ public class battle_gamemanager : MonoBehaviour
                     MyScoreController.RateOfTurn=1.0f;
                     init_recognition();
                     ReadLine("夢見てるのなら一つ言わせろ　調子は良いけど経験はゼロ　ラップにおいてはキミは無知　だから打つのよ愛のムチ", 0.18f);
-                    voice_lag = 0;
                     break;
                 case 5:
                     //ターン2(先生-2)
@@ -173,7 +165,7 @@ public class battle_gamemanager : MonoBehaviour
                     break;
                 case 7:
                     //ターン2(熊井-2)
-                    voice_lag = 1f;
+                    voice_lag = 0f;
                     break;
                 case 8:
                     //ターン3(先生-1)
@@ -183,7 +175,6 @@ public class battle_gamemanager : MonoBehaviour
                     MyScoreController.RateOfTurn=1.5f;
                     init_recognition();
                     ReadLine("確かに少しはやるようね　チェックしとくわYourName-弱音をはかないその威勢　姿勢　すでに　合格点よ", 0.18f);
-                    voice_lag = 0f;
                     break;
                 case 9:
                     //ターン3(先生-2)
@@ -213,7 +204,7 @@ public class battle_gamemanager : MonoBehaviour
                     break;
                 case 11:
                     //ターン3(熊井-2)
-                    voice_lag = 1f;
+                    voice_lag = 0f;
                     break;
                 case 12:
                     StartCoroutine("LastPointCalculation");
@@ -302,6 +293,8 @@ public class battle_gamemanager : MonoBehaviour
     //DictationComplete：音声認識セッションを終了したときにトリガされるイベント
     private void DictationRecognizer_DictationComplete(DictationCompletionCause cause){
         Debug.Log("音声認識完了");
+        Debug.Log(dictationRecognizer.InitialSilenceTimeoutSeconds);
+        Debug.Log(dictationRecognizer.AutoSilenceTimeoutSeconds);
     }
 
     //音声認識を終了してまた音声認識が使えるようにインスタンスを生成する
@@ -320,11 +313,6 @@ public class battle_gamemanager : MonoBehaviour
             ここで外部の関数で寺杣君韻踏みシステムで計算をしてバーを動かすところまでしてある。
         */
 
-        //音声認識で使ったやつを消して新しく音声認識のインスタンスを生成する。
-        dictationRecognizer.Dispose(); 
-        dictationRecognizer = new DictationRecognizer();
-        dictationRecognizer.InitialSilenceTimeoutSeconds  = 240f;
-        dictationRecognizer.AutoSilenceTimeoutSeconds = 240f;
         ans = "";
         fullans = "";
         Debug.Log("非同期処理終了");
@@ -372,6 +360,8 @@ public class battle_gamemanager : MonoBehaviour
 
         SceneLoad();
     }
+
+    //勝ち負けの結果を表示するシーンをロードする
     private void SceneLoad()
     {
         PublicStaticStatus.KumaiResultPoint = PlayerPointOfRap;
@@ -385,4 +375,5 @@ public class battle_gamemanager : MonoBehaviour
             SceneManager.LoadScene("LoseScenes");
         }
     }
+
 }
