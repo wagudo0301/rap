@@ -203,3 +203,4 @@
 
 &!foreground_anim="fadeout,0,2,%0,0,0%%"
 !wait="2"
+&!scene="Classroom1-1"
