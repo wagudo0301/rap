@@ -6,7 +6,8 @@ using UnityEngine.SceneManagement;
 using UnityEngine.Windows.Speech;   //Windowsの音声認識で使用
 using System.Threading;    //非同期処理で使用
 using System.Threading.Tasks;
-public class sample_battle_gamemanager : MonoBehaviour
+using NMeCab.Specialized;
+public class production_battle_gamemanager : MonoBehaviour
 {
     bool recognizer_complete;
     DictationRecognizer dictationRecognizer;
@@ -20,9 +21,26 @@ public class sample_battle_gamemanager : MonoBehaviour
     public float PlayerPointOfRap=0;
     public float OpponentPointOfRap=0;
     private float RateOfTurn;
-    private sample_ScoreController MyScoreController;
     private string stringPlayerPointOfRap="0";
     private string stringOpponentPointOfRap="0";
+
+
+    //韻踏みシステムの定義
+    private const float PointScale=10.0f;
+    private const int JudgeVowelRange=10;
+    private const float NumberImportanceScale=0.3f;
+    private const float RhymeImportanceScale=1.7f;//累乗される
+    private const float ConsonantImportanceScale=1.6f;//0か1かこれ
+    
+    List<string> ls20= new List<string>() {"ア","カ","キャ","クァ","ガ","ギャ","グァ","サ","シャ","ザ","ジャ","タ","チャ","ダ","ジャ","デャ","ツァ","テャ","ナ","ニャ","ハ","ヒャ","バ","ビャ","パ","ピャ","ファ","フャ","マ","ミャ","ヤ","ラ","リャ","ワ","ヴァ"};
+    List<string> ls21= new List<string>() {"イ","キ","キィ","ギ","ギィ","シ","シィ","ジ","ジィ","チ","チィ","ヂ","ヂィ","ディ","ツィ","ティ","ニ","ニィ","ヒ","ヒィ","ビ","ビィ","ピ","ピィ","フィ","ミ","ミィ","リ","リィ","ウィ","ヴィ"};
+    List<string> ls22= new List<string>() {"ウ","ク","キュ","グ","ギュ","ス","シュ","ズ","ジュ","ツ","チュ","トゥ","ヅ","ヂュ","ドゥ","デュ","テュ","ヌ","ニュ","フ","ヒュ","ブ","ビュ","プ","ピュ","フュ","ム","ミュ","ユ","ル","リュ","ヴ"};
+    List<string> ls23= new List<string>() {"エ","ケ","キェ","ゲ","ギェ","セ","シェ","ゼ","ジェ","テ","チェ","デ","ヂェ","デェ","ツェ","テェ","ネ","ニェ","ヘ","ヒェ","ベ","ビェ","ペ","ピェ","フェ","メ","ミェ","レ","リェ","ウェ","ヴェ"};
+    List<string> ls24= new List<string>() {"オ","コ","キョ","ゴ","ギョ","ソ","ショ","ゾ","ジョ","ト","チョ","ド","ヂョ","デョ","ツォ","テョ","ノ","ニョ","ホ","ヒョ","ボ","ビョ","ポ","ピョ","フォ","フョ","モ","ミョ","ヨ","ロ","リョ","ヲ","ヴォ"};
+
+    //↑ここまで
+
+
     // SerializeFieldと書くとprivateなパラメーターでも
     // インスペクター上で値を変更できる
 
@@ -89,6 +107,12 @@ public class sample_battle_gamemanager : MonoBehaviour
         }
     }
 
+
+    /**
+    * ↓ここからノベルゲーム式文字列表示の関数
+    */
+
+
     /**
     * 文を1文字ごとに区切り、キューに格納したものを返す
     */
@@ -144,6 +168,182 @@ public class sample_battle_gamemanager : MonoBehaviour
     }
 
 
+    /**
+    * ↑ここまでノベルゲーム式文字列表示の関数
+    */
+
+
+    /**
+    * ↓ここから韻踏みシステムの関数
+    */
+
+    //ラップ判定
+    public float JudgeRap(string st00)
+    {
+        float PointOfRap=0;
+        List<(string,string)> ls00= new List<(string,string)>();
+        ls00 = SentenceToWords(st00);
+        for(var i = 0; i < ls00.Count; i++)
+        {
+            for(var j = i+1; j < ls00.Count; j++)
+            {
+                if(Mathf.Abs(i-j)<=JudgeVowelRange)//距離がJudgeVowelRange以内で、自分と違う形態素のみ韻を踏んでるか判断する
+                {
+                    if(JudgeMaxVowelCombo(ls00[i].Item2,ls00[j].Item2)>=2)
+                    {
+                        Debug.Log($"{i}{ls00[i].Item2}{j}{ls00[j].Item2}");
+                        Debug.Log("韻の数は"+JudgeMaxVowelCombo(ls00[i].Item2,ls00[j].Item2)+"で、点は"+Mathf.Pow(RhymeImportanceScale,JudgeMaxVowelCombo(ls00[i].Item2,ls00[j].Item2)));
+                        PointOfRap+=Mathf.Pow(RhymeImportanceScale,JudgeMaxVowelCombo(ls00[i].Item2,ls00[j].Item2));
+                    }
+                }
+            }
+        }
+        Debug.Log("韻は"+PointOfRap);
+        Debug.Log("文字数の得点"+ls00.Count*0.8f);
+        PointOfRap+=ls00.Count*0.8f;//形態素の数だけ得点
+        Debug.Log("合計"+PointOfRap);
+        return(Mathf.Round(PointOfRap)*PointScale);
+    }
+
+    //文からカタカナ形態素
+    List<(string,string)> SentenceToWords(string st01)
+    {
+        //重複してないリスト
+        List<string> NotDuplicateList = new List<string>();
+        //単語と読みセットのリスト
+        List<(string,string)> ls01= new List<(string,string)>();
+
+        var dicDir = @"Assets/Plugins/NMeCab-0.10.2/dic/ipadic";
+
+        using (var tagger = MeCabIpaDicTagger.Create(dicDir))
+        {
+            var nodes = tagger.Parse(st01);
+
+            foreach (var item in nodes)
+            {
+                if(NotDuplicateWord(NotDuplicateList, item.Surface))
+                {
+                    ls01.Add((item.Surface,item.Reading));
+                    Debug.Log(item.Surface);
+                }
+            }
+        }
+        return(ls01);
+    }
+
+
+    //既にリストにある単語と今入ってきた単語を比べて同じかどうか判定する関数
+
+    bool NotDuplicateWord(List<string> NotDuplicateList, string word)
+    {
+        for(var i = 0; i < NotDuplicateList.Count; i++ )
+        {
+            if(word == NotDuplicateList[i])
+            {
+                return false;
+            }
+        }
+        NotDuplicateList.Add(word);
+        return true;
+    }
+
+
+    //ライム判定
+    float JudgeMaxVowelCombo(string st10,string st11)//韻を踏める最大文字数
+    {
+        float MaxVowelCombo=0f;
+        List<string> ls10= new List<string>();
+        List<string> ls11= new List<string>();
+        //カタカナ形態素を前処理して音ごとに分ける
+        foreach(char ch10 in st10)
+        {
+            ls10.Add(ch10.ToString());
+        }
+        foreach(char ch11 in st11)
+        {
+            ls11.Add(ch11.ToString());
+        }
+        for(int i = ls10.Count - 1; i >= 0; i--)
+        {
+            if((ls10[i]=="ッ")||(ls10[i]=="ー")||(ls10[i]=="ン"))
+            {
+                ls10.RemoveAt(i);
+            }
+            else if((ls10[i]=="ァ")||(ls10[i]=="ィ")||(ls10[i]=="ゥ")||(ls10[i]=="ェ")||(ls10[i]=="ォ")||(ls10[i]=="ャ")||(ls10[i]=="ュ")||(ls10[i]=="ョ"))
+            {
+                if(i>=1){ls10[i-1]+=ls10[i];}
+                ls10.RemoveAt(i);
+            }
+        }
+        for(int i = ls11.Count - 1; i >= 0; i--)
+        {
+            if((ls11[i]=="ッ")||(ls11[i]=="ー")||(ls11[i]=="ン"))
+            {
+                ls11.RemoveAt(i);
+            }
+            else if((ls11[i]=="ァ")||(ls11[i]=="ィ")||(ls11[i]=="ゥ")||(ls11[i]=="ェ")||(ls11[i]=="ォ")||(ls11[i]=="ャ")||(ls11[i]=="ュ")||(ls11[i]=="ョ"))
+            {
+                if(i>=1){ls11[i-1]+=ls11[i];}
+                ls11.RemoveAt(i);
+            }
+        }
+        //ls10をもって動かす
+        for(var i = 0; i < ls10.Count; i++)
+        {
+            for(var j = 0; j < ls11.Count; j++)
+            {
+                if(CountVowelCombo(ls10,ls11,i,j)>MaxVowelCombo)
+                {
+                    MaxVowelCombo=CountVowelCombo(ls10,ls11,i,j);
+                }
+            }
+        }
+        //Debug.Log(st10+","+st11+"韻は"+MaxVowelCombo);
+        return(MaxVowelCombo);
+    }
+    float CountVowelCombo(List<string> ls12,List<string> ls13,int num10,int num11)
+    {
+        float VowelCombo=0;
+        int num12=num10;
+        int num13=num11;
+        while(JudgeVowel(ls12[num12],ls13[num13])>=1)
+        {
+            VowelCombo+=1;//VowelCombo+=JudgeVowel(ls11[i],ls10[j]);
+            if(num12+1<ls12.Count&&num13+1<ls13.Count)
+            {
+                num12+=1;num13+=1;
+            }
+            else
+            {
+                break;
+            }
+        }
+        return(VowelCombo);
+    }
+
+
+    //母音判定
+    float JudgeVowel(string st20,string st21)//0,1(,x)を返す
+    {
+        if((ls20.Contains(st20)&&ls20.Contains(st21))||(ls21.Contains(st20)&&ls21.Contains(st21))||(ls22.Contains(st20)&&ls22.Contains(st21))||(ls23.Contains(st20)&&ls23.Contains(st21))||(ls24.Contains(st20)&&ls24.Contains(st21)))
+        {
+            return(1);
+        }
+        else
+        {
+            return(0);
+        }
+    }
+
+
+    /**
+    * ↑ここまで韻踏みシステムの関数
+    */
+
+
+    /**
+    * ↓ここから音声認識の関数
+    */
 
     //音声認識してる最中に行う関数
     private void voice_recognition()
@@ -188,7 +388,7 @@ public class sample_battle_gamemanager : MonoBehaviour
         dictationRecognizer.Stop();
         yield return new WaitForSeconds(1.5f);
         Debug.Log(fullans);
-        float num=GameObject.Find("RapJudger").GetComponent<RapJudger>().JudgeRap(fullans);
+        float num = JudgeRap(fullans);
         Debug.Log(num+"*"+RateOfTurn+"加算");
         PlayerPointOfRap+=num*RateOfTurn;
         stringPlayerPointOfRap = PlayerPointOfRap.ToString();
@@ -199,6 +399,15 @@ public class sample_battle_gamemanager : MonoBehaviour
         Debug.Log("非同期処理終了");
     }
 
+
+    /**
+    * ↑ここまで音声認識の関数
+    */
+
+
+    /**
+    * ↓ここからゲーム自体を制御する関数
+    */
 
 
     //音楽が始まった後の先生のターンの関数
@@ -223,7 +432,6 @@ public class sample_battle_gamemanager : MonoBehaviour
         //透過画像の表示
         TurnPannel.sprite = UIMask;
     }
-
 
 
     //先生のターンに変わる瞬間の関数
@@ -330,8 +538,12 @@ public class sample_battle_gamemanager : MonoBehaviour
     }
 
 
+    /**
+    * ↑ここまでゲーム自体を制御する関数
+    */
 
-    //ゲームをコルーチンを使って制御する
+
+    //ゲーム本体をコルーチンを使って制御する
     IEnumerator GameManagerCoroutine()
     {
         //アニメーションの影響で音楽の開始をずらす
