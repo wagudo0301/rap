@@ -22,7 +22,8 @@ public class LoseScenesScript : MonoBehaviour
     {
         if (Input.GetMouseButton(0))
         {
-            SceneManager.LoadScene("GameOverScenes");
+            if(PublicStaticStatus.OnlyRapBattle) SceneManager.LoadScene("TitleScenes");
+            else SceneManager.LoadScene("GameOverScenes");
         }
         
     }

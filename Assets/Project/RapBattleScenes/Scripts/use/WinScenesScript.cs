@@ -19,9 +19,10 @@ public class WinScenesScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-     if (Input.GetMouseButton(0))
-    {
-        SceneManager.LoadScene("Chapter1-after_the_battleScenes");
-    }   
+        if (Input.GetMouseButton(0))
+        {
+            if(PublicStaticStatus.OnlyRapBattle) SceneManager.LoadScene("TitleScenes");
+            else SceneManager.LoadScene("Chapter1-after_the_battleScenes");
+        }   
     }
 }

@@ -388,7 +388,7 @@ public class GameManager : MonoBehaviour
     private void FadeSound(string parameter, AudioSource audio)
     {
         string[] ps = parameter.Replace(" ", "").Split(',');
-        StartCoroutine(FadeSound(audio, int.Parse(ps[0]), int.Parse(ps[1])));
+        StartCoroutine(FadeSound(audio, int.Parse(ps[0]), float.Parse(ps[1])));
     }
 
     /**
