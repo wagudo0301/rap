@@ -4,14 +4,13 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    public bool ControlEnable=true;
     [SerializeField]
     private int moveSpeed;
-
     [SerializeField]
     private Animator playerAnim;
 
     public Rigidbody2D Rb;
-
     private int timer;
     // Start is called before the first frame update
     void Start()
@@ -22,6 +21,7 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(!ControlEnable){return;}
         Rb.velocity = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")).normalized * moveSpeed;
 
         if(Rb.velocity != Vector2.zero)
