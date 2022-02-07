@@ -111,4 +111,4 @@
 !charaimg_delete="homeroom_teacher_normal"=""
 !foreground_anim="fadeout,0,2,%0,0,0%%"
 !wait="2"
-&!scene="RapBattleScenes"
+&!scene="RapBattle_Production"
