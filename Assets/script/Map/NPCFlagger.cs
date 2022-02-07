@@ -1,13 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class NPCFlagger : MonoBehaviour
 {
     public bool Flag=false;
     bool FlagChanged=false;
     public string FlagName;
-
+    GameObject MyFadeOuter;
+    Player MyPlayer;
+    bool StartFadeOutTimer=false;
+    float FadeOutTimer;
+    void Start()
+    {
+        MyFadeOuter=GameObject.Find("FadeOuter");
+        MyPlayer=GameObject.Find("Player").GetComponent<Player>();
+    }
     void Update()
     {
         if(Flag&&!FlagChanged)
@@ -18,6 +28,23 @@ public class NPCFlagger : MonoBehaviour
             {
                 Debug.Log(st);
             }*/
+            if(FlagName=="GoToBed")
+            {
+                MyPlayer.ControlEnable=false;
+                Debug.Log("nocon");
+                StartFadeOutTimer=true;
+            }
+        }
+        if(StartFadeOutTimer)
+        {
+            FadeOutTimer+=Time.deltaTime;
+            MyFadeOuter.GetComponent<Image>().color = new Color32 (0, 0, 0, (byte)(Mathf.RoundToInt((FadeOutTimer/3.0f)*85)+170));
+            if(FadeOutTimer>=3.0f)
+            {
+                MyPlayer.ControlEnable=true;
+                Debug.Log("yescon");
+                SceneManager.LoadScene("Chapter1-2-Scenes");
+            }
         }
     }
 }

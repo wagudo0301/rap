@@ -34,21 +34,16 @@ public class NPCAnswerer : MonoBehaviour
     {
         if(Input.GetMouseButtonDown(0))
         {
-            if(gameObject.GetComponent<NPCFlagger>())
-            {
-                Debug.Log("Flag");
-                {
-                    gameObject.GetComponent<NPCFlagger>().Flag=true;
-                }
-            }
 
             //1ページ目表示
-            if(Vector3.Distance(gameObject.transform.position,Player.transform.position)<=1.8f&&page==-1)
+            if(Vector3.Distance(gameObject.transform.position,Player.transform.position)<=1.67f&&page==-1&&Player.GetComponent<Player>().ControlEnable)
             {
                 Debug.Log("Talk");
                 page+=1;
 
                 Time.timeScale=0f;//まだポーズ中に頭ぐりぐりできる
+                Player.GetComponent<Player>().ControlEnable=false;
+                Debug.Log("nocon");
                 //Anim.SetFloat("X",0);
                 //Anim.SetFloat("Y",-1);
                 MyFadeOuter.GetComponent<Image>().color = new Color32 (0, 0, 0, 170);
@@ -88,8 +83,19 @@ public class NPCAnswerer : MonoBehaviour
                     MyCanvasForRPG.transform.Find("MainTextPanel").gameObject.SetActive(false);
                     MyCanvasForRPG.transform.Find("NextPageIcon").gameObject.SetActive(false);
                     Time.timeScale=1.0f;
+                    Player.GetComponent<Player>().ControlEnable=true;
+                    Debug.Log("yescon");
 
                     page=-1;
+
+                    
+                    if(gameObject.GetComponent<NPCFlagger>())
+                    {
+                        Debug.Log("Flag");
+                        {
+                            gameObject.GetComponent<NPCFlagger>().Flag=true;
+                        }
+                    }
                 }
             }
         }
