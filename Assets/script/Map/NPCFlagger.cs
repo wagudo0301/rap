@@ -38,8 +38,8 @@ public class NPCFlagger : MonoBehaviour
         if(StartFadeOutTimer)
         {
             FadeOutTimer+=Time.deltaTime;
-            MyFadeOuter.GetComponent<Image>().color = new Color32 (0, 0, 0, (byte)(Mathf.RoundToInt((FadeOutTimer/3.0f)*85)+170));
-            if(FadeOutTimer>=3.0f)
+            MyFadeOuter.GetComponent<Image>().color = new Color32 (0, 0, 0, (byte)(Mathf.RoundToInt((FadeOutTimer/7.0f)*85)+170));
+            if(FadeOutTimer>=7.0f)
             {
                 MyPlayer.ControlEnable=true;
                 Debug.Log("yescon");
