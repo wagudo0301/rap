@@ -8,4 +8,6 @@ public class PublicStaticStatus : MonoBehaviour
     public static string LastTeleportDistination="";
     public static float KumaiResultPoint;
     public static float MashiroResultPoint;
+
+    public static List<string> Flags=new List<string>();
 }
