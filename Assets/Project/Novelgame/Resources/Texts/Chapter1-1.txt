@@ -24,9 +24,8 @@
 !foreground_anim="fadein,0,2,%0,0,0,0%%"
 !bgm_sound="tanoshiibouken"
 !bgm_loop="true"
-!bgm_volume="0"
 !bgm_play=""
-!bgm_fade="5,1"
+!bgm_volume="0.1"
 !background_sprite="gymnasium_background"
 !charaimg_pos="principal_normal"="-600,0,0"
 !charaimg_active="principal_normal"="true"
@@ -43,8 +42,8 @@
 ださい。」
 
 &!foreground_anim="fadeout,0,2,%0,0,0%%"
-!bgm_fade="5,1"
-!wait="2"
+!bgm_fade="2,0"
+&!wait="2"
 &!jump_to="CHAPTER1-1-2"
 
 
@@ -56,7 +55,7 @@
 !bgm_loop="true"
 !bgm_volume="0"
 !bgm_play=""
-!bgm_fade="5,1"
+!bgm_volume="0.2"
 !charaimg_active="principal_normal"="false"
 !charaimg_pos="main_character_normal"="600,0,0"
 !charaimg_active="main_character_normal"="true"
@@ -1446,7 +1445,7 @@ charaimg_size="main_character_normal"="1700,1700,1"
 「寮の自分の部屋のベッドを調べると次の日に移ります。」
 &!charaimg_size="main_character_normal"="1500,1500,1"
 &!foreground_anim="fadeout,0,2,%0,0,0%%"
-!bgm_fade="5,1"
+!bgm_fade="2,1"
 !wait="2"
 &!scene="Classroom1-1"
 

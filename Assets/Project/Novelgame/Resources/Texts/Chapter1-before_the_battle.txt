@@ -72,7 +72,7 @@
 !charaimg_size="shizaki_normal"="1500,1500,1"
 !charaimg_pos="shizaki_normal"="0,0,0"
 
-&se_play="zidou_door"=""
+!se_play="zidou_door"=""
 
 &紫崎
 「失礼します。」
@@ -111,4 +111,4 @@
 !charaimg_delete="homeroom_teacher_normal"=""
 !foreground_anim="fadeout,0,2,%0,0,0%%"
 !wait="2"
-&!scene="RapBattle_Production"
+&!scene="RapBattleScene_Production"

@@ -2,8 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
-public class StartButtonScripts : MonoBehaviour
+public class RapBattleButton : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -16,9 +15,9 @@ public class StartButtonScripts : MonoBehaviour
     {
         
     }
-    public void OnClickStartButton()
+    public void OnClickRapBattleButton()
     {
-        PublicStaticStatus.OnlyRapBattle = false;
-        SceneManager.LoadScene("PrologueScenes");
+        PublicStaticStatus.OnlyRapBattle = true;
+        SceneManager.LoadScene("RapBattleScene_Production");
     }
 }
