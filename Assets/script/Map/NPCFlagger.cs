@@ -43,7 +43,18 @@ public class NPCFlagger : MonoBehaviour
             {
                 MyPlayer.ControlEnable=true;
                 Debug.Log("yescon");
-                SceneManager.LoadScene("Chapter1-2-Scenes");
+                PublicStaticStatus.LastTeleportDistination="ZeroZero";
+                if(!PublicStaticStatus.Flags.Contains("EndDay1"))
+                {
+                    PublicStaticStatus.Flags.Add("EndDay1");
+                    SceneManager.LoadScene("Chapter1-2-Scenes");
+                }
+                else if(PublicStaticStatus.Flags.Contains("EndDay1"))
+                {
+                    PublicStaticStatus.Flags.Add("EndDay2");
+                    SceneManager.LoadScene("Chapter1-befor_the_battleScenes");
+                }
+
             }
         }
     }
