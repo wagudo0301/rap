@@ -1436,6 +1436,14 @@ charaimg_size="main_character_normal"="1700,1700,1"
 
 &熊井
 「わかった。じゃあまた。」
+&
+「これから探索モードに移ります。」
+&
+「キャラクター操作はWASDキー、矢印キーで動きます。」
+&
+「アイテムを調べるまたはNPCに話しかける際には、アイテムやNPCの前でクリックしてください。」
+&
+「寮の自分の部屋のベッドを調べると次の日に移ります。」
 &!charaimg_size="main_character_normal"="1500,1500,1"
 &!foreground_anim="fadeout,0,2,%0,0,0%%"
 !bgm_fade="5,1"
