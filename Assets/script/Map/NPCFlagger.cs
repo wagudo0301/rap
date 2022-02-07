@@ -52,7 +52,7 @@ public class NPCFlagger : MonoBehaviour
                 else if(PublicStaticStatus.Flags.Contains("EndDay1"))
                 {
                     PublicStaticStatus.Flags.Add("EndDay2");
-                    SceneManager.LoadScene("Chapter1-befor_the_battleScenes");
+                    SceneManager.LoadScene("Chapter1-before_the_battleScenes");
                 }
 
             }
