@@ -6,7 +6,13 @@
 !charaimg_sprite="homeroom_teacher_normal"="homeroom_teacher_normal"
 !charaimg_size="homeroom_teacher_normal"="2000,2000,1"
 !charaimg_pos="homeroom_teacher_normal"="0,0,0"
+!se_sound="school_chime"="school_chime"
+!se_priority="school_chime"="150"
+!se_play="school_chime"=""
 !wait="1"
+
+
+&!se_fade="school_chime"="5,0"
 &先生
 「ついに、テスト当日になったわね！やる気があっても不合格は不合格。試験が終わり次第、荷物まとめて退学してもらうから、そのつもりでぶつかってきなさい！」
 
@@ -135,6 +141,13 @@
 &伊勢
 「はいッ！」
 
+
+
+&!se_sound="zidou_door"="zidou_door"
+!se_priority="zidou_door"="150"
+!se_play="zidou_door"=""
+
+
 &!charaimg_active="main_character_normal"="true"
 !charaimg_active="yatsurugi_normal"="true"
 &八剱
@@ -159,6 +172,9 @@
 !background_sprite="hall_background"
 !charaimg_active="homeroom_teacher_normal"="true"
 !wait="1"
+
+
+&!se_play="zidou_door"=""
 
 &先生
 「次は橘川くんだから、熊井くん、部屋に入ってきてください。」
@@ -187,6 +203,8 @@
 !foreground_color="0,0,0"
 !foreground_anim="fadein,0,2,%0,0,0,0%%"
 !background_sprite="soundproofroom_background"
+
+&!se_play="zidou_door"=""
 
 !charaimg_active="homeroom_teacher_normal"="true"
 !wait="1"
