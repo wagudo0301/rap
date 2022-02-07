@@ -77,7 +77,7 @@ public class NPCAnswerer : MonoBehaviour
 
                     MyFadeOuter.GetComponent<Image>().color = new Color32 (0, 0, 0, 0);
                     MyImage.color=new Color32 (0,0,0,0);
-                    go0.GetComponent<Text>().text="";
+                    if(go0){go0.GetComponent<Text>().text="";}
                     go1.GetComponent<Text>().text="";
                     MyCanvasForRPG.transform.Find("NameTextPanel").gameObject.SetActive(false);
                     MyCanvasForRPG.transform.Find("MainTextPanel").gameObject.SetActive(false);
