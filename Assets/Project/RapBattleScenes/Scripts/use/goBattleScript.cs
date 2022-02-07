@@ -17,6 +17,6 @@ public class goBattleScript : MonoBehaviour
     }
     public void OnClickgoBattleButton()
     {
-        SceneManager.LoadScene("RapBattleScenes");
+        SceneManager.LoadScene("RapBattleScene_Production");
     }
 }
