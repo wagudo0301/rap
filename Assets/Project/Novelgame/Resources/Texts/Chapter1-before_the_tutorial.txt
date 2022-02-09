@@ -8,6 +8,7 @@
 !charaimg_pos="homeroom_teacher_normal"="0,0,0"
 !se_sound="school_chime"="school_chime"
 !se_priority="school_chime"="150"
+!se_volume="school_chime"="0.3"
 !se_play="school_chime"=""
 !wait="1"
 
