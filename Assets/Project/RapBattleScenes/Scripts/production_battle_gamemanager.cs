@@ -213,7 +213,10 @@ public class production_battle_gamemanager : MonoBehaviour
         //単語と読みセットのリスト
         List<(string,string)> ls01= new List<(string,string)>();
 
-        var dicDir = @"Assets/Plugins/NMeCab-0.10.2/dic/ipadic";
+        string m_Path = Application.dataPath;
+
+        //var dicDir = @"Assets/Plugins/NMeCab-0.10.2/dic/ipadic";
+        var dicDir = m_Path + "/StreamingAssets/NMeCab-0.10.2/dic/ipadic";
 
         using (var tagger = MeCabIpaDicTagger.Create(dicDir))
         {
@@ -386,7 +389,7 @@ public class production_battle_gamemanager : MonoBehaviour
     IEnumerator init_recognition()
     {
         dictationRecognizer.Stop();
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(3f);
         Debug.Log(fullans);
         float num = JudgeRap(fullans);
         Debug.Log(num+"*"+RateOfTurn+"加算");
@@ -516,7 +519,7 @@ public class production_battle_gamemanager : MonoBehaviour
         mainText.text = "";
         //テキストパネルの削除
         TextPannel.sprite = UIMask;
-        //3.5秒停止
+        //2秒停止
         yield return new WaitForSeconds(2f);
 
         SceneLoad();
