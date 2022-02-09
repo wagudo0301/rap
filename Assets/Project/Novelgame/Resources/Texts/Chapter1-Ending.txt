@@ -20,9 +20,8 @@
 !se_fade="school_chime"="5,0"
 !bgm_sound="n_ending_scene_bg"
 !bgm_loop="true"
-!bgm_volume="1"
+!bgm_volume="0.2"
 !bgm_play=""
-!bgm_fade="5,1"
 
 !charaimg_delete="homeroom_teacher_normal"=""
 !charaimg_sprite="sub_character1_normal"="sub_character1_normal"
@@ -66,3 +65,7 @@
 !charaimg_pos="main_character_normal"="0,0,0"
 
 &「個性的な人たちばかりだ．．．！ついに、ここから僕の奇妙な学校生活が始まるんだ」
+
+&!foreground_anim="fadeout,0,2,%0,0,0%%"
+!wait="2"
+!bgm_fade="2,0"
