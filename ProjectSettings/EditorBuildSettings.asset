@@ -36,7 +36,7 @@ EditorBuildSettings:
     path: Assets/Project/Chapter1-EndingScenes/Chapter1-EndingScenes.unity
     guid: 95c6d0e0697b62c47ac57a1194224239
   - enabled: 1
-    path: Assets/Project/RapBattle_Production/RapBattleScene_Production.unity
+    path: Assets/Project/RapBattleScenes/RapBattleScene_Production.unity
     guid: 8607aa9454468454a8640324e45204bf
   - enabled: 1
     path: Assets/Project/RapBattleScenes/WinScenes.unity
