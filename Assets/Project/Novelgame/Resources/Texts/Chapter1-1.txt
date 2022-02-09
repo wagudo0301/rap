@@ -542,7 +542,7 @@ charaimg_size="main_character_normal"="1700,1700,1"
 &!se_sound="Highheels_walk"="Highheels_walk"
 !se_priority="Highheels_walk"="150"
 !se_play="Highheels_walk"=""
-!se_fade="Highheels_walk"="5,0"
+!se_fade="Highheels_walk"="2,0"
 
 
 
@@ -820,13 +820,14 @@ charaimg_size="main_character_normal"="1700,1700,1"
 !foreground_anim="fadein,0,2,%0,0,0,0%%"
 !background_sprite="classroom_background"
 !se_play="zidou_door"=""
-!se_play="Highheels_walk"=""
-!se_fade="Highheels_walk"="5,0"
-!charaimg_active="homeroom_teacher_normal"="true"
-!wait="1"
-!se_play="Highheels_walk"=""
-!se_fade="Highheels_walk"="5,0"
+&「」
 
+&!se_play="Highheels_walk"=""
+!se_fade="Highheels_walk"="2,0"
+&「」
+
+&!charaimg_active="homeroom_teacher_normal"="true"
+!wait="1"
 !se_play="school_chime"=""
 !se_fade="school_chime"="5,0"
 &先生
@@ -1004,7 +1005,8 @@ charaimg_size="main_character_normal"="1700,1700,1"
 !wait="1"
 
 &se_play="Highheels_walk"=""
-!se_fade="Highheels_walk"="5,0"
+!se_fade="Highheels_walk"="2,0"
+!wait="1"
 !se_play="zidou_door"=""
 !se_play="Highheels_walk"=""
 !se_fade="Highheels_walk"="5,0"
