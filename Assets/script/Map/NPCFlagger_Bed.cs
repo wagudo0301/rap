@@ -52,11 +52,13 @@ public class NPCFlagger_Bed : MonoBehaviour
                 if(!PublicStaticStatus.Flags.Contains("EndDay1"))
                 {
                     PublicStaticStatus.Flags.Add("EndDay1");
+                    Destroy(GameObject.Find("Player"));
                     SceneManager.LoadScene("Chapter1-2-Scenes");
                 }
                 else if(PublicStaticStatus.Flags.Contains("EndDay1"))
                 {
                     PublicStaticStatus.Flags.Add("EndDay2");
+                    Destroy(GameObject.Find("Player"));
                     SceneManager.LoadScene("Chapter1-before_the_TutorialScenes");
                 }
 
