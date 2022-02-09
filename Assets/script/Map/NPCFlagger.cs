@@ -13,6 +13,9 @@ public class NPCFlagger : MonoBehaviour
     Player MyPlayer;
     bool StartFadeOutTimer=false;
     float FadeOutTimer;
+
+    public AudioClip sound;
+
     void Start()
     {
         MyFadeOuter=GameObject.Find("FadeOuter");
@@ -32,6 +35,7 @@ public class NPCFlagger : MonoBehaviour
             {
                 MyPlayer.ControlEnable=false;
                 Debug.Log("nocon");
+                gameObject.GetComponent<AudioSource>().PlayOneShot(sound);
                 StartFadeOutTimer=true;
             }
         }
@@ -52,7 +56,7 @@ public class NPCFlagger : MonoBehaviour
                 else if(PublicStaticStatus.Flags.Contains("EndDay1"))
                 {
                     PublicStaticStatus.Flags.Add("EndDay2");
-                    SceneManager.LoadScene("Chapter1-before_the_battleScenes");
+                    SceneManager.LoadScene("Chapter1-before_the_TutorialScenes");
                 }
 
             }
