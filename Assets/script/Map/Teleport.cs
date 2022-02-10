@@ -7,6 +7,7 @@ public class Teleport : MonoBehaviour
 {
     public string SceneName;
     public string TeleportDistinationName;
+    public GameObject SoundEffector;
     private float timer=0f;
 
     void Update()
@@ -22,6 +23,7 @@ public class Teleport : MonoBehaviour
         PublicStaticStatus.CurrrentScene=SceneName;
         Debug.Log(PublicStaticStatus.CurrrentScene+"に行く");
         PublicStaticStatus.LastTeleportDistination=TeleportDistinationName;
+        Instantiate(SoundEffector);
         SceneManager.LoadScene(SceneName);
         //StartCoroutine("Teleportation");
         /*

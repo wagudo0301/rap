@@ -9,8 +9,6 @@ public class NPCAnswerer : MonoBehaviour
     //public string MainText="";
     public List<string> MainText=new List<string>();
     [SerializeField]
-    private Animator Anim;
-    [SerializeField]
     private Sprite Spr;
 
     GameObject Player;
@@ -34,21 +32,15 @@ public class NPCAnswerer : MonoBehaviour
     {
         if(Input.GetMouseButtonDown(0))
         {
-
-            //1ページ目表示
-            if(Vector3.Distance(gameObject.transform.position,Player.transform.position)<=1.67f&&page==-1&&Player.GetComponent<Player>().ControlEnable)
+            //最初ページを表示
+            if(page==-1&&Player.GetComponent<Player>().ControlEnable&&Vector3.Distance(gameObject.transform.position,Player.transform.position)<=1.67f)
             {
                 Debug.Log("Talk");
-                page+=1;
-
-                Time.timeScale=0f;//まだポーズ中に頭ぐりぐりできる
+                Time.timeScale=0f;
                 Player.GetComponent<Player>().ControlEnable=false;
-                Debug.Log("nocon");
-                //Anim.SetFloat("X",0);
-                //Anim.SetFloat("Y",-1);
                 MyFadeOuter.GetComponent<Image>().color = new Color32 (0, 0, 0, 170);
                 MyImage.sprite=Spr;
-                MyImage.color=new Color32 (255,255,255,255);
+                MyImage.color=new Color32 (255,255,255,255);                
                 if(NameText!="")
                 {
                     MyCanvasForRPG.transform.Find("NameTextPanel").gameObject.SetActive(true);
@@ -58,46 +50,77 @@ public class NPCAnswerer : MonoBehaviour
                 MyCanvasForRPG.transform.Find("MainTextPanel").gameObject.SetActive(true);
                 MyCanvasForRPG.transform.Find("NextPageIcon").gameObject.SetActive(true);
                 go1=GameObject.Find("MainText").gameObject;
-                go1.GetComponent<Text>().text=MainText[page];
+
+                TurnPage();
 
             }
-            //2ページ目以降表示
+            //次ページをチェックして表示
             else if(page>=0)
             {
-                page+=1;
                 //2ページ目以降表示
-                if(MainText.Count>page)
+                if(MainText.Count>page+1)
                 {
-                    go1.GetComponent<Text>().text=MainText[page];
+                    TurnPage();
                 }
                 //ページがめくれないなら表示終了
-                if(MainText.Count<=page)
+                else if(MainText.Count<=page+1)
                 {
                     Debug.Log("EndTalk");
-
-                    MyFadeOuter.GetComponent<Image>().color = new Color32 (0, 0, 0, 0);
-                    MyImage.color=new Color32 (0,0,0,0);
-                    if(go0){go0.GetComponent<Text>().text="";}
-                    go1.GetComponent<Text>().text="";
-                    MyCanvasForRPG.transform.Find("NameTextPanel").gameObject.SetActive(false);
-                    MyCanvasForRPG.transform.Find("MainTextPanel").gameObject.SetActive(false);
-                    MyCanvasForRPG.transform.Find("NextPageIcon").gameObject.SetActive(false);
-                    Time.timeScale=1.0f;
-                    Player.GetComponent<Player>().ControlEnable=true;
-                    Debug.Log("yescon");
-
-                    page=-1;
-
-                    
-                    if(gameObject.GetComponent<NPCFlagger>())
-                    {
-                        Debug.Log("Flag");
-                        {
-                            gameObject.GetComponent<NPCFlagger>().Flag=true;
-                        }
-                    }
+                    EndTalk();
                 }
             }
         }
+    }
+    void TurnPage()
+    {
+        page+=1;
+
+        //Flagチェック
+        if(MainText[page].Substring(0, 1)=="_")
+        {
+            ChangeFlag();
+            
+            //次ページをチェックして表示
+            if(MainText.Count>page+1)
+            {
+                TurnPage();
+            }
+            else if(MainText.Count<=page+1)
+            {
+                Debug.Log("EndTalk");
+                EndTalk();
+            }
+        }
+        //次ページにする
+        else
+        {
+            go1.GetComponent<Text>().text=MainText[page];
+        }
+    }
+    public void EndTalk()
+    {
+        MyFadeOuter.GetComponent<Image>().color = new Color32 (0, 0, 0, 0);
+        MyImage.color=new Color32 (0,0,0,0);
+        if(go0){go0.GetComponent<Text>().text="";}
+        go1.GetComponent<Text>().text="";
+        MyCanvasForRPG.transform.Find("NameTextPanel").gameObject.SetActive(false);
+        MyCanvasForRPG.transform.Find("MainTextPanel").gameObject.SetActive(false);
+        MyCanvasForRPG.transform.Find("NextPageIcon").gameObject.SetActive(false);
+        Time.timeScale=1.0f;
+        Player.GetComponent<Player>().ControlEnable=true;
+
+        page=-1;
+
+        //ChangeFlag();
+        
+    }
+    void ChangeFlag()
+    {
+            gameObject.AddComponent<NPCFlagger_GoToBed>();
+        /*if(gameObject.GetComponent<NPCFlagger_Bed>())
+        {
+            Debug.Log("Flag");
+            //gameObject.GetComponent<NPCFlagger_Bed>().Flag=true;
+        }*/
     }
 }
