@@ -7,11 +7,14 @@
 &!charaimg_sprite="kitsukawa_normal"="kitsukawa_normal"
 !charaimg_size="kitsukawa_normal"="1500,1500,1"
 !charaimg_pos="kitsukawa_normal"="0,0,0"
+&!se_sound="click_se_N"="click_se_N"
+!se_priority="click_se_N"="150"
+
 
 
 &橘川
 「どうでしょうか．．．」
-
+&!se_play="click_se_N"=""
 &
 !charaimg_sprite="homeroom_teacher_normal"="homeroom_teacher_normal"
 !charaimg_size="homeroom_teacher_normal"="2000,2000,1"
@@ -24,7 +27,7 @@
 
 &先生
 「まぁ、及第点ってところかな？とりあえず、合格！」
-
+&!se_play="click_se_N"=""
 &
 !charaimg_sprite="homeroom_teacher_normal"="homeroom_teacher_normal"
 !charaimg_size="homeroom_teacher_normal"="2000,2000,1"
@@ -38,7 +41,7 @@
 
 &橘川
 「よかったああああああ、もう帰っていいですか？？？？」
-
+&!se_play="click_se_N"=""
 &
 !charaimg_sprite="homeroom_teacher_normal"="homeroom_teacher_normal"
 !charaimg_size="homeroom_teacher_normal"="2200,2200,1"
@@ -51,7 +54,7 @@
 
 &先生
 「ええ。疲れただろうから今日はゆっくり部屋で休んでね。お疲れ様。」
-
+&!se_play="click_se_N"=""
 &!se_sound="zidou_door"="zidou_door"
 !se_priority="zidou_door"="150"
 !se_play="zidou_door"=""
@@ -66,7 +69,7 @@
 
 &先生
 「次は熊井くんなので紫崎くん、部屋に来てください。」
-
+&!se_play="click_se_N"=""
 &!charaimg_active="homeroom_teacher_normal"="false"
 !charaimg_sprite="shizaki_normal"="shizaki_normal"
 !charaimg_size="shizaki_normal"="1500,1500,1"
@@ -77,12 +80,12 @@
 &紫崎
 「失礼します。」
 
-
+&!se_play="click_se_N"=""
 &!charaimg_active="shizaki_normal"="false"
 !charaimg_active="homeroom_teacher_normal"="true"
 &先生
 「そこに座って頂戴。」
-
+&!se_play="click_se_N"=""
 &!charaimg_active="homeroom_teacher_normal"="false"
 !charaimg_active="shizaki_normal"="true"
 !se_sound="pushing-up-eyeglasses-1"="pushing-up-eyeglasses-1"
@@ -92,19 +95,19 @@
 
 &紫崎
 「熊井。お手並み拝見ってところだな。」
-
+&!se_play="click_se_N"=""
 &!charaimg_active="shizaki_normal"="false"
 !charaimg_active="homeroom_teacher_normal"="true"
 &先生
 「準備はいい？熊井くん！！」
-
+&!se_play="click_se_N"=""
 &!charaimg_active="homeroom_teacher_normal"="false"
 !charaimg_sprite="main_character_normal"="main_character_normal"
 !charaimg_size="main_character_normal"="1500,1500,1"
 !charaimg_pos="main_character_normal"="0,0,0"
 &熊井
 「もちろんです！」
-
+&!se_play="click_se_N"=""
 &!charaimg_delete="main_character_normal"=""
 !charaimg_delete="shizaki_normal"=""
 !charaimg_delete="asao_normal"=""
