@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class NPCFlagger_Bed : MonoBehaviour
+public class NPCFlagger_GoToBed : MonoBehaviour
 {
     public bool Flag=false;
     bool FlagChanged=false;
@@ -20,6 +20,10 @@ public class NPCFlagger_Bed : MonoBehaviour
     {
         MyFadeOuter=GameObject.Find("FadeOuter");
         MyPlayer=GameObject.Find("Player").GetComponent<Player>();
+
+        Flag=true;
+        FlagName="GoToBed";
+        sound= Resources.Load<AudioClip>("BedSound");
     }
     void Update()
     {
@@ -43,6 +47,7 @@ public class NPCFlagger_Bed : MonoBehaviour
         if(StartFadeOutTimer)
         {
             FadeOutTimer+=Time.deltaTime;
+            MyPlayer.ControlEnable=false;//デバッグ用の行
             MyFadeOuter.GetComponent<Image>().color = new Color32 (0, 0, 0, (byte)(Mathf.RoundToInt((FadeOutTimer/7.0f)*85)+170));
             if(FadeOutTimer>=7.0f)
             {

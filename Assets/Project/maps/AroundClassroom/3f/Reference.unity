@@ -147,6 +147,12 @@ PrefabInstance:
       objectReference: {fileID: 9100000, guid: c6a23e6cbf187514a88c83df6773efb5, type: 2}
     - target: {fileID: 7656468341879715467, guid: d964e10193f41064e989639963525543,
         type: 3}
+      propertyPath: Spr
+      value: 
+      objectReference: {fileID: 21300000, guid: b7cb17186d880df48a71a88d8741c883,
+        type: 3}
+    - target: {fileID: 7656468341879715467, guid: d964e10193f41064e989639963525543,
+        type: 3}
       propertyPath: NameText
       value: "\u516B\u5271"
       objectReference: {fileID: 0}
