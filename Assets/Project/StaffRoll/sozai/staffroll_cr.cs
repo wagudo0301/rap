@@ -19,7 +19,7 @@ public class staffroll_cr : MonoBehaviour
         time += Time.deltaTime;//毎フレームの時間を加算.
         
         if (Input.GetMouseButtonDown(0) && time >= 5f){
-            cnt += 3;
+            cnt += 1;
             Debug.Log(cnt+"だよ");
         }
         
