@@ -563,6 +563,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -5235791847987863985, guid: 21497ed55bad645478331e3f96b356c5,
         type: 3}
+    - target: {fileID: 7656468341879715470, guid: d964e10193f41064e989639963525543,
+        type: 3}
+      propertyPath: m_BodyType
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7656468341879715466, guid: d964e10193f41064e989639963525543, type: 3}
     - {fileID: 7656468341879715465, guid: d964e10193f41064e989639963525543, type: 3}
@@ -2078,9 +2083,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   NameText: 
   MainText:
-  - "\u304D\u3087\u3046\u3070"
-  - "\u5BDD\u3088\u3046"
-  - "\u5BDD\u3088\u3046"
+  - "\u4ECA\u65E5\u306F\u3082\u3046\u4F11\u3082\u3046\u304B"
+  - "\u660E\u65E5\u306B\u5099\u3048\u3066\u5BDD\u308B\u3053\u3068\u306B\u3057\u305F"
   Anim: {fileID: 898371067}
   Spr: {fileID: 10917, guid: 0000000000000000f000000000000000, type: 0}
 --- !u!82 &1680723133
