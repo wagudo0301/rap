@@ -520,7 +520,7 @@ public class production_battle_gamemanager : MonoBehaviour
         //テキストパネルの削除
         TextPannel.sprite = UIMask;
         //2秒停止
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(5f);
 
         SceneLoad();
     }
