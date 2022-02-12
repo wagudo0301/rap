@@ -1,19 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-public class QuitButtonScripts : MonoBehaviour
-{
-    public void ButtonExit()
-    {
-        Application.Quit();
-    }
-    
-    // Start is called before the first frame update
-    void Start()
-    {
-       
-    }
+using UnityEngine.SceneManagement;
 
+public class goTitleButton : MonoBehaviour
+{
+    // Start is called before the first frame update
+    public void ButtonGoTitle()
+    {
+        SceneManager.LoadScene("TitleScenes");
+    }
     // Update is called once per frame
     void Update()
     {
