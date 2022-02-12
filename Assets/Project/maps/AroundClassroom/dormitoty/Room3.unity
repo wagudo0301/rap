@@ -2175,7 +2175,11 @@ MonoBehaviour:
   MainText:
   - "\u4ECA\u65E5\u306F\u3082\u3046\u4F11\u3082\u3046\u304B"
   - "\u660E\u65E5\u306B\u5099\u3048\u3066\u5BDD\u308B\u3053\u3068\u306B\u3057\u305F"
-  - _Flag
+  - _Choice
+  - _Choice
+  - _Choice
+  - _Choice
+  - _Choice
   Spr: {fileID: 10917, guid: 0000000000000000f000000000000000, type: 0}
 --- !u!1 &1791295353
 GameObject:
@@ -2187,7 +2191,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1791295354}
   m_Layer: 5
-  m_Name: TopButtons
+  m_Name: TopButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
