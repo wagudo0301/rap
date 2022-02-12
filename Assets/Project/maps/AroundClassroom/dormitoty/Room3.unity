@@ -563,17 +563,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -5235791847987863985, guid: 21497ed55bad645478331e3f96b356c5,
         type: 3}
+    - target: {fileID: 7656468341879715470, guid: d964e10193f41064e989639963525543,
+        type: 3}
+      propertyPath: m_BodyType
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7656468341879715466, guid: d964e10193f41064e989639963525543, type: 3}
     - {fileID: 7656468341879715465, guid: d964e10193f41064e989639963525543, type: 3}
     - {fileID: 7656468341879715467, guid: d964e10193f41064e989639963525543, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: d964e10193f41064e989639963525543, type: 3}
---- !u!95 &898371067 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 7656468341879715464, guid: d964e10193f41064e989639963525543,
-    type: 3}
-  m_PrefabInstance: {fileID: 898371066}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &900872643
 GameObject:
   m_ObjectHideFlags: 0
@@ -2064,25 +2063,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 898371066}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1680723132
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1680723131}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 64730999215bdfa49993633587c765ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  NameText: 
-  MainText:
-  - "\u304D\u3087\u3046\u3070"
-  - "\u5BDD\u3088\u3046"
-  - "\u5BDD\u3088\u3046"
-  Anim: {fileID: 898371067}
-  Spr: {fileID: 10917, guid: 0000000000000000f000000000000000, type: 0}
 --- !u!82 &1680723133
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2179,7 +2159,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &1680723134
+--- !u!114 &1680723140
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2188,12 +2168,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 1680723131}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c31b501eb56bd7d46b34d95153a2c600, type: 3}
+  m_Script: {fileID: 11500000, guid: 63bae206f3808dd49b154d1cc9702e3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Flag: 0
-  FlagName: GoToBed
-  sound: {fileID: 8300000, guid: e67f2cb53c1f1f54ea79179a30953f59, type: 3}
+  NameText: 
+  MainText:
+  - "\u4ECA\u65E5\u306F\u3082\u3046\u4F11\u3082\u3046\u304B"
+  - "\u660E\u65E5\u306B\u5099\u3048\u3066\u5BDD\u308B\u3053\u3068\u306B\u3057\u305F"
+  - _Flag
+  Spr: {fileID: 10917, guid: 0000000000000000f000000000000000, type: 0}
 --- !u!1 &1791295353
 GameObject:
   m_ObjectHideFlags: 0

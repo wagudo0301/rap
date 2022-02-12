@@ -10,13 +10,17 @@
 !charaimg_size="main_character_normal"="1500,1500,1"
 !charaimg_pos="main_character_normal"="-600,0,0"
 !charaimg_active="main_character_normal"="true"
+&!se_sound="click_se_N"="click_se_N"
+!se_priority="click_se_N"="150"
+
+
 
 
 
 
 &熊井
 「どうしたらテストに合格できるんだろう．．．」
-
+&!se_play="click_se_N"=""
 &
 !charaimg_active="main_character_normal"="false"
 !charaimg_sprite="main_character_normal"="main_character_normal"
@@ -31,7 +35,7 @@
 
 &八剱
 「というか、どんなテストなのかもわからないよ」
-
+&!se_play="click_se_N"=""
 &!charaimg_sprite="asao_normal"="asao_normal"
 !charaimg_size="asao_normal"="1500,1500,1"
 !charaimg_pos="asao_normal"="0,0,0"
@@ -40,19 +44,19 @@
 
 &浅尾
 「生徒の噂によると先生とラップバトルするんだってさ」
-
+&!se_play="click_se_N"=""
 &!charaimg_size="main_character_normal"="1700,1700,1"
 
 
 &熊井
 「先生！？かなり難易度高そうだね」
-
+&!se_play="click_se_N"=""
 &!charaimg_size="main_character_normal"="1500,1500,1"
 !charaimg_size="yatsurugi_normal"="1700,1700,1"
 
 &八剱
 「そうだとしたら、俺は自信ないわ」
-
+&!se_play="click_se_N"=""
 
 &!charaimg_size="yatsurugi_normal"="1500,1500,1"
 !charaimg_size="asao_normal"="1700,1700,1"
@@ -60,24 +64,25 @@
 
 &浅尾
 「だよね～でもさ、私は勝ち筋がないわけではないと思うよ」
+&!se_play="click_se_N"=""
 &!charaimg_size="asao_normal"="1500,1500,1"
 !charaimg_size="main_character_normal"="1700,1700,1"
 
 &熊井
 「なんでそう思うの？」
-
+&!se_play="click_se_N"=""
 &!charaimg_size="main_character_normal"="1500,1500,1"
 !charaimg_size="asao_normal"="1700,1700,1"
 
 &浅尾
 「初日のラップの基礎の話って覚えてる？」
-
+&!se_play="click_se_N"=""
 &!charaimg_size="asao_normal"="1500,1500,1"
 !charaimg_size="yatsurugi_normal"="1700,1700,1"
 
 &八剱
 「たしか4つあったよな．．．」
-
+&!se_play="click_se_N"=""
 &!charaimg_size="yatsurugi_normal"="1500,1500,1"
 !charaimg_size="asao_normal"="1700,1700,1"
 
@@ -85,12 +90,12 @@
 
 &浅尾
 「そう！フロウ・ライム・アンサー・パンチラインだったよね」
-
+&!se_play="click_se_N"=""
 
 
 &浅尾
 「その中の相手が出してくるパンチラインがわかっちゃえば初心者の私たちでも結構良い線行くって気づいちゃったわけ！」
-
+&!se_play="click_se_N"=""
 
 &!charaimg_size="asao_normal"="1500,1500,1"
 !charaimg_size="yatsurugi_normal"="1700,1700,1"
@@ -99,28 +104,28 @@
 
 &八剱
 「それってかなり良い案だと思うぜ、ババ抜きとかのカードゲームでも相手の手札がわかっていれば出し方の通りは絞られるしな」
-
+&!se_play="click_se_N"=""
 &!charaimg_size="yatsurugi_normal"="1500,1500,1"
 !charaimg_size="main_character_normal"="1700,1700,1"
 
 
 &熊井
 「問題は先生のパンチラインをどうやって見つけるかだよね」
-
+&!se_play="click_se_N"=""
 &!charaimg_size="main_character_normal"="1500,1500,1"
 !charaimg_size="asao_normal"="1700,1700,1"
 
 
 &浅尾
 「そうなの．．．残念なことにそこで詰まっちゃったの」
-
+&!se_play="click_se_N"=""
 &!charaimg_size="asao_normal"="1500,1500,1"
 !charaimg_size="yatsurugi_normal"="1700,1700,1"
 
 
 &八剱
 「じゃあ、こっそり先生の部屋に忍び込むとか＿」
-
+&!se_play="click_se_N"=""
 &!charaimg_size="yatsurugi_normal"="1500,1500,1"
 !charaimg_size="main_character_normal"="1700,1700,1"
 !charaimg_size="asao_normal"="1700,1700,1"
@@ -129,79 +134,81 @@
 
 &熊井・浅尾
 「それは駄目だと思う」
-
+&!se_play="click_se_N"=""
 &!charaimg_size="asao_normal"="1500,1500,1"
 
 
 &熊井
 「そこで謹慎くらったら、テストに合格どころか受けられもしなくなっちゃうよ」
-
+&!se_play="click_se_N"=""
 &!charaimg_size="main_character_normal"="1500,1500,1"
 !charaimg_size="asao_normal"="1700,1700,1"
 
 
 &浅尾
 「そーそー」
+&!se_play="click_se_N"=""
 &浅尾
 「それにパンチラインなんてどこかにメモを書いておいたりするものじゃないしね」
-
+&!se_play="click_se_N"=""
 &!charaimg_size="asao_normal"="1500,1500,1"
 !charaimg_size="main_character_normal"="1700,1700,1"
 
 
 &熊井
 「確かに．．．」
+&!se_play="click_se_N"=""
 &熊井
 「普段から使っていたりする言葉とか言い回しがパンチラインに出てくることが多そうだよね」
-
+&!se_play="click_se_N"=""
 &!charaimg_size="main_character_normal"="1500,1500,1"
 !charaimg_size="yatsurugi_normal"="1700,1700,1"
 
 
 &八剱
 「それはそうかもしれないな。でも、先生の話してたことなんてうっすらとしか覚えてないー」
-
+&!se_play="click_se_N"=""
 &!charaimg_size="yatsurugi_normal"="1500,1500,1"
 !charaimg_size="asao_normal"="1700,1700,1"
 
 
 &浅尾
 「私もなんとなくしか覚えてないけどあんたはスマホでYOuchubeしか見てなかったから私より覚えてないでしょーね」
-
+&!se_play="click_se_N"=""
 &!charaimg_size="asao_normal"="1500,1500,1"
 !charaimg_size="yatsurugi_normal"="1700,1700,1"
 
 
 &八剱
 「話は聞こえてはいるぞ！俺も流石にそこまで腐ってはないぜ」
-
+&!se_play="click_se_N"=""
 &!charaimg_size="yatsurugi_normal"="1500,1500,1"
 !charaimg_size="asao_normal"="1700,1700,1"
 
 
 &浅尾
 「ノイズキャンセリング付きのイヤホン耳にさしておいてよく言うわね．．．」
-
+&!se_play="click_se_N"=""
 &浅尾
 「あいつとは違って、熊井くんはいつも前向いて話聞いてたよね！授業で眠くなったりするの？」
-
+&!se_play="click_se_N"=""
 &!charaimg_size="asao_normal"="1500,1500,1"
 !charaimg_size="main_character_normal"="1700,1700,1"
 
 
 &熊井
 「昼食後とかはかなりの確率で眠くなったりするのだけど．．．」
-
+&!se_play="click_se_N"=""
 &熊井
 「その時は八剱君の片方のイヤホンから『Novel Ore』の曲を聴いて眠気覚ましさせてもらってるかな」
-
+&!se_play="click_se_N"=""
 &!charaimg_size="main_character_normal"="1500,1500,1"
 !charaimg_size="asao_normal"="1700,1700,1"
 
 
 &浅尾
 「え．．．」
-
+&!se_play="click_se_N"=""
 &!foreground_anim="fadeout,0,2,%0,0,0%%"
 !wait="2"
 &!scene="Classroom1-1"

@@ -4688,6 +4688,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: NPC
       objectReference: {fileID: 0}
+    - target: {fileID: 7656468341879715460, guid: d964e10193f41064e989639963525543,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7656468341879715464, guid: d964e10193f41064e989639963525543,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: eea4c6a2a870c3247aa5b058b8389ab6, type: 2}
     - target: {fileID: 7656468341879715468, guid: d964e10193f41064e989639963525543,
         type: 3}
       propertyPath: m_RootOrder

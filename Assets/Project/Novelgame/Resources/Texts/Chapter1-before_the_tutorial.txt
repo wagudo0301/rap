@@ -11,18 +11,23 @@
 !se_volume="school_chime"="0.3"
 !se_play="school_chime"=""
 !wait="1"
+&!se_sound="click_se_N"="click_se_N"
+!se_priority="click_se_N"="150"
+
+
+
 
 
 &!se_fade="school_chime"="5,0"
 &先生
 「ついに、テスト当日になったわね！やる気があっても不合格は不合格。試験が終わり次第、荷物まとめて退学してもらうから、そのつもりでぶつかってきなさい！」
-
+&!se_play="click_se_N"=""
 &先生
 「試験が終わったものは寮の自分の部屋にまっすぐ帰ること。基本、試験内容の交換はできないようになっているから。スマホもあらかじめ部屋に置いて来るように確認させてもらったのもそういう理由よ。」
-
+&!se_play="click_se_N"=""
 &先生
 「それから、寮と教室をつなぐ通路はシャッターを下ろさせてもらうわ。」
-
+&!se_play="click_se_N"=""
 &!charaimg_active="homeroom_teacher_normal"="false"
 !charaimg_sprite="yatsurugi_normal"="yatsurugi_normal"
 !charaimg_size="yatsurugi_normal"="1500,1500,1"
@@ -32,7 +37,7 @@
 !charaimg_pos="asao_normal"="-400,0,0"
 &八剱
 「あぁ．．．緊張してきた．．．あっ、熊井だ！」
-
+&!se_play="click_se_N"=""
 &!charaimg_pos="yatsurugi_normal"="800,0,0"
 !charaimg_pos="asao_normal"="0,0,0"
 !charaimg_sprite="main_character_normal"="main_character_normal"
@@ -40,25 +45,25 @@
 !charaimg_pos="main_character_normal"="-800,0,0"
 &熊井
 「八剱くん、浅尾さん。おはよー」
-
+&!se_play="click_se_N"=""
 &!charaimg_size="yatsurugi_normal"="1700,1700,1"
 
 &八剱
 「熊井。昨日はよく眠れたか？俺さ、緊張して眠れなくてどうしようもなかったからさ、今朝は校内一周走った後に教室に避難してたわ。」
-
+&!se_play="click_se_N"=""
 &!charaimg_size="yatsurugi_normal"="1500,1500,1"
 !charaimg_size="main_character_normal"="1700,1700,1"
 
 &熊井
 「僕はいつも通りだよ」
-
+&!se_play="click_se_N"=""
 &!charaimg_size="main_character_normal"="1500,1500,1"
 !charaimg_size="asao_normal"="1700,1700,1"
 
 
 &浅尾
 「私なんか朝早く起きたいからって早く寝たら、いつもよりたくさん寝ちゃって、朝ごはん食べれなかったよ．．．もしかして、熊井くんはマイペースなのかな。熊井だけに！あは！今朝から私のライム絶好調じゃん！！」
-
+&!se_play="click_se_N"=""
 &!charaimg_size="asao_normal"="1500,1500,1"
 !charaimg_size="yatsurugi_normal"="1700,1700,1"
 
@@ -66,20 +71,20 @@
 
 &八剱
 「たしかに韻は踏んでいるけど．．．なんかさっむ！」
-
+&!se_play="click_se_N"=""
 &!charaimg_size="yatsurugi_normal"="1500,1500,1"
 !charaimg_size="main_character_normal"="1700,1700,1"
 
 
 &熊井
 「浅尾さんは普段からおやじギャグを言ったりするの？」
-
+&!se_play="click_se_N"=""
 &!charaimg_size="main_character_normal"="1500,1500,1"
 !charaimg_size="asao_normal"="1700,1700,1"
 
 &浅尾
 「おやじギャグって言わないでよ！これでもラッパーの卵なんだから！」
-
+&!se_play="click_se_N"=""
 
 &!charaimg_size="asao_normal"="1500,1500,1"
 !charaimg_active="main_character_normal"="false"
@@ -88,23 +93,25 @@
 !charaimg_active="homeroom_teacher_normal"="true"
 &先生
 「はーい！みんな、おしゃべりはそこまで！じゃあ、名簿順に呼んでいくから、隣の部屋に来てね。自分の前の人の番になったら部屋に入って椅子に座る感じでよろしく！」
-
+&!se_play="click_se_N"=""
 &!charaimg_active="homeroom_teacher_normal"="false"
 !charaimg_active="main_character_normal"="true"
 !charaimg_active="asao_normal"="true"
 !charaimg_active="yatsurugi_normal"="true"
 &八剱
 「自分より後の人に見られちまうってことか．．．これはまた緊張するじゃないか．．．．．．」
+&!se_play="click_se_N"=""
 &!charaimg_size="main_character_normal"="1700,1700,1"
 
 &熊井
 「僕の後は紫崎くんか．．．」
+&!se_play="click_se_N"=""
 &!charaimg_size="main_character_normal"="1500,1500,1"
 !charaimg_size="asao_normal"="1700,1700,1"
 
 &浅尾
 「逆に言えば、前の人を見て学べるってことでしょ？でも、私は」
-
+&!se_play="click_se_N"=""
 &
 !charaimg_size="asao_normal"="1500,1500,1"
 !charaimg_active="main_character_normal"="false"
@@ -113,12 +120,12 @@
 !charaimg_active="homeroom_teacher_normal"="true"
 &先生
 「最初は浅尾さんからね～、私についてきて！」
-
+&!se_play="click_se_N"=""
 &!charaimg_active="homeroom_teacher_normal"="false"
 !charaimg_active="asao_normal"="true"
 &浅尾
 「はい」
-
+&!se_play="click_se_N"=""
 &!charaimg_active="asao_normal"="false"
 !charaimg_pos="main_character_normal"="-400,0,0"
 !charaimg_active="main_character_normal"="true"
@@ -126,22 +133,22 @@
 !charaimg_pos="yatsurugi_normal"="400,0,0"
 &八剱・熊井
 「がんばれ！」
-
+&!se_play="click_se_N"=""
 &!charaimg_active="main_character_normal"="false"
 !charaimg_active="yatsurugi_normal"="false"
 !charaimg_active="asao_normal"="true"
 &浅尾
 「．．．ありがと」
-
+&!se_play="click_se_N"=""
 &!charaimg_active="asao_normal"="false"
 !charaimg_active="homeroom_teacher_normal"="true"
 &先生
 「あ、あと伊勢くんも次だからついてきて。」
-
+&!se_play="click_se_N"=""
 &!charaimg_active="homeroom_teacher_normal"="false"
 &伊勢
 「はいッ！」
-
+&!se_play="click_se_N"=""
 
 
 &!se_sound="zidou_door"="zidou_door"
@@ -153,13 +160,13 @@
 !charaimg_active="yatsurugi_normal"="true"
 &八剱
 「浅尾が一番不利かもしれないな、この試験。」
-
+&!se_play="click_se_N"=""
 &熊井
 「確かに不利かもしれないけど、僕たちは浅尾さんの努力を知っている。きっと、うまくいくはずだよ。」
-
+&!se_play="click_se_N"=""
 &八剱
 「それもそうだ！あいつがどれだけ真面目に取り組んでいたかを思い出せば、心配いらないな。」
-
+&!se_play="click_se_N"=""
 &!charaimg_active="main_character_normal"="false"
 !charaimg_active="yatsurugi_normal"="false"
 !foreground_anim="fadeout,0,2,%0,0,0%%"
@@ -179,20 +186,20 @@
 
 &先生
 「次は橘川くんだから、熊井くん、部屋に入ってきてください。」
-
+&!se_play="click_se_N"=""
 &!background_sprite="classroom_background"
 !charaimg_active="homeroom_teacher_normal"="false"
 !charaimg_pos="yatsurugi_normal"="0,0,0"
 !charaimg_active="yatsurugi_normal"="true"
 &八剱
 「熊井、がんばれよ！応援してっから！！」
-
+&!se_play="click_se_N"=""
 &!charaimg_active="yatsurugi_normal"="false"
 !charaimg_pos="main_character_normal"="0,0,0"
 !charaimg_active="main_character_normal"="true"
 &熊井
 「ありがとう！八剱君も絶対受かろうね」
-
+&!se_play="click_se_N"=""
 &!charaimg_active="main_character_normal"="false"
 !charaimg_active="yatsurugi_normal"="false"
 !foreground_anim="fadeout,0,2,%0,0,0%%"
@@ -211,10 +218,10 @@
 !wait="1"
 &先生
 「さあさ、熊井くんはこの椅子に座って」
-
+&!se_play="click_se_N"=""
 &先生
 「さあ、試験を始めるわよ！橘川くん」
-
+&!se_play="click_se_N"=""
 &!charaimg_active="homeroom_teacher_normal"="false"
 !charaimg_sprite="kitsukawa_normal"="kitsukawa_normal"
 !charaimg_size="kitsukawa_normal"="1500,1500,1"
@@ -223,7 +230,7 @@
 
 &橘川
 「は、はいぃぃぃぃ！」
-
+&!se_play="click_se_N"=""
 
 
 &
@@ -231,7 +238,7 @@
 !charaimg_active="main_character_normal"="true"
 &熊井
 「すごい緊張している」
-
+&!se_play="click_se_N"=""
 &!charaimg_delete="main_character_normal"=""
 !charaimg_delete="yatsurugi_normal"=""
 !charaimg_delete="asao_normal"=""
