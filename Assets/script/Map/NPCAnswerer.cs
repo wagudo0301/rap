@@ -114,7 +114,7 @@ public class NPCAnswerer : MonoBehaviour
     }
     void ChangeFlag()
     {
-        if(MainText[page].Substring(1)=="Choice")
+        /*if(MainText[page].Substring(1)=="Choice")
         {
             Debug.Log("Choice--");
             TurnPageIsActive=false;
@@ -124,8 +124,8 @@ public class NPCAnswerer : MonoBehaviour
             page-=2;//選択肢がでるクリックでMainTextを進めない
         }
         else
-        {
-            gameObject.AddComponent(Type.GetType(MainText[page].Substring(1)));
-        }
+        {*/
+        gameObject.AddComponent(Type.GetType(MainText[page].Substring(1)));
+        /*}*/
     }
 }
