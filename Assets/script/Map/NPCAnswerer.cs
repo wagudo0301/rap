@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,7 +7,6 @@ using UnityEngine.UI;
 public class NPCAnswerer : MonoBehaviour
 {
     public string NameText="";
-    //public string MainText="";
     public List<string> MainText=new List<string>();
     [SerializeField]
     private Sprite Spr;
@@ -18,6 +18,8 @@ public class NPCAnswerer : MonoBehaviour
     GameObject go1;
     Image MyImage;
     int page;
+    bool TurnPageIsActive=true;
+
     void Start()
     {
         Player=GameObject.Find("Player");
@@ -57,13 +59,11 @@ public class NPCAnswerer : MonoBehaviour
             //次ページをチェックして表示
             else if(page>=0)
             {
-                //2ページ目以降表示
-                if(MainText.Count>page+1)
+                if(MainText.Count>page+1)//2ページ目以降表示
                 {
                     TurnPage();
                 }
-                //ページがめくれないなら表示終了
-                else if(MainText.Count<=page+1)
+                else if(MainText.Count<=page+1)//ページがめくれないなら表示終了
                 {
                     Debug.Log("EndTalk");
                     EndTalk();
@@ -73,10 +73,11 @@ public class NPCAnswerer : MonoBehaviour
     }
     void TurnPage()
     {
+        if(!TurnPageIsActive){return;}
         page+=1;
 
         //Flagチェック
-        if(MainText[page].Substring(0, 1)=="_")
+        if(MainText[page].Substring(0, 1)=="_")//メッセージの代わりに_で始まったらスクリプト
         {
             ChangeFlag();
             
@@ -110,17 +111,21 @@ public class NPCAnswerer : MonoBehaviour
         Player.GetComponent<Player>().ControlEnable=true;
 
         page=-1;
-
-        //ChangeFlag();
-        
     }
     void ChangeFlag()
     {
-            gameObject.AddComponent<NPCFlagger_GoToBed>();
-        /*if(gameObject.GetComponent<NPCFlagger_Bed>())
+        if(MainText[page].Substring(1)=="Choice")
         {
-            Debug.Log("Flag");
-            //gameObject.GetComponent<NPCFlagger_Bed>().Flag=true;
-        }*/
+            Debug.Log("Choice--");
+            TurnPageIsActive=false;
+            MainText.RemoveAt(page);//MainTextには表示しない
+            //MainText.RemoveAt(page);
+            //MainText.RemoveAt(page);
+            page-=2;//選択肢がでるクリックでMainTextを進めない
+        }
+        else
+        {
+            gameObject.AddComponent(Type.GetType(MainText[page].Substring(1)));
+        }
     }
 }
