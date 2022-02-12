@@ -37,6 +37,7 @@
 
 
 
+
 &校長
 「あなたたちは今までに様々な経験をしてきたでしょう。一人一人、
 全く別の人生をこれまで歩んできました。異なる境遇の人と関わる
@@ -51,9 +52,22 @@
 ださい。」
 &!se_play="click_se_N"=""
 
+
+
+
 &!foreground_anim="fadeout,0,2,%0,0,0%%"
 !bgm_fade="2,0"
 &!wait="2"
+
+!charaimg_active="principal_normal"="false"
+
+&!top_text="CHAPTER1-1-10"="食堂までとばす"
+!bottom_text="1-1"="やめとく"
+
+
+#1-1
+
+
 &!jump_to="CHAPTER1-1-2"
 
 
@@ -1378,20 +1392,24 @@ charaimg_size="main_character_normal"="1700,1700,1"
 !charaimg_sprite="miune_normal"="miune_normal"
 !charaimg_size="miune_normal"="1600,1600,1"
 !charaimg_pos="miune_normal"="600,0,0"
+
+!se_sound="gaya"="gaya"
+!se_priority="gaya"="150"
+!se_play="gaya"=""
 !wait="1"
 &紫崎
 「ラップパン2つ買えたな！争奪戦に勝つってこれはいい気分なものだな。」
 &!se_play="click_se_N"=""
 &!charaimg_size="miune_normal"="1800,1800,1"
 
-
+&!se_play="gaya"=""
 &三嶺
 「3人の分も買えたらよかったんだけど．．．あれ？3人の名前聞くの忘れてた！！」
 &!se_play="click_se_N"=""
 &!charaimg_size="miune_normal"="1600,1600,1"
 !charaimg_size="shizaki_normal"="1700,1700,1"
 
-
+&!se_play="gaya"=""
 
 &紫崎
 「そういうことなら学校のアプリから生徒の名簿リストを見るといい。ほら。」
@@ -1399,13 +1417,13 @@ charaimg_size="main_character_normal"="1700,1700,1"
 &!charaimg_size="shizaki_normal"="1500,1500,1"
 !charaimg_size="miune_normal"="1800,1800,1"
 
-
+&!se_play="gaya"=""
 &三嶺
 「わっ！ほんとだ！顔写真もついているんだね！さっき話したのは熊井くん、浅尾さん、八剱くんか。紫崎はなんでもしってるんだね！」
 &!se_play="click_se_N"=""
 &!charaimg_size="miune_normal"="1600,1600,1"
 !charaimg_size="shizaki_normal"="1700,1700,1"
-
+&!se_play="gaya"=""
 &!se_play="pushing-up-eyeglasses-1"=""
 
 &紫崎
@@ -1413,53 +1431,57 @@ charaimg_size="main_character_normal"="1700,1700,1"
 &!se_play="click_se_N"=""
 &!charaimg_size="shizaki_normal"="1500,1500,1"
 !charaimg_size="miune_normal"="1800,1800,1"
-
+&!se_play="gaya"=""
 
 &三嶺
 「またひどい．．．その冷たい言い回しやめなよ。ともだちできないよ？」
 &!se_play="click_se_N"=""
 &!charaimg_size="miune_normal"="1600,1600,1"
 !charaimg_size="shizaki_normal"="1700,1700,1"
-
+&!se_play="gaya"=""
 
 &紫崎
 「人前でおどおどしている奴には言われたくないね。大体、お前は昔から．．．あっ、おい！！」
 &!se_play="click_se_N"=""
 &!charaimg_size="shizaki_normal"="1500,1500,1"
 !charaimg_size="miune_normal"="1800,1800,1"
-
+&!se_play="gaya"=""
 
 &三嶺
 「ラップパンおいし～～～！もう一つも食べちゃお～」
 &!se_play="click_se_N"=""
 &!charaimg_size="miune_normal"="1600,1600,1"
 !charaimg_size="shizaki_normal"="1700,1700,1"
-
+&!se_play="gaya"=""
 
 &紫崎
 「返せ！！せめて金だけでも返すんだ！！あぁ．．．俺の980円が．．．労力が．．．」
 &!se_play="click_se_N"=""
 &!charaimg_size="shizaki_normal"="1500,1500,1"
 !charaimg_size="miune_normal"="1800,1800,1"
-
+&!se_play="gaya"=""
 
 &三嶺
 「おいしかった～！ありがとうね！！紫崎！」
 &!se_play="click_se_N"=""
 &!charaimg_size="miune_normal"="1600,1600,1"
 !charaimg_size="shizaki_normal"="1700,1700,1"
-
+&!se_play="gaya"=""
 
 &紫崎
 「．．．」
 &!se_play="click_se_N"=""
-
+&!se_play="gaya"=""
 &!charaimg_size="shizaki_normal"="1500,1500,1"
 
 !charaimg_delete="shizaki_normal"=""
 !charaimg_delete="miune_normal"=""
 !foreground_anim="fadeout,0,2,%0,0,0%%"
+
+!se_fade="gaya"="5,0"
 !wait="2"
+
+
 &!jump_to="CHAPTER1-1-11"
 
 
