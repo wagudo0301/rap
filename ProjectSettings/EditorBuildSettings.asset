@@ -164,4 +164,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Project/maps/AroundClassroom/dormitoty/Room16.unity
     guid: 7f013f8a711cbd54ba3224fac657a391
+  - enabled: 1
+    path: Assets/Project/StaffRoll/StaffRoll.unity
+    guid: 9ddf50c58bf141b44a4fc10ecc6130ee
   m_configObjects: {}
