@@ -37,6 +37,7 @@
 
 
 
+
 &校長
 「あなたたちは今までに様々な経験をしてきたでしょう。一人一人、
 全く別の人生をこれまで歩んできました。異なる境遇の人と関わる
@@ -51,9 +52,22 @@
 ださい。」
 &!se_play="click_se_N"=""
 
+
+
+
 &!foreground_anim="fadeout,0,2,%0,0,0%%"
 !bgm_fade="2,0"
 &!wait="2"
+
+!charaimg_active="principal_normal"="false"
+
+&!top_text="CHAPTER1-1-10"="食堂までとばす"
+!bottom_text="1-1"="やめとく"
+
+
+#1-1
+
+
 &!jump_to="CHAPTER1-1-2"
 
 
