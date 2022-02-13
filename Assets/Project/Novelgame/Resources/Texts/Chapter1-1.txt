@@ -33,6 +33,7 @@
 
 &!se_sound="click_se_N"="click_se_N"
 !se_priority="click_se_N"="150"
+!se_sound="zidou_door"="zidou_door"
 
 
 
@@ -207,8 +208,6 @@
 
 &!charaimg_size="homeroom_teacher_normal"="2000,2000,1"
 !charaimg_size="main_character_normal"="1700,1700,1"
-
-
 &熊井
 「よろしくお願いします。」
 
@@ -216,8 +215,6 @@
 
 &!charaimg_size="main_character_normal"="1500,1500,1"
 !charaimg_size="homeroom_teacher_normal"="2200,2200,1"
-
-
 &先生
 「えーと、八剱くんはいる？学校の警備システムでゲートで認証して
 いるみたいだけどここにはいないのね。時間も押しているし、先に
@@ -693,7 +690,6 @@ charaimg_size="main_character_normal"="1700,1700,1"
 &!se_play="click_se_N"=""
 &!se_play="Highheels_walk"=""
 !se_fade="Highheels_walk"="5,0"
-!se_sound="zidou_door"="zidou_door"
 !se_priority="zidou_door"="150"
 !se_play="zidou_door"=""
 
@@ -875,7 +871,7 @@ charaimg_size="main_character_normal"="1700,1700,1"
 &!se_play="click_se_N"=""
 
 &!se_play="Highheels_walk"=""
-!se_fade="Highheels_walk"="5,0"
+!se_fade="Highheels_walk"="2,0"
 !se_play="zidou_door"=""
 
 
@@ -944,14 +940,9 @@ charaimg_size="main_character_normal"="1700,1700,1"
 !foreground_anim="fadein,0,2,%0,0,0,0%%"
 !background_sprite="classroom_background"
 !se_play="zidou_door"=""
-&「」
-
-&!se_play="Highheels_walk"=""
-!se_fade="Highheels_walk"="2,0"
-&「」
-
-&!charaimg_active="homeroom_teacher_normal"="true"
+!charaimg_active="homeroom_teacher_normal"="true"
 !wait="1"
+!se_play="zidou_door"=""
 !se_play="school_chime"=""
 !se_fade="school_chime"="5,0"
 &先生
@@ -1109,15 +1100,14 @@ charaimg_size="main_character_normal"="1700,1700,1"
 &熊井
 「夜間は校内唯一の玄関である入門がしまっているし、関係者以外は基本、外からは入れない。それに、この教室には大して物が置かれていないし、寮から繋がっているということは生徒か先生ぐらいしか夜間には入れない。大方、忘れ物をした生徒がいつでも寮から来れるようにしているんだろうね。」
 &!se_play="click_se_N"=""
+
 &!charaimg_size="main_character_normal"="1500,1500,1"
 !charaimg_size="yatsurugi_normal"="1700,1700,1"
-
-
 &八剱
 「警備の人も忘れ物をした生徒のためだけに鍵を開けたり閉めたり管理するのは面倒だもんなぁ」
+
 &!se_play="click_se_N"=""
-&
-!charaimg_delete="main_character_normal"=""
+&!charaimg_delete="main_character_normal"=""
 !charaimg_delete="yatsurugi_normal"=""
 !foreground_anim="fadeout,0,2,%0,0,0%%"
 !wait="2"
@@ -1129,24 +1119,17 @@ charaimg_size="main_character_normal"="1700,1700,1"
 !background_sprite="classroom_background"
 !wait="1"
 
-&se_play="Highheels_walk"=""
-!se_fade="Highheels_walk"="2,0"
-!wait="1"
-!se_play="zidou_door"=""
-!se_play="Highheels_walk"=""
-!se_fade="Highheels_walk"="5,0"
-
-!charaimg_sprite="homeroom_teacher_normal"="homeroom_teacher_normal"
+&!charaimg_sprite="homeroom_teacher_normal"="homeroom_teacher_normal"
 !charaimg_size="homeroom_teacher_normal"="1800,1800,1"
 !charaimg_pos="homeroom_teacher_normal"="0,0,0"
-
 !se_play="school_chime"=""
-
 &先生
 「はい、それでは朝のHRをはじめます。今日やることを先に説明しちゃいたいと思います！これから2日後、ラッパー適正テストをします。いたって簡単、昨日の授業で説明した4つの観点をうまくクリアしていればOK。できなかったら、即退学ね。」
+
 &!se_play="click_se_N"=""
 &先生
 「即退学とは言ったけど、今日を含めたこの2日間でテストに向けて自己のスキルを強化しなさい！私からは以上です。」
+
 &!se_play="click_se_N"=""
 &!background_sprite="hall_background"
 !charaimg_delete="homeroom_teacher_normal"=""
@@ -1159,23 +1142,21 @@ charaimg_size="main_character_normal"="1700,1700,1"
 !charaimg_sprite="yatsurugi_normal"="yatsurugi_normal"
 !charaimg_size="yatsurugi_normal"="1500,1500,1"
 !charaimg_pos="yatsurugi_normal"="800,0,0"
-
 &八剱
 「な、なあ．．．退学って本気かな．．．」
 &!se_play="click_se_N"=""
 
 &!charaimg_size="asao_normal"="1700,1700,1"
-
 &浅尾
 「わからないけど、2日間まるまるテストに向けて対策する時間をとっているし、あながち嘘ではないんじゃないの？」
 &!se_play="click_se_N"=""
+
 &!charaimg_size="asao_normal"="1500,1500,1"
 !charaimg_size="yatsurugi_normal"="1700,1700,1"
-
-
 &八剱
 「まじかよぉぉ．．．タダ飯、タダ風呂のタダ生活の日常もテストに合格しなければ、たった数日で終わりかあぁ～～．．．」
 &!se_play="click_se_N"=""
+
 &!charaimg_delete="main_character_normal"=""
 !charaimg_active="asao_normal"="false"
 !charaimg_active="yatsurugi_normal"="false"
@@ -1394,14 +1375,11 @@ charaimg_size="main_character_normal"="1700,1700,1"
 &!se_play="click_se_N"=""
 &!charaimg_size="miune_normal"="1800,1800,1"
 
-&!se_play="gaya"=""
 &三嶺
 「3人の分も買えたらよかったんだけど．．．あれ？3人の名前聞くの忘れてた！！」
 &!se_play="click_se_N"=""
 &!charaimg_size="miune_normal"="1600,1600,1"
 !charaimg_size="shizaki_normal"="1700,1700,1"
-
-&!se_play="gaya"=""
 
 &紫崎
 「そういうことなら学校のアプリから生徒の名簿リストを見るといい。ほら。」
@@ -1409,7 +1387,6 @@ charaimg_size="main_character_normal"="1700,1700,1"
 &!charaimg_size="shizaki_normal"="1500,1500,1"
 !charaimg_size="miune_normal"="1800,1800,1"
 
-&!se_play="gaya"=""
 &三嶺
 「わっ！ほんとだ！顔写真もついているんだね！さっき話したのは熊井くん、浅尾さん、八剱くんか。紫崎はなんでもしってるんだね！」
 &!se_play="click_se_N"=""
@@ -1423,47 +1400,40 @@ charaimg_size="main_character_normal"="1700,1700,1"
 &!se_play="click_se_N"=""
 &!charaimg_size="shizaki_normal"="1500,1500,1"
 !charaimg_size="miune_normal"="1800,1800,1"
-&!se_play="gaya"=""
 
 &三嶺
 「またひどい．．．その冷たい言い回しやめなよ。ともだちできないよ？」
 &!se_play="click_se_N"=""
 &!charaimg_size="miune_normal"="1600,1600,1"
 !charaimg_size="shizaki_normal"="1700,1700,1"
-&!se_play="gaya"=""
 
 &紫崎
 「人前でおどおどしている奴には言われたくないね。大体、お前は昔から．．．あっ、おい！！」
 &!se_play="click_se_N"=""
 &!charaimg_size="shizaki_normal"="1500,1500,1"
 !charaimg_size="miune_normal"="1800,1800,1"
-&!se_play="gaya"=""
 
 &三嶺
 「ラップパンおいし～～～！もう一つも食べちゃお～」
 &!se_play="click_se_N"=""
 &!charaimg_size="miune_normal"="1600,1600,1"
 !charaimg_size="shizaki_normal"="1700,1700,1"
-&!se_play="gaya"=""
 
 &紫崎
 「返せ！！せめて金だけでも返すんだ！！あぁ．．．俺の980円が．．．労力が．．．」
 &!se_play="click_se_N"=""
 &!charaimg_size="shizaki_normal"="1500,1500,1"
 !charaimg_size="miune_normal"="1800,1800,1"
-&!se_play="gaya"=""
 
 &三嶺
 「おいしかった～！ありがとうね！！紫崎！」
 &!se_play="click_se_N"=""
 &!charaimg_size="miune_normal"="1600,1600,1"
 !charaimg_size="shizaki_normal"="1700,1700,1"
-&!se_play="gaya"=""
 
 &紫崎
 「．．．」
 &!se_play="click_se_N"=""
-&!se_play="gaya"=""
 &!charaimg_size="shizaki_normal"="1500,1500,1"
 
 !charaimg_delete="shizaki_normal"=""
