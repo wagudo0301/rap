@@ -59,14 +59,6 @@
 !bgm_fade="2,0"
 &!wait="2"
 
-!charaimg_active="principal_normal"="false"
-
-&!top_text="CHAPTER1-1-10"="食堂までとばす"
-!bottom_text="1-1"="やめとく"
-
-
-#1-1
-
 
 &!jump_to="CHAPTER1-1-2"
 
