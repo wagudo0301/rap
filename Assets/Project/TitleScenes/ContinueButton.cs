@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class ContinueButton : MonoBehaviour
 {
     // Start is called before the first frame update
@@ -18,5 +18,6 @@ public class ContinueButton : MonoBehaviour
     public void OnClickContinueButton()
     {
         PublicStaticStatus.OnlyRapBattle = false;
+        SceneManager.LoadScene("MenuScenes");
     }
 }

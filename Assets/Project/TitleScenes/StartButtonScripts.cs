@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class StartButtonScripts : MonoBehaviour
 {
@@ -18,6 +19,8 @@ public class StartButtonScripts : MonoBehaviour
     }
     public void OnClickStartButton()
     {
+        PlayerPrefs.SetInt("SAVE", 0);
+        PlayerPrefs.Save();
         PublicStaticStatus.OnlyRapBattle = false;
         SceneManager.LoadScene("PrologueScenes");
     }

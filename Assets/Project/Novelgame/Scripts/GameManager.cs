@@ -51,6 +51,10 @@ public class GameManager : MonoBehaviour
     private const string SE_AUDIOSOURCE_PREFAB = "SEAudioSource";
     private const string CHARACTER_IMAGE_PREFAB = "CharacterImage";
     private bool wait = false;
+    private const string COMMAND_DESTROY_GOTITLECANVAS = "destroygotitlecanvas";
+    private const string COMMAND_SAVE_COUNT = "savecount";
+    private int savecount;
+
     // SerializeFieldと書くとprivateなパラメーターでも
     // インスペクター上で値を変更できる
     [SerializeField]
@@ -147,10 +151,9 @@ public class GameManager : MonoBehaviour
         else
         {
             if (_selectButtonList.Count > 0) return;
-        if (!ShowNextPage())
-                return;
-                // UnityエディタのPlayモードを終了する
-                //UnityEditor.EditorApplication.isPlaying = false;
+            if (!ShowNextPage()) return;
+            // UnityエディタのPlayモードを終了する
+            //UnityEditor.EditorApplication.isPlaying = false;
         }
     }
 
@@ -219,9 +222,37 @@ public class GameManager : MonoBehaviour
                 SetSoundEffect(cmds[1], cmds[0], cmds[2]);
             if (cmds[0].Contains(COMMAND_CHANGE_SCENE))
                 ChangeNextScene(cmds[1]);
+            if (cmds[0].Contains(COMMAND_DESTROY_GOTITLECANVAS))
+                DestroyGoTitleCanvas();
+            if (cmds[0].Contains(COMMAND_SAVE_COUNT))
+                SaveCount(cmds[1]);
+                
             
         }
     }
+
+    /**
+    * セーブカウントを加算する
+    */
+    private void SaveCount(string parameter)
+    {
+        parameter = parameter.Substring(parameter.IndexOf('"') + 1, parameter.LastIndexOf('"') - parameter.IndexOf('"') - 1);
+        savecount = int.Parse(parameter);
+        PlayerPrefs.SetInt ("SAVE", savecount);
+        PlayerPrefs.Save ();
+        
+    }
+
+
+
+    /**
+    * タイトルへボタンを削除する
+    */
+    private void DestroyGoTitleCanvas()
+    {
+        Destroy(GameObject.Find("GoTitleCanvas"));
+    }
+
 
     /**
     * 待機時間を設定する

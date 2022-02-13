@@ -55,5 +55,6 @@ public class Player : MonoBehaviour
         {
             playerAnim.speed=0;
         }
+        
     }
 }

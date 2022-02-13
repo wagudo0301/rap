@@ -113,5 +113,6 @@
 !charaimg_delete="asao_normal"=""
 !charaimg_delete="homeroom_teacher_normal"=""
 !foreground_anim="fadeout,0,2,%0,0,0%%"
+!destroygotitlecanvas
 !wait="2"
 &!scene="RapBattleScene_Production"
