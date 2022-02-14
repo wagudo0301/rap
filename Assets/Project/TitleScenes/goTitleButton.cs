@@ -9,6 +9,7 @@ public class goTitleButton : MonoBehaviour
     public void ButtonGoTitle()
     {
         Destroy(GameObject.Find("Player"));
+        Destroy(GameObject.Find("GoTitleCanvas"));
         SceneManager.LoadScene("TitleScenes");
     }
     // Update is called once per frame
