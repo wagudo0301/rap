@@ -210,6 +210,11 @@
 「え．．．」
 &!se_play="click_se_N"=""
 &!foreground_anim="fadeout,0,2,%0,0,0%%"
-!savecount="3"
-!wait="2"
+
+
+&!savecount="3"
+
+
+
+&!wait="2"
 &!scene="Classroom1-1"
