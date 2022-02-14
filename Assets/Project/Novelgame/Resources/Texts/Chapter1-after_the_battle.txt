@@ -2,6 +2,7 @@
 
 !foreground_color="0,0,0"
 !foreground_anim="fadein,0,2,%0,0,0,0%%"
+!savecount="6"
 !background_sprite="soundproofroom_background"
 
 !charaimg_sprite="main_character_normal"="main_character_normal"
@@ -152,6 +153,7 @@
 
 &!se_play="click_se_N"=""
 &!foreground_anim="fadeout,0,2,%0,0,0%%"
+!savecount="6"
 !wait="2"
 &!scene="Chapter1-EndingScenes"
 
