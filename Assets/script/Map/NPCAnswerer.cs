@@ -4,21 +4,24 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class NPCAnswerer : MonoBehaviour
+public class NPCAnswerer : MonoBehaviour//会話にスクリプトを入れる場合はMainTextに書く。その際、_から始めて、その次にパラメーターを入れる。
 {
     public string NameText="";
     public List<string> MainText=new List<string>();
+    public string ParameterOfFlag;
+
+    public int page;//public
+    public bool CanCheckNextPage=true;//
     [SerializeField]
     private Sprite Spr;
-
+    [SerializeField]
+    private AudioClip sound;
     GameObject Player;
     GameObject MyCanvasForRPG;
     GameObject MyFadeOuter;
     GameObject go0;
     GameObject go1;
     Image MyImage;
-    int page;
-    bool TurnPageIsActive=true;
 
     void Start()
     {
@@ -37,69 +40,61 @@ public class NPCAnswerer : MonoBehaviour
             //最初ページを表示
             if(page==-1&&Player.GetComponent<Player>().ControlEnable&&Vector3.Distance(gameObject.transform.position,Player.transform.position)<=1.67f)
             {
-                Debug.Log("Talk");
-                Time.timeScale=0f;
-                Player.GetComponent<Player>().ControlEnable=false;
-                MyFadeOuter.GetComponent<Image>().color = new Color32 (0, 0, 0, 170);
-                MyImage.sprite=Spr;
-                MyImage.color=new Color32 (255,255,255,255);                
-                if(NameText!="")
-                {
-                    MyCanvasForRPG.transform.Find("NameTextPanel").gameObject.SetActive(true);
-                    go0=GameObject.Find("NameText").gameObject;
-                    go0.GetComponent<Text>().text=NameText;
-                }
-                MyCanvasForRPG.transform.Find("MainTextPanel").gameObject.SetActive(true);
-                MyCanvasForRPG.transform.Find("NextPageIcon").gameObject.SetActive(true);
-                go1=GameObject.Find("MainText").gameObject;
-
-                TurnPage();
-
+                StartTalk();
+                CheckNextPage();
             }
             //次ページをチェックして表示
             else if(page>=0)
             {
-                if(MainText.Count>page+1)//2ページ目以降表示
-                {
-                    TurnPage();
-                }
-                else if(MainText.Count<=page+1)//ページがめくれないなら表示終了
-                {
-                    Debug.Log("EndTalk");
-                    EndTalk();
-                }
+                CheckNextPage();
             }
         }
     }
-    void TurnPage()
+    public void CheckNextPage()//public
     {
-        if(!TurnPageIsActive){return;}
-        page+=1;
-
-        //Flagチェック
-        if(MainText[page].Substring(0, 1)=="_")//メッセージの代わりに_で始まったらスクリプト
+        if(!CanCheckNextPage){return;}
+        gameObject.GetComponent<AudioSource>().PlayOneShot(sound);
+        if(MainText.Count<=page+1)//ページがめくれないなら表示終了
         {
-            ChangeFlag();
-            
-            //次ページをチェックして表示
-            if(MainText.Count>page+1)
-            {
-                TurnPage();
-            }
-            else if(MainText.Count<=page+1)
-            {
-                Debug.Log("EndTalk");
-                EndTalk();
-            }
+            page=-1;
+            EndTalk();
         }
-        //次ページにする
-        else
+        else if(MainText[page+1].Substring(0, 1)=="_")//メッセージの代わりに_で始まったらスクリプト
         {
+            page+=2;
+            ParameterOfFlag=MainText[page];
+            CanCheckNextPage=false;
+            gameObject.AddComponent(Type.GetType(MainText[page-1].Substring(1)));
+            //スクリプトはCanCheckNextPageをtrueにしてページをめくる（必ずNPCTemplate参考にする）
+        }
+        else//次ページにする
+        {
+            page+=1;
             go1.GetComponent<Text>().text=MainText[page];
         }
     }
+    public void StartTalk()
+    {
+        Debug.Log("Talk");
+        Time.timeScale=0f;
+        Player.GetComponent<Player>().ControlEnable=false;
+        MyCanvasForRPG.transform.Find("TalkingNPCMemorizer").GetComponent<TalkingNPCMemorizer>().TalkingNPC=gameObject;
+        MyFadeOuter.GetComponent<Image>().color = new Color32 (0, 0, 0, 170);
+        MyImage.sprite=Spr;
+        MyImage.color=new Color32 (255,255,255,255);                
+        if(NameText!="")
+        {
+            MyCanvasForRPG.transform.Find("NameTextPanel").gameObject.SetActive(true);
+            go0=MyCanvasForRPG.transform.Find("NameTextPanel").transform.Find("NameText").gameObject;
+            go0.GetComponent<Text>().text=NameText;
+        }
+        MyCanvasForRPG.transform.Find("MainTextPanel").gameObject.SetActive(true);
+        MyCanvasForRPG.transform.Find("NextPageIcon").gameObject.SetActive(true);
+        go1=MyCanvasForRPG.transform.Find("MainTextPanel").transform.Find("MainText").gameObject;
+    }
     public void EndTalk()
     {
+        Debug.Log("EndTalk");
         MyFadeOuter.GetComponent<Image>().color = new Color32 (0, 0, 0, 0);
         MyImage.color=new Color32 (0,0,0,0);
         if(go0){go0.GetComponent<Text>().text="";}
@@ -109,23 +104,5 @@ public class NPCAnswerer : MonoBehaviour
         MyCanvasForRPG.transform.Find("NextPageIcon").gameObject.SetActive(false);
         Time.timeScale=1.0f;
         Player.GetComponent<Player>().ControlEnable=true;
-
-        page=-1;
-    }
-    void ChangeFlag()
-    {
-        /*if(MainText[page].Substring(1)=="Choice")
-        {
-            Debug.Log("Choice--");
-            TurnPageIsActive=false;
-            MainText.RemoveAt(page);//MainTextには表示しない
-            //MainText.RemoveAt(page);
-            //MainText.RemoveAt(page);
-            page-=2;//選択肢がでるクリックでMainTextを進めない
-        }
-        else
-        {*/
-        gameObject.AddComponent(Type.GetType(MainText[page].Substring(1)));
-        /*}*/
     }
 }
