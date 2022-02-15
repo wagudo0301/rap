@@ -10,6 +10,11 @@
 !se_priority="school_chime"="150"
 !se_volume="school_chime"="0.3"
 !se_play="school_chime"=""
+
+
+
+
+!savecount="4"
 !wait="1"
 &!se_sound="click_se_N"="click_se_N"
 !se_priority="click_se_N"="150"
@@ -244,5 +249,6 @@
 !charaimg_delete="asao_normal"=""
 !charaimg_delete="homeroom_teacher_normal"=""
 !foreground_anim="fadeout,0,2,%0,0,0%%"
+!savecount="5"
 !wait="2"
 &!scene="Chapter1-before_the_battleScenes"

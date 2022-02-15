@@ -1,18 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
-public class TansakuButtonScript : MonoBehaviour
-{   public void ButtonTansaku()
-    {
-        SceneManager.LoadScene("Classroom1-1");
-    }
-    
+public class LoadTitleScenes : MonoBehaviour
+{
     // Start is called before the first frame update
     void Start()
     {
-        
+        Destroy(GameObject.Find("GoTitleCanvas"));
     }
 
     // Update is called once per frame

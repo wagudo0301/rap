@@ -6,7 +6,7 @@
 !charaimg_sprite="homeroom_teacher_normal"="homeroom_teacher_normal"
 !charaimg_size="homeroom_teacher_normal"="2000,2000,1"
 !charaimg_pos="homeroom_teacher_normal"="0,0,0"
-
+!savecount="7"
 !wait="1"
 
 !se_sound="school_chime"="school_chime"

@@ -72,6 +72,8 @@
 「主人公にはどんな学校生活が待っているのだろうか。」
 &!se_play="click_se_N"=""
 &!foreground_anim="fadeout,0,2,%0,0,0%%"
+!destroygotitlecanvas
+!savecount="1"
 !wait="2"
 &!scene="MenuScenes"
 

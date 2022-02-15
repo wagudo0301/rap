@@ -1,13 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 public class QuitButtonScripts : MonoBehaviour
 {
     public void ButtonExit()
     {
-        //Application.Quit();
-        SceneManager.LoadScene("TitleScenes");
+        Application.Quit();
     }
     
     // Start is called before the first frame update
