@@ -338,7 +338,7 @@
 
 &
 「【行動を選択してください】」
-&!top_text="CHAPTER1-1-A2"="メンチを切る"
+&!top_text="CHAPTER1-1-A2"="メンチを切る(白目をむく)"
 !bottom_text="CHAPTER1-1-B2"="逆に話しかけてみる"
 
 #CHAPTER1-1-A2
@@ -366,11 +366,29 @@
 &!se_play="click_se_N"=""
 
 
+&熊井
+「そういえば、あの人は『メンチを切る』じゃなくて『ガンを飛ばしていた』ような．．．」
+
+&!se_play="click_se_N"=""
+
+
+
+&熊井
+「驚かせてしまったかもしれない．．．」
+
+
+
+&!se_play="click_se_N"=""
+
+
+
+
 
 &!charaimg_active="main_character_normal"="false"
 
 !charaimg_active="yatsurugi_normal"="true"
 !charaimg_pos="yatsurugi_normal"="0,0,0"
+
 &八剱
 「やべえぜ、マジモンのヤンキーってやつだぜ
 こえええ」
