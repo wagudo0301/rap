@@ -2,17 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NPCEndTalk : MonoBehaviour
+public class NPCTemplate : MonoBehaviour
 {
     GameObject MyCanvasForRPG;
     GameObject MyTalkingNPC;
+    string parameter;
 
     void Awake()
     {
         MyCanvasForRPG=GameObject.Find("CanvasForRPG");
         MyTalkingNPC=MyCanvasForRPG.transform.Find("TalkingNPCMemorizer").GetComponent<TalkingNPCMemorizer>().TalkingNPC;
+        //MyTalkingNPC.GetComponent<NPCAnswerer>().CanCheckNextPage=false;
+        parameter=MyTalkingNPC.GetComponent<NPCAnswerer>().ParameterOfFlag;
 
-        MyTalkingNPC.GetComponent<NPCAnswerer>().page=MyTalkingNPC.GetComponent<NPCAnswerer>().MainText.Count-1;
+        //ここに処理を書く
     }
     void Start()
     {
@@ -22,5 +25,6 @@ public class NPCEndTalk : MonoBehaviour
     {
         MyTalkingNPC.GetComponent<NPCAnswerer>().CanCheckNextPage=true;
         MyTalkingNPC.GetComponent<NPCAnswerer>().CheckNextPage();
+        Destroy(this);//いるはず
     }
 }

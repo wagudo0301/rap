@@ -82,7 +82,10 @@ public class production_battle_gamemanager : MonoBehaviour
     private Sprite mashiro_turn;
     [SerializeField]
     private Sprite UIMask;
-    // Start is called before the first frame update
+
+    //2/24追加
+    private GameObject MyPunchlineReflector;
+
     void Start()
     {
         dictationRecognizer = new DictationRecognizer();
@@ -96,6 +99,9 @@ public class production_battle_gamemanager : MonoBehaviour
 
         hpSlider.value = 0.5f;
         StartCoroutine("GameManagerCoroutine");
+        
+        //2/24追加
+        MyPunchlineReflector=GameObject.Find("PunchlineReflector");
     }
 
     // Update is called once per frame
@@ -513,7 +519,8 @@ public class production_battle_gamemanager : MonoBehaviour
     IEnumerator LastPointCalculation()
     {
         //最後の点数計算
-        RateOfTurn=2f;
+        RateOfTurn=2f*MyPunchlineReflector.GetComponent<PunchlineReflector>().RateOfPunchline;
+        Debug.Log("RateOfTurn"+RateOfTurn);
         StartCoroutine("init_recognition");
         //画面上の吹き出しの文字列削除
         mainText.text = "";
@@ -576,7 +583,8 @@ public class production_battle_gamemanager : MonoBehaviour
 
         //ターン2(先生-1)
         recognizer_complete = false;
-        RateOfTurn  = 1.0f;
+        RateOfTurn  = 1.0f*MyPunchlineReflector.GetComponent<PunchlineReflector>().RateOfPunchline;
+        Debug.Log("RateOfTurn"+RateOfTurn);
         StartCoroutine("init_recognition");
         StartCoroutine(ChangeMashiroTurn("夢見てるのなら一つ言わせろ　調子は良いけど経験はゼロ　ラップにおいてはキミは無知　だから打つのよ愛のムチ", 0.17f));
         yield return new WaitForSeconds(11.2f);
@@ -595,7 +603,8 @@ public class production_battle_gamemanager : MonoBehaviour
 
         //ターン3(先生-1)
         recognizer_complete = false;
-        RateOfTurn=1.5f;
+        RateOfTurn=1.5f*MyPunchlineReflector.GetComponent<PunchlineReflector>().RateOfPunchline;
+        Debug.Log("RateOfTurn"+RateOfTurn);
         StartCoroutine("init_recognition");
         StartCoroutine(ChangeMashiroTurn("確かに少しはやるようね　チェックしとくわYourName-弱音をはかないその威勢　姿勢　すでに　合格点よ", 0.18f));
         yield return new WaitForSeconds(11.3f);

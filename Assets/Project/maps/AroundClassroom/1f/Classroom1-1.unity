@@ -8798,6 +8798,16 @@ PrefabInstance:
       propertyPath: MainText.Array.data[4]
       value: "\u266A\uFF5E"
       objectReference: {fileID: 0}
+    - target: {fileID: 7656468341879715467, guid: d964e10193f41064e989639963525543,
+        type: 3}
+      propertyPath: MainText.Array.data[5]
+      value: _NPCShowImg
+      objectReference: {fileID: 0}
+    - target: {fileID: 7656468341879715467, guid: d964e10193f41064e989639963525543,
+        type: 3}
+      propertyPath: MainText.Array.data[6]
+      value: Note0
+      objectReference: {fileID: 0}
     - target: {fileID: 7656468341879715468, guid: d964e10193f41064e989639963525543,
         type: 3}
       propertyPath: m_RootOrder

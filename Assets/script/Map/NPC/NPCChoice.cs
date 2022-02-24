@@ -45,5 +45,6 @@ public class NPCChoice : MonoBehaviour//パラメーターは「選択肢1,選�
     {
         MyTalkingNPC.GetComponent<NPCAnswerer>().CanCheckNextPage=true;
         MyTalkingNPC.GetComponent<NPCAnswerer>().CheckNextPage();
+        Destroy(this);
     }
 }

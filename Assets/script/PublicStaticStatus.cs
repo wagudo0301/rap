@@ -10,5 +10,5 @@ public class PublicStaticStatus : MonoBehaviour
     public static float MashiroResultPoint;
     public static bool OnlyRapBattle = false;
 
-    public static List<string> Flags=new List<string>();
+    public static List<string> Flags=new List<string>(){"Punchline1","Punchline1","Punchline1","Punchline1","Punchline1","Punchline1","Punchline2"};
 }
