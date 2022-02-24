@@ -22,6 +22,7 @@ public class StartButtonScripts : MonoBehaviour
         PlayerPrefs.SetInt("SAVE", 0);
         PlayerPrefs.Save();
         PublicStaticStatus.OnlyRapBattle = false;
+        PublicStaticStatus.Flags.Clear();
         SceneManager.LoadScene("PrologueScenes");
     }
 }
